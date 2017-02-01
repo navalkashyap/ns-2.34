@@ -1,0 +1,11 @@
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/naval/Documents/WSN_ns2.34/ns-2.34_shared/ns rilmac.tcl
+
+Program received signal SIGSEGV, Segmentation fault.
+0x081e7538 in WirelessPhy::UpdateSleepEnergy() ()
+A debugging session is active.
+
+	Inferior 1 [process 8461] will be killed.
+
+Quit anyway? (y or n) 
