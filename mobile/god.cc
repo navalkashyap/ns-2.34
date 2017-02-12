@@ -1017,7 +1017,9 @@ God::command(int argc, const char* const* argv)
                         instance_ = this;
             // Naval
             myParent = new int[num_nodes];
-			bzero((char*)myParent, sizeof(int)*num_nodes);
+			//bzero((char*)myParent, sizeof(int)*num_nodes);
+			mySlot = new int[num_nodes];
+			bzero((char*)mySlot, sizeof(int)*num_nodes);  // marking current slot as zero slot
 			//-Naval
             return TCL_OK;
      }

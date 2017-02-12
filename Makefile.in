@@ -74,7 +74,8 @@ INCLUDES = \
 	-I./diffserv -I./satellite \
 	-I./wpan \
 	-I./chargingsys -I./chargingsys/app -I./chargingsys/phy -I./chargingsys/mac -I./chargingsys/routing \
-	-I./dsr
+	-I./dsr \
+	-I./chargingsys/awsn 
 
 
 LIB	= \
@@ -334,6 +335,7 @@ OBJ_CC = \
 	chargingsys/routing/chargingrt.o \
  	chargingsys/phy/wireless-chargingphy.o chargingsys/phy/charging-energy-model.o \
  	chargingsys/mac/rilmac.o \
+ 	chargingsys/awsn/awsn-mac.o \
  	chargingsys/ctrace.o \
 	@V_STLOBJ@
 

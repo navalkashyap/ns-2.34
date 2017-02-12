@@ -90,7 +90,7 @@ class EnergyModel : public TclObject {
 public:
 	EnergyModel(MobileNode* n, double energy, double l1, double l2) :
 		energy_(energy), er_(0), et_(0),ei_(0), es_(0), 
-		initialenergy_(energy), maxenergy_(10),
+		initialenergy_(energy), maxenergy_(energy),
 		level1_(l1), level2_(l2), node_(n), 
 		sleep_mode_(0), total_sleeptime_(0), total_rcvtime_(0), 
 		total_sndtime_(0), powersavingflag_(0), 
@@ -110,7 +110,7 @@ public:
 	inline double es() const { return es_; }
 //
 	inline double initialenergy() const { return initialenergy_; }
-	inline double maxenergy() const { return maxenergy_; }
+	inline double maxenergy() const { return maxenergy_; }			//Naval
 	inline double level1() const { return level1_; }
 	inline double level2() const { return level2_; }
 	inline void setenergy(double e) { energy_ = e; }
@@ -121,7 +121,7 @@ public:
 //
 	virtual void DecrSleepEnergy(double sleeptime, double P_sleep);
 	virtual void DecrTransitionEnergy(double transitiontime, double P_transition);
-//	
+	virtual void IncrChargeEnergy(double chargetime, double P_charge); 			//Naval
 	inline virtual double MaxTxtime(double P_tx) {
 		return(energy_/P_tx);
 	}

@@ -4,7 +4,7 @@
 set val(chan)           Channel/WirelessChannel    ;# channel type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessCPhy           ;# network interface type
-set val(mac)            Mac/AmensticMac            ;# user our own mac
+set val(mac)            Mac/Awsn		           ;# user our own mac
 set val(ifq)            Queue/DropTail             ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
@@ -33,7 +33,7 @@ set val(runningmac)     1
 set val(logfile)        log
 set val(routeinterval)  3
 set val(trvalue)  		1
-set val(fulleng)        1.0
+set val(fulleng)        0.001
 
 # some ns2 default settings
 ns-random 		$val(nsseed)
@@ -48,8 +48,8 @@ source ns2parameters.tcl
 Agent/ChargingRT    set RTYPE $val(rtype)
 Agent/ChargingRT    set routinginterval $val(routeinterval)
 Agent/ChargingRT    set twtf [expr $val(trvalue)/10]
-Mac/RILMac          set runningmac $val(runningmac)
-Mac/RILMac          set defaulttr $val(trvalue)
+#Mac/RILMac          set runningmac $val(runningmac)
+#Mac/RILMac          set defaulttr $val(trvalue)
 Phy/WirelessCPhy    set routingscheme $val(rtype)
 Phy/WirelessCPhy    set randomenergy $val(random)
 
@@ -74,7 +74,7 @@ $ns_ node-config    -adhocRouting $val(rp) \
                     -eotTrace_ OFF \
                     -toraDebug OFF
 
-set val(total) [expr {$val(nn)+1}]; #extra one is for sink
+set val(total) [expr {$val(nn)}]; #extra one is for sink
 set val(mylog) [new CTRACE $val(logfile)]
 
 set god_ [create-god $val(total)]
@@ -84,8 +84,6 @@ Application/RILApp set DataRate 	$val(datarate)
 
 for {set i 0} {$i <  $val(total)} {incr i} {
     set node_($i) [$ns_ node]
-    $node_($i) random-motion 0
-
     set rtagent [$node_($i) set ragent_]
     $rtagent add-node $node_($i)
     #set val(myenergy) [expr $val(fulleng)-$i*0.5]
@@ -99,8 +97,8 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     $ns_ attach-agent $node_($i) $RILagent_($i)
     $RILapp_($i) attach-agent $RILagent_($i)
 
-    if {$val(rtype) == 1} {
-    # line
+	if {$val(rtype) == 1} {
+		# line
         if {$i==0} {
             $god_ setassink $i
         } else {
@@ -108,83 +106,12 @@ for {set i 0} {$i <  $val(total)} {incr i} {
         }
         #$node_($i) set X_ [expr 70.0*$i]
         #$node_($i) set Y_ 100.0
-    } elseif {$val(rtype) == 2} {
-    # star
-        if {$i==0} {
-            #$node_($i) set X_ 100.0
-            #$node_($i) set Y_ 100.0
-            $god_ setassink $i
-	} else {
-            #$node_($i) set X_ [expr 100.0+70.0*cos($i*360.0/$val(total))]
-            #$node_($i) set Y_ [expr 100.0+70.0*sin($i*360.0/$val(total))]
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 3} {
-    #fixed topology
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 6} {
-    #energy desa
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 7} {
-    #energy orinoco
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 8} {
-    #orw
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 9} {
-    #etx
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 10} {
-    #etx
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } elseif {$val(rtype) == 11} {
-    #etx
-        if {$i==0} {
-            $god_ setassink $i
-        } else {
-            $god_ setassource $i
-        }
-    } else {
-        puts "wrong input"
-    }
-
-    $node_($i) set Z_ 0.0  
-    $ns_ at 5.0 "$RILapp_($i) start"
+	}
 }
-
-for {set i 0} {$i < $val(total) } {incr i} {
-    $ns_ at [expr {$val(et)+0.5}] "$RILapp_($i) stop";
-    $ns_ at [expr {$val(et)+1.5}] "$node_($i) reset";
-}
-
 #$ns_ at [expr {$val(et)+2.0}] "stop"
-#$ns_ at [expr {$val(et)+2.1}] "$god_ log_dutycycle; puts \"NS EXITING...\"; $ns_ halt;"
-$ns_ at 3600.0 "stop"
-$ns_ at 3600.0 "$god_ log_dutycycle; puts \"NS EXITING...\"; $ns_ halt;"
+#$ns_ at [expr {$val(et)+2.1}] "puts \"NS EXITING...\"; $ns_ halt;"
+$ns_ at 100.0 "stop"
+$ns_ at 100.0 "puts \"NS EXITING...\"; $ns_ halt;"
 
 proc stop {} {
     puts "calling stop function"

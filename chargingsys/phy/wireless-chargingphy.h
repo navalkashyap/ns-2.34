@@ -62,6 +62,13 @@ public:
 	void 	turnOnRadio();
 	void 	turnOffRadio();
 	int 	getRadioStatus();
+	double	timeToFullCharge() { return (em()->maxenergy() - em()->energy()) / P_charge;}		// return power needed for TX/RX
+	void 	chargeNode(double chargeTime);
+	double	timeToCauseLead(double shiftTime) { return (Pt_consume_ /(Pt_consume_ + P_charge))*shiftTime;}
+	double	timeToCauseLag(double shiftTime) { return (P_charge /(Pt_consume_ + P_charge))*shiftTime;}
+	bool 	isNodeCharged() { return em()->energy() >= em()->maxenergy();}
+	double	getNodeEnergy() { return em()->energy();}
+	double 	getResidualEnergy()	{ return em()->maxenergy() - em()->energy(); }
 	EnergyModel* em() { return node()->energy_model(); }
 protected:
 	enum 	RadioStatus { RADIOON, RADIOOFF };	
@@ -69,6 +76,7 @@ private:
 
 	int 	radioStatus_;
 	double 	last_radioOn_time_;
+	double	last_charged_time_;
 };
 
 #endif /* !ns_WirelessPhy_h */

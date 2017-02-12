@@ -218,8 +218,11 @@ public:
 	double* lastWorkload;
         // -Yang
 	// Naval - 1/27/2017
+	inline void setMyParent(int nodeId, int parentId) { myParent[nodeId] = parentId;}
 	inline int getMyParent(int nodeId) {return myParent[nodeId]; }
-//	inline bool getMyRole(int nodeId) {return myRole[nodeId]; }
+	inline bool getMyRole(int nodeId) {return myRole[nodeId]; }
+	inline void setMySlot(int slotNum,int nodeID) {mySlot[nodeID] = slotNum;}
+	inline int getNodeSlot(int nodeID) {return mySlot[nodeID]; }
 //-Naval
 private:
         int num_nodes;
@@ -245,8 +248,11 @@ private:
         int gridsize_;
         int gridX;
         int gridY;
+        //Naval
         int* myParent;
- //       bool* myRole;
+        bool* myRole;
+        int* mySlot;
+        //~Naval
         // added by Yang 04/25/2010
         CTRACE* ctrace_;
         double* dutyontime_;

@@ -2,4 +2,4 @@ cd ..
 make
 
 cd -
-../ns rilmac.tcl  > output
+../ns amensticmac.tcl  > output

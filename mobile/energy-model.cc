@@ -73,7 +73,7 @@ void EnergyModel::DecrTxEnergy(double txtime, double P_tx)
 	// This variable keeps track of total energy consumption in Transmission..
 	et_=et_+dEng;
 //
-//	printf("EnergyModel::DecrTxEnergy: energy:%f, decreaseEnergy:%f\n",energy_,dEng);
+//	printf("EnergyModel::DecrTxEnergy: energy:%f, txtime:%f, decreaseEnergy:%f\n",energy_,txtime,dEng);
 }
 
 
@@ -134,6 +134,17 @@ void EnergyModel::DecrTransitionEnergy(double transitiontime, double P_transitio
 		God::instance()->ComputeRoute();
 }
 //
+
+void EnergyModel::IncrChargeEnergy(double chargetime, double P_charge)
+{
+	double iEng = P_charge * chargetime;
+	if (maxenergy_ < energy_ + iEng)
+		energy_ = maxenergy_;
+	else
+		energy_ = energy_ + iEng;
+	printf("EnergyModel::IncrChargeEnergy: energy:%f, chargetime:%f, increaseEnergy:%f\n",energy_,chargetime,iEng);
+	return;
+}
 
 // XXX Moved from node.cc. These wireless stuff should NOT stay in the 
 // base node.

@@ -66,14 +66,14 @@ public:
         }
 }class_WirelessChargingPhy;
 
-
-WirelessChargingPhy::WirelessChargingPhy() : WirelessPhy(), radioStatus_(RADIOON), last_radioOn_time_(NOW)
+WirelessChargingPhy::WirelessChargingPhy() : WirelessPhy(), radioStatus_(RADIOOFF), last_radioOn_time_(NOW), last_charged_time_(NOW)
 {
-	//Pt_consume_ = 0.0588;
-	//Pr_consume_ = 0.0616;
+	Pt_consume_ = 0.0588;
+	Pr_consume_ = 0.0616;
 	//Pt_consume_ = 0.588/2;
 	//Pr_consume_ = 0.616/2;
 	//P_idle_ = 0.000042;
+	P_charge = 0.0001;
 }
 
 int
@@ -85,15 +85,19 @@ void
 WirelessChargingPhy::turnOnRadio(){
 //if (!God::instance()->isSink(index_)) {
 	double radioOnTime = NOW - last_radioOn_time_;
+	double chargeTime = NOW - last_charged_time_;
 	last_radioOn_time_ = NOW;
+	last_charged_time_ = NOW;
 	if (radioStatus_ == RADIOON) {
 		if (radioOnTime > 0) {
 			//em()->DecrTxEnergy(radioOnTime, Pt_consume_);
-			God::instance()->addDutyOnTime(index_, radioOnTime);
+			//God::instance()->addDutyOnTime(index_, radioOnTime);
 		}
 	}
 	radioStatus_ = RADIOON;
-	em()->DecrTxEnergy(radioOnTime, P_idle_);
+//	em()->DecrTxEnergy(radioOnTime, P_idle_);
+	printf("node:%d, WirelessChargingPhy::turnOnRadio: RadioStatus:%d, current_energy:%f, time:%f\n",index_,radioStatus_,em()->energy(),NOW);
+
 //}
 }
 
@@ -104,16 +108,23 @@ WirelessChargingPhy::turnOffRadio(){
 	if (radioStatus_ == RADIOON) {
 		last_radioOn_time_ = NOW;
 		if (radioOnTime > 0) {
-			//em()->DecrTxEnergy(radioOnTime, Pt_consume_);
-			God::instance()->addDutyOnTime(index_, radioOnTime);
+			em()->DecrTxEnergy(radioOnTime, Pt_consume_);
+		//	God::instance()->addDutyOnTime(index_, radioOnTime);
 		}
 		radioStatus_ = RADIOOFF;
 	}
-	em()->DecrTxEnergy(radioOnTime, P_idle_);
+	//em()->DecrTxEnergy(radioOnTime, P_idle_);
+	printf("node:%d, WirelessChargingPhy::turnOffRadio: RadioStatus:%d, radioOnTime:%f, energy_afterRadioOFF:%f, time:%f\n",index_,radioStatus_,radioOnTime,em()->energy(),NOW);
 //}
 }
 
- 
+void WirelessChargingPhy::chargeNode(double chargeTime) {
+	printf("node:%d ",index_);
+	em()->IncrChargeEnergy(chargeTime,P_charge);
+	return;
+}
+
+
 void 
 WirelessChargingPhy::sendDown(Packet *p)
 {
@@ -125,12 +136,10 @@ WirelessChargingPhy::sendDown(Packet *p)
 	if (em()) {
 			//node is off here...
 			if (radioStatus_ != RADIOON ) {
-				printf("WirelessChargingPhy::sendDown: node:%d radio is already off, eng %f!\n", index_, em()->energy());
+				printf("node:%d, WirelessChargingPhy::sendDown: radio is already off, eng %f!\n", index_, em()->energy());
 				Packet::free(p);
 				return;
 			}
-
-
 	}
 	/*
 	 * Decrease node's energy
@@ -141,7 +150,7 @@ WirelessChargingPhy::sendDown(Packet *p)
 		    double start_time = MAX(channel_idle_time_, NOW);
 		    double end_time = MAX(channel_idle_time_, NOW+txtime);
 		    double actual_txtime = end_time-start_time;
-	printf("WirelessChargingPhy::sendDown: node:%d- txtime %f\tactual_txtime %f\n",node()->address(),txtime,actual_txtime);
+		    printf("node:%d, WirelessChargingPhy::sendDown: txtime %f\tactual_txtime %f @ %f\n",node()->address(),txtime,actual_txtime,NOW);
 
 		    if (start_time > update_energy_time_) {
 			    //em()->DecrIdleEnergy(start_time - 
@@ -220,7 +229,7 @@ WirelessChargingPhy::sendUp(Packet *p)
 	 * Sanity Check
 	 */
 	assert(initialized());
-	printf("WirelessChargingPhy::sendUp: node:%d \n",node()->address());
+	printf("node:%d, WirelessChargingPhy::sendUp: @%f \n",node()->address(),NOW);
 
 	PacketStamp s;
 	double Pr;

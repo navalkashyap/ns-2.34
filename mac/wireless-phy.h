@@ -106,6 +106,7 @@ protected:
 	double P_sleep_;	// sleep power consumption (W)
 	double P_transition_;	// power consumed when transiting from SLEEP mode to IDLE mode and vice versa.
 	double T_transition_;	// time period to transit from SLEEP mode to IDLE mode and vice versa.
+	double P_charge;		// power charged
 //
 
 	double last_send_time_;	// the last time the node sends somthing.
