@@ -329,6 +329,7 @@ void MacAwsn::runAtstartUp() {
 
 	} else {
 		God::instance()->setMyParent(index_,index_); 		// Sink node to consider parent of itself
+		randomTime = dischargetime * 2.6;
 	}
 	printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomtime@%f, dischargetime:%f,chargetime:%f, myParent:%d\n",
 			index_,ranNum,randomTime, dischargetime,chargetime,God::instance()->getMyParent(index_));
@@ -355,6 +356,7 @@ void MacAwsn::SlotHandler() {
 		slotAwsnTimer.restart(config_.slotTime);
 	else { // After all slots over
 		if(God::instance()->getMyParent(index_) == -2) {
+			shiftFrameSlot = - maxSlots + 1;		// Linear search with minimum overlap slots
 			printf("node:%d, MacAwsn:: No parent found after super frame, shifting SuperFrame by %d slots\n",index_,shiftFrameSlot);
 		}
 		SFAwsnTimer.start(config_.slotTime);
