@@ -2,7 +2,7 @@ Starting Simulation...
 num_nodes is set 2
 node 0 x 0.000000 y 0.000000
 ChargingRT::command: node:0 x 0.000000 y 0.000000 
-node:0, AWSNMac::AWSNMac: ranNum:71802775, randomtime@0.003072, dischargetime:0.010240,chargetime:0.000000, myParent:0
+node:0, AWSNMac::AWSNMac: ranNum:71802775, randomtime@0.026624, dischargetime:0.010240,chargetime:0.000000, myParent:0
 ChargingRT::command: node:1 x 0.000000 y 45.000000 
 node:1, AWSNMac::AWSNMac: ranNum:1262376000, randomtime@0.000000, dischargetime:0.010240,chargetime:0.000000, myParent:-2
 node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000000, energy_afterRadioOFF:0.001000, time:0.000000
@@ -19,948 +19,928 @@ highestAntennaZ_ = 1.5,  distCST_ = 150.0
 node:0, WirelessChargingPhy::sendUp: @0.000000 
 node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@0.001024
 node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@0.002048
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.003072, energy_afterRadioOFF:0.001000, time:0.003072
-node:0, MacAwsn::SuperFrameHandler:1 energy:0.001000, isNodecharged:1, chargetime:0.000000, shiftFrameSlot:0 time@0.003072
-node:0, MacAwsn::ChargeHandler: chargetime:0.000000, time@0.003072
-node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:0.000000, increaseEnergy:0.000000
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@0.003072
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:0.003072
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@0.003072
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@0.003072
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 0.003072
 node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@0.003072
-node:1, WirelessChargingPhy::sendUp: @0.003072 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:4, txtime@0.000320, source_node: 0, msg received, time@0.003072
-node:1, MacAwsn::recvHandler: time@0.003584
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:4, time@0.003584
-node:1, shiftFrameSlot:-3, currentFrameSlots:10, maxSlots:10
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@0.003584
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 0.003584
-node:0, WirelessChargingPhy::sendUp: @0.003584 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@0.003584
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@0.004096
 node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@0.004096
-node:0, MacAwsn::recvHandler: time@0.004096
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:5, on slotNum:2, time@0.004096
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@0.005120
 node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@0.005120
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@0.006144
 node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@0.006144
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@0.007168
 node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@0.007168
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@0.008192
 node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@0.008192
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@0.009216
 node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@0.009216
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@0.010240
+node:1, MacAwsn:: No parent found after super frame, shifting SuperFrame by -9 slots
 node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:0.010240
-node:1, MacAwsn::SuperFrameHandler:2 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:-3 time@0.010240
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@0.011264
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@0.012288
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:0.013312
-node:0, MacAwsn::SuperFrameHandler:2 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@0.013312
+node:1, MacAwsn::SuperFrameHandler:2 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:-9 time@0.010240
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.026624, energy_afterRadioOFF:0.001000, time:0.026624
+node:0, MacAwsn::SuperFrameHandler:1 energy:0.001000, isNodecharged:1, chargetime:0.000000, shiftFrameSlot:0 time@0.026624
+node:0, MacAwsn::ChargeHandler: chargetime:0.000000, time@0.026624
+node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:0.000000, increaseEnergy:0.000000
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@0.026624
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:0.026624
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@0.026624
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@0.026624
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 0.026624
+node:1, WirelessChargingPhy::sendUp: @0.026624 
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@0.027648
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@0.028672
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@0.029696
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@0.030720
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@0.031744
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@0.032768
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@0.033792
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@0.034816
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@0.035840
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:0.036864
+node:0, MacAwsn::SuperFrameHandler:2 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@0.036864
 node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@6.031360
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
 node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:6.031360
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000005, energy_afterRadioOFF:0.001000, time:6.031365
-node:1, MacAwsn::RadioOFFHandler: time@6.031365
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000000, energy_afterRadioOFF:0.001000, time:6.031365
-node:1, MacAwsn::SuperFrameHandler:3 energy:0.001000, isNodecharged:0, chargetime:0.003067, shiftFrameSlot:0 time@6.031365
-node:1, MacAwsn::ChargeHandler: chargetime:0.003067, time@6.034432
-node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:0.003067, increaseEnergy:0.000000
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@6.034432
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:6.034432
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@6.034432
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@6.034432
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 6.034432
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@6.034432
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000016, energy_afterRadioOFF:0.000999, time:6.031376
+node:1, MacAwsn::RadioOFFHandler: time@6.031376
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000000, energy_afterRadioOFF:0.000999, time:6.031376
+node:1, MacAwsn::SuperFrameHandler:3 energy:0.000999, isNodecharged:0, chargetime:0.009200, shiftFrameSlot:0 time@6.031376
+node:1, MacAwsn::ChargeHandler: chargetime:0.009200, time@6.040576
+node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:0.009200, increaseEnergy:0.000001
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@6.040576
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:6.040576
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@6.040576
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@6.040576
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 6.040576
+node:0, WirelessChargingPhy::sendUp: @6.040576 
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@6.041600
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@6.042624
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@6.043648
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@6.044672
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@6.045696
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@6.046720
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@6.047744
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@6.048768
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@6.049792
+node:1, MacAwsn:: No parent found after super frame, shifting SuperFrame by -9 slots
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:6.050816
+node:1, MacAwsn::SuperFrameHandler:4 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:-9 time@6.050816
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@6.057984
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@6.034432
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:6.034432
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@6.034432
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@6.034432
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 6.034432
-node:0, WirelessChargingPhy::sendUp: @6.034432 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@6.034432
-node:1, WirelessChargingPhy::sendUp: @6.034432 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@6.034432
-node:0, MacAwsn::recvHandler: time@6.034944
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@6.034944
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@6.034944
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 6.034944
-node:1, MacAwsn::recvHandler: time@6.034944
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@6.034944
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@6.034944
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 6.034944
-node:1, WirelessChargingPhy::sendUp: @6.034944 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@6.034944
-node:0, WirelessChargingPhy::sendUp: @6.034944 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@6.034944
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@6.035456
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@6.035456
-node:1, MacAwsn::recvHandler: time@6.035456
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@6.035456
-node:0, MacAwsn::recvHandler: time@6.035456
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@6.035456
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@6.036480
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@6.036480
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@6.037504
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@6.037504
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@6.038528
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@6.038528
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@6.039552
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@6.039552
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@6.040576
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@6.040576
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@6.041600
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@6.041600
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@6.042624
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@6.042624
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@6.043648
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@6.043648
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:6.044672
-node:1, MacAwsn::SuperFrameHandler:4 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@6.044672
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:6.044672
-node:0, MacAwsn::SuperFrameHandler:3 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@6.044672
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@12.065792
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@6.057984
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:6.057984
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@6.057984
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@6.057984
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 6.057984
+node:1, WirelessChargingPhy::sendUp: @6.057984 
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@6.059008
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@6.060032
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@6.061056
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@6.062080
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@6.063104
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@6.064128
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@6.065152
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@6.066176
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@6.067200
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:6.068224
+node:0, MacAwsn::SuperFrameHandler:3 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@6.068224
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@12.071936
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@12.065792
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:12.065792
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@12.065792
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@12.065792
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.065792
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@12.065792
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:12.071936
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000016, energy_afterRadioOFF:0.000999, time:12.071952
+node:1, MacAwsn::RadioOFFHandler: time@12.071952
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000000, energy_afterRadioOFF:0.000999, time:12.071952
+node:1, MacAwsn::SuperFrameHandler:5 energy:0.000999, isNodecharged:0, chargetime:0.009200, shiftFrameSlot:0 time@12.071952
+node:1, MacAwsn::ChargeHandler: chargetime:0.009200, time@12.081152
+node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:0.009200, increaseEnergy:0.000001
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@12.081152
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:12.081152
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@12.081152
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@12.081152
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.081152
+node:0, WirelessChargingPhy::sendUp: @12.081152 
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@12.082176
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@12.083200
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@12.084224
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@12.085248
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@12.086272
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@12.087296
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@12.088320
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@12.089344
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@12.089344
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@12.065792
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:12.065792
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@12.065792
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@12.065792
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.065792
-node:0, WirelessChargingPhy::sendUp: @12.065792 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@12.065792
-node:1, WirelessChargingPhy::sendUp: @12.065792 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@12.065792
-node:0, MacAwsn::recvHandler: time@12.066304
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@12.066304
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@12.066304
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.066304
-node:1, MacAwsn::recvHandler: time@12.066304
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@12.066304
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@12.066304
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.066304
-node:1, WirelessChargingPhy::sendUp: @12.066304 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@12.066304
-node:0, WirelessChargingPhy::sendUp: @12.066304 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@12.066304
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@12.066816
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@12.066816
-node:1, MacAwsn::recvHandler: time@12.066816
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@12.066816
-node:0, MacAwsn::recvHandler: time@12.066816
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@12.066816
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@12.067840
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@12.067840
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@12.068864
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@12.068864
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@12.069888
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@12.069888
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@12.070912
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@12.070912
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@12.071936
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@12.071936
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@12.072960
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@12.072960
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@12.073984
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@12.073984
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@12.075008
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@12.075008
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:12.076032
-node:1, MacAwsn::SuperFrameHandler:5 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@12.076032
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:12.076032
-node:0, MacAwsn::SuperFrameHandler:4 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@12.076032
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@18.097152
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@12.089344
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:12.089344
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@12.089344
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@12.089344
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.089344
+node:1, WirelessChargingPhy::sendUp: @12.089344 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:9, txtime@0.000320, source_node: 0, msg received, time@12.089344
+node:1, MacAwsn::recvHandler: time@12.089856
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:9, time@12.089856
+node:1, shiftFrameSlot:-8, currentFrameSlots:10, maxSlots:10
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@12.089856
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 12.089856
+node:0, WirelessChargingPhy::sendUp: @12.089856 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@12.089856
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@12.090368
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@12.090368
+node:0, MacAwsn::recvHandler: time@12.090368
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:0, on slotNum:2, time@12.090368
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:12.091392
+node:1, MacAwsn::SuperFrameHandler:6 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:-8 time@12.091392
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@12.091392
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@12.092416
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@12.093440
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@12.094464
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@12.095488
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@12.096512
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@12.097536
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@12.098560
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:12.099584
+node:0, MacAwsn::SuperFrameHandler:4 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@12.099584
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@18.112512
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@18.097152
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:18.097152
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@18.097152
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@18.097152
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.097152
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@18.097152
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:18.112512
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000014, energy_afterRadioOFF:0.000999, time:18.112526
+node:1, MacAwsn::RadioOFFHandler: time@18.112526
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.000000, energy_afterRadioOFF:0.000999, time:18.112526
+node:1, MacAwsn::SuperFrameHandler:7 energy:0.000999, isNodecharged:0, chargetime:0.008178, shiftFrameSlot:0 time@18.112526
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@18.120704
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@18.097152
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:18.097152
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@18.097152
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@18.097152
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.097152
-node:0, WirelessChargingPhy::sendUp: @18.097152 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@18.097152
-node:1, WirelessChargingPhy::sendUp: @18.097152 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@18.097152
-node:0, MacAwsn::recvHandler: time@18.097664
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@18.097664
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@18.097664
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.097664
-node:1, MacAwsn::recvHandler: time@18.097664
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@18.097664
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@18.097664
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.097664
-node:1, WirelessChargingPhy::sendUp: @18.097664 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@18.097664
-node:0, WirelessChargingPhy::sendUp: @18.097664 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@18.097664
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@18.098176
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@18.098176
-node:1, MacAwsn::recvHandler: time@18.098176
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@18.098176
-node:0, MacAwsn::recvHandler: time@18.098176
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@18.098176
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@18.099200
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@18.099200
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@18.100224
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@18.100224
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@18.101248
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@18.101248
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@18.102272
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@18.102272
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@18.103296
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@18.103296
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@18.104320
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@18.104320
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@18.105344
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@18.105344
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@18.106368
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@18.106368
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:18.107392
-node:1, MacAwsn::SuperFrameHandler:6 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@18.107392
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:18.107392
-node:0, MacAwsn::SuperFrameHandler:5 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@18.107392
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@24.128512
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@18.120704
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:18.120704
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@18.120704
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@18.120704
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.120704
+node:1, MacAwsn::ChargeHandler: chargetime:0.008178, time@18.120704
+node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:0.008178, increaseEnergy:0.000001
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@18.120704
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:18.120704
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@18.120704
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@18.120704
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.120704
+node:1, WirelessChargingPhy::sendUp: @18.120704 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@18.120704
+node:0, WirelessChargingPhy::sendUp: @18.120704 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@18.120704
+node:1, MacAwsn::recvHandler: time@18.121216
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@18.121216
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@18.121216
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.121216
+node:0, MacAwsn::recvHandler: time@18.121216
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@18.121216
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@18.121216
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 18.121216
+node:0, WirelessChargingPhy::sendUp: @18.121216 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@18.121216
+node:1, WirelessChargingPhy::sendUp: @18.121216 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@18.121216
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@18.121728
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@18.121728
+node:0, MacAwsn::recvHandler: time@18.121728
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@18.121728
+node:1, MacAwsn::recvHandler: time@18.121728
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@18.121728
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@18.122752
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@18.122752
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@18.123776
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@18.123776
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@18.124800
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@18.124800
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@18.125824
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@18.125824
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@18.126848
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@18.126848
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@18.127872
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@18.127872
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@18.128896
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@18.128896
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@18.129920
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@18.129920
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:18.130944
+node:0, MacAwsn::SuperFrameHandler:5 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@18.130944
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:18.130944
+node:1, MacAwsn::SuperFrameHandler:8 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@18.130944
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@24.152064
+node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@24.152064
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:24.152064
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@24.152064
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@24.152064
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.152064
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@24.152064
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@24.128512
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:24.128512
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@24.128512
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@24.128512
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.128512
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@24.128512
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@24.152064
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:24.152064
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@24.152064
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@24.152064
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.152064
+node:1, WirelessChargingPhy::sendUp: @24.152064 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@24.152064
+node:0, WirelessChargingPhy::sendUp: @24.152064 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@24.152064
+node:1, MacAwsn::recvHandler: time@24.152576
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@24.152576
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@24.152576
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.152576
+node:0, MacAwsn::recvHandler: time@24.152576
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@24.152576
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@24.152576
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.152576
+node:0, WirelessChargingPhy::sendUp: @24.152576 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@24.152576
+node:1, WirelessChargingPhy::sendUp: @24.152576 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@24.152576
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@24.153088
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@24.153088
+node:0, MacAwsn::recvHandler: time@24.153088
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@24.153088
+node:1, MacAwsn::recvHandler: time@24.153088
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@24.153088
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@24.154112
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@24.154112
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@24.155136
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@24.155136
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@24.156160
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@24.156160
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@24.157184
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@24.157184
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@24.158208
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@24.158208
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@24.159232
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@24.159232
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@24.160256
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@24.160256
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@24.161280
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@24.161280
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:24.162304
+node:0, MacAwsn::SuperFrameHandler:6 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@24.162304
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:24.162304
+node:1, MacAwsn::SuperFrameHandler:9 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@24.162304
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@30.183424
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@24.128512
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:24.128512
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@24.128512
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@24.128512
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.128512
-node:0, WirelessChargingPhy::sendUp: @24.128512 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@24.128512
-node:1, WirelessChargingPhy::sendUp: @24.128512 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@24.128512
-node:0, MacAwsn::recvHandler: time@24.129024
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@24.129024
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@24.129024
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.129024
-node:1, MacAwsn::recvHandler: time@24.129024
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@24.129024
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@24.129024
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 24.129024
-node:1, WirelessChargingPhy::sendUp: @24.129024 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@24.129024
-node:0, WirelessChargingPhy::sendUp: @24.129024 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@24.129024
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@24.129536
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@24.129536
-node:1, MacAwsn::recvHandler: time@24.129536
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@24.129536
-node:0, MacAwsn::recvHandler: time@24.129536
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@24.129536
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@24.130560
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@24.130560
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@24.131584
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@24.131584
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@24.132608
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@24.132608
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@24.133632
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@24.133632
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@24.134656
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@24.134656
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@24.135680
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@24.135680
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@24.136704
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@24.136704
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@24.137728
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@24.137728
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:24.138752
-node:1, MacAwsn::SuperFrameHandler:7 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@24.138752
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:24.138752
-node:0, MacAwsn::SuperFrameHandler:6 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@24.138752
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@30.159872
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@30.183424
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:30.183424
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@30.183424
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@30.183424
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.183424
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@30.183424
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@30.159872
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:30.159872
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@30.159872
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@30.159872
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.159872
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@30.159872
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@30.183424
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:30.183424
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@30.183424
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@30.183424
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.183424
+node:1, WirelessChargingPhy::sendUp: @30.183424 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@30.183424
+node:0, WirelessChargingPhy::sendUp: @30.183424 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@30.183424
+node:1, MacAwsn::recvHandler: time@30.183936
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@30.183936
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@30.183936
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.183936
+node:0, MacAwsn::recvHandler: time@30.183936
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@30.183936
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@30.183936
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.183936
+node:0, WirelessChargingPhy::sendUp: @30.183936 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@30.183936
+node:1, WirelessChargingPhy::sendUp: @30.183936 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@30.183936
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@30.184448
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@30.184448
+node:0, MacAwsn::recvHandler: time@30.184448
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@30.184448
+node:1, MacAwsn::recvHandler: time@30.184448
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@30.184448
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@30.185472
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@30.185472
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@30.186496
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@30.186496
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@30.187520
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@30.187520
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@30.188544
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@30.188544
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@30.189568
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@30.189568
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@30.190592
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@30.190592
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@30.191616
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@30.191616
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@30.192640
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@30.192640
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:30.193664
+node:0, MacAwsn::SuperFrameHandler:7 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@30.193664
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:30.193664
+node:1, MacAwsn::SuperFrameHandler:10 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@30.193664
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@36.214784
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@30.159872
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:30.159872
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@30.159872
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@30.159872
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.159872
-node:0, WirelessChargingPhy::sendUp: @30.159872 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@30.159872
-node:1, WirelessChargingPhy::sendUp: @30.159872 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@30.159872
-node:0, MacAwsn::recvHandler: time@30.160384
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@30.160384
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@30.160384
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.160384
-node:1, MacAwsn::recvHandler: time@30.160384
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@30.160384
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@30.160384
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 30.160384
-node:1, WirelessChargingPhy::sendUp: @30.160384 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@30.160384
-node:0, WirelessChargingPhy::sendUp: @30.160384 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@30.160384
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@30.160896
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@30.160896
-node:1, MacAwsn::recvHandler: time@30.160896
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@30.160896
-node:0, MacAwsn::recvHandler: time@30.160896
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@30.160896
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@30.161920
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@30.161920
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@30.162944
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@30.162944
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@30.163968
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@30.163968
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@30.164992
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@30.164992
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@30.166016
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@30.166016
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@30.167040
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@30.167040
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@30.168064
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@30.168064
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@30.169088
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@30.169088
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:30.170112
-node:1, MacAwsn::SuperFrameHandler:8 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@30.170112
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:30.170112
-node:0, MacAwsn::SuperFrameHandler:7 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@30.170112
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@36.191232
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@36.214784
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:36.214784
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@36.214784
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@36.214784
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.214784
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@36.214784
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@36.191232
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:36.191232
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@36.191232
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@36.191232
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.191232
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@36.191232
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@36.214784
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:36.214784
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@36.214784
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@36.214784
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.214784
+node:1, WirelessChargingPhy::sendUp: @36.214784 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@36.214784
+node:0, WirelessChargingPhy::sendUp: @36.214784 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@36.214784
+node:1, MacAwsn::recvHandler: time@36.215296
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@36.215296
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@36.215296
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.215296
+node:0, MacAwsn::recvHandler: time@36.215296
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@36.215296
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@36.215296
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.215296
+node:0, WirelessChargingPhy::sendUp: @36.215296 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@36.215296
+node:1, WirelessChargingPhy::sendUp: @36.215296 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@36.215296
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@36.215808
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@36.215808
+node:0, MacAwsn::recvHandler: time@36.215808
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@36.215808
+node:1, MacAwsn::recvHandler: time@36.215808
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@36.215808
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@36.216832
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@36.216832
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@36.217856
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@36.217856
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@36.218880
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@36.218880
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@36.219904
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@36.219904
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@36.220928
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@36.220928
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@36.221952
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@36.221952
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@36.222976
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@36.222976
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@36.224000
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@36.224000
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:36.225024
+node:0, MacAwsn::SuperFrameHandler:8 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@36.225024
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:36.225024
+node:1, MacAwsn::SuperFrameHandler:11 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@36.225024
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@42.246144
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@36.191232
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:36.191232
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@36.191232
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@36.191232
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.191232
-node:0, WirelessChargingPhy::sendUp: @36.191232 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@36.191232
-node:1, WirelessChargingPhy::sendUp: @36.191232 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@36.191232
-node:0, MacAwsn::recvHandler: time@36.191744
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@36.191744
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@36.191744
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.191744
-node:1, MacAwsn::recvHandler: time@36.191744
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@36.191744
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@36.191744
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 36.191744
-node:1, WirelessChargingPhy::sendUp: @36.191744 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@36.191744
-node:0, WirelessChargingPhy::sendUp: @36.191744 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@36.191744
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@36.192256
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@36.192256
-node:1, MacAwsn::recvHandler: time@36.192256
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@36.192256
-node:0, MacAwsn::recvHandler: time@36.192256
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@36.192256
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@36.193280
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@36.193280
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@36.194304
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@36.194304
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@36.195328
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@36.195328
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@36.196352
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@36.196352
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@36.197376
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@36.197376
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@36.198400
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@36.198400
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@36.199424
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@36.199424
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@36.200448
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@36.200448
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:36.201472
-node:1, MacAwsn::SuperFrameHandler:9 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@36.201472
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:36.201472
-node:0, MacAwsn::SuperFrameHandler:8 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@36.201472
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@42.222592
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@42.246144
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:42.246144
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@42.246144
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@42.246144
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.246144
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@42.246144
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@42.222592
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:42.222592
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@42.222592
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@42.222592
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.222592
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@42.222592
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@42.246144
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:42.246144
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@42.246144
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@42.246144
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.246144
+node:1, WirelessChargingPhy::sendUp: @42.246144 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@42.246144
+node:0, WirelessChargingPhy::sendUp: @42.246144 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@42.246144
+node:1, MacAwsn::recvHandler: time@42.246656
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@42.246656
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@42.246656
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.246656
+node:0, MacAwsn::recvHandler: time@42.246656
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@42.246656
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@42.246656
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.246656
+node:0, WirelessChargingPhy::sendUp: @42.246656 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@42.246656
+node:1, WirelessChargingPhy::sendUp: @42.246656 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@42.246656
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@42.247168
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@42.247168
+node:0, MacAwsn::recvHandler: time@42.247168
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@42.247168
+node:1, MacAwsn::recvHandler: time@42.247168
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@42.247168
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@42.248192
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@42.248192
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@42.249216
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@42.249216
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@42.250240
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@42.250240
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@42.251264
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@42.251264
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@42.252288
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@42.252288
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@42.253312
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@42.253312
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@42.254336
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@42.254336
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@42.255360
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@42.255360
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:42.256384
+node:0, MacAwsn::SuperFrameHandler:9 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@42.256384
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:42.256384
+node:1, MacAwsn::SuperFrameHandler:12 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@42.256384
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@48.277504
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@42.222592
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:42.222592
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@42.222592
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@42.222592
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.222592
-node:0, WirelessChargingPhy::sendUp: @42.222592 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@42.222592
-node:1, WirelessChargingPhy::sendUp: @42.222592 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@42.222592
-node:0, MacAwsn::recvHandler: time@42.223104
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@42.223104
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@42.223104
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.223104
-node:1, MacAwsn::recvHandler: time@42.223104
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@42.223104
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@42.223104
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 42.223104
-node:1, WirelessChargingPhy::sendUp: @42.223104 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@42.223104
-node:0, WirelessChargingPhy::sendUp: @42.223104 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@42.223104
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@42.223616
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@42.223616
-node:1, MacAwsn::recvHandler: time@42.223616
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@42.223616
-node:0, MacAwsn::recvHandler: time@42.223616
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@42.223616
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@42.224640
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@42.224640
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@42.225664
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@42.225664
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@42.226688
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@42.226688
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@42.227712
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@42.227712
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@42.228736
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@42.228736
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@42.229760
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@42.229760
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@42.230784
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@42.230784
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@42.231808
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@42.231808
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:42.232832
-node:1, MacAwsn::SuperFrameHandler:10 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@42.232832
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:42.232832
-node:0, MacAwsn::SuperFrameHandler:9 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@42.232832
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@48.253952
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@48.277504
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:48.277504
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@48.277504
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@48.277504
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.277504
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@48.277504
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@48.253952
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:48.253952
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@48.253952
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@48.253952
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.253952
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@48.253952
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@48.277504
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:48.277504
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@48.277504
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@48.277504
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.277504
+node:1, WirelessChargingPhy::sendUp: @48.277504 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@48.277504
+node:0, WirelessChargingPhy::sendUp: @48.277504 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@48.277504
+node:1, MacAwsn::recvHandler: time@48.278016
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@48.278016
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@48.278016
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.278016
+node:0, MacAwsn::recvHandler: time@48.278016
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@48.278016
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@48.278016
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.278016
+node:0, WirelessChargingPhy::sendUp: @48.278016 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@48.278016
+node:1, WirelessChargingPhy::sendUp: @48.278016 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@48.278016
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@48.278528
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@48.278528
+node:0, MacAwsn::recvHandler: time@48.278528
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@48.278528
+node:1, MacAwsn::recvHandler: time@48.278528
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@48.278528
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@48.279552
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@48.279552
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@48.280576
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@48.280576
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@48.281600
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@48.281600
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@48.282624
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@48.282624
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@48.283648
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@48.283648
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@48.284672
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@48.284672
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@48.285696
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@48.285696
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@48.286720
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@48.286720
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:48.287744
+node:0, MacAwsn::SuperFrameHandler:10 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@48.287744
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:48.287744
+node:1, MacAwsn::SuperFrameHandler:13 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@48.287744
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@54.308864
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@48.253952
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:48.253952
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@48.253952
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@48.253952
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.253952
-node:0, WirelessChargingPhy::sendUp: @48.253952 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@48.253952
-node:1, WirelessChargingPhy::sendUp: @48.253952 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@48.253952
-node:0, MacAwsn::recvHandler: time@48.254464
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@48.254464
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@48.254464
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.254464
-node:1, MacAwsn::recvHandler: time@48.254464
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@48.254464
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@48.254464
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 48.254464
-node:1, WirelessChargingPhy::sendUp: @48.254464 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@48.254464
-node:0, WirelessChargingPhy::sendUp: @48.254464 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@48.254464
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@48.254976
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@48.254976
-node:1, MacAwsn::recvHandler: time@48.254976
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@48.254976
-node:0, MacAwsn::recvHandler: time@48.254976
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@48.254976
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@48.256000
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@48.256000
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@48.257024
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@48.257024
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@48.258048
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@48.258048
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@48.259072
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@48.259072
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@48.260096
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@48.260096
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@48.261120
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@48.261120
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@48.262144
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@48.262144
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@48.263168
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@48.263168
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:48.264192
-node:1, MacAwsn::SuperFrameHandler:11 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@48.264192
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:48.264192
-node:0, MacAwsn::SuperFrameHandler:10 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@48.264192
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@54.285312
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@54.308864
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:54.308864
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@54.308864
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@54.308864
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.308864
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@54.308864
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@54.285312
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:54.285312
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@54.285312
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@54.285312
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.285312
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@54.285312
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@54.308864
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:54.308864
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@54.308864
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@54.308864
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.308864
+node:1, WirelessChargingPhy::sendUp: @54.308864 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@54.308864
+node:0, WirelessChargingPhy::sendUp: @54.308864 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@54.308864
+node:1, MacAwsn::recvHandler: time@54.309376
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@54.309376
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@54.309376
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.309376
+node:0, MacAwsn::recvHandler: time@54.309376
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@54.309376
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@54.309376
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.309376
+node:0, WirelessChargingPhy::sendUp: @54.309376 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@54.309376
+node:1, WirelessChargingPhy::sendUp: @54.309376 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@54.309376
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@54.309888
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@54.309888
+node:0, MacAwsn::recvHandler: time@54.309888
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@54.309888
+node:1, MacAwsn::recvHandler: time@54.309888
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@54.309888
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@54.310912
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@54.310912
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@54.311936
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@54.311936
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@54.312960
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@54.312960
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@54.313984
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@54.313984
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@54.315008
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@54.315008
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@54.316032
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@54.316032
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@54.317056
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@54.317056
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@54.318080
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@54.318080
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:54.319104
+node:0, MacAwsn::SuperFrameHandler:11 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@54.319104
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:54.319104
+node:1, MacAwsn::SuperFrameHandler:14 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@54.319104
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@60.340224
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@54.285312
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:54.285312
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@54.285312
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@54.285312
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.285312
-node:0, WirelessChargingPhy::sendUp: @54.285312 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@54.285312
-node:1, WirelessChargingPhy::sendUp: @54.285312 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@54.285312
-node:0, MacAwsn::recvHandler: time@54.285824
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@54.285824
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@54.285824
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.285824
-node:1, MacAwsn::recvHandler: time@54.285824
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@54.285824
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@54.285824
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 54.285824
-node:1, WirelessChargingPhy::sendUp: @54.285824 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@54.285824
-node:0, WirelessChargingPhy::sendUp: @54.285824 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@54.285824
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@54.286336
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@54.286336
-node:1, MacAwsn::recvHandler: time@54.286336
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@54.286336
-node:0, MacAwsn::recvHandler: time@54.286336
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@54.286336
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@54.287360
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@54.287360
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@54.288384
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@54.288384
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@54.289408
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@54.289408
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@54.290432
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@54.290432
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@54.291456
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@54.291456
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@54.292480
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@54.292480
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@54.293504
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@54.293504
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@54.294528
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@54.294528
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:54.295552
-node:1, MacAwsn::SuperFrameHandler:12 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@54.295552
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:54.295552
-node:0, MacAwsn::SuperFrameHandler:11 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@54.295552
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@60.316672
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@60.340224
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:60.340224
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@60.340224
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@60.340224
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.340224
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@60.340224
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@60.316672
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:60.316672
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@60.316672
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@60.316672
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.316672
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@60.316672
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@60.340224
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:60.340224
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@60.340224
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@60.340224
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.340224
+node:1, WirelessChargingPhy::sendUp: @60.340224 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@60.340224
+node:0, WirelessChargingPhy::sendUp: @60.340224 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@60.340224
+node:1, MacAwsn::recvHandler: time@60.340736
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@60.340736
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@60.340736
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.340736
+node:0, MacAwsn::recvHandler: time@60.340736
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@60.340736
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@60.340736
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.340736
+node:0, WirelessChargingPhy::sendUp: @60.340736 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@60.340736
+node:1, WirelessChargingPhy::sendUp: @60.340736 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@60.340736
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@60.341248
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@60.341248
+node:0, MacAwsn::recvHandler: time@60.341248
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@60.341248
+node:1, MacAwsn::recvHandler: time@60.341248
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@60.341248
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@60.342272
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@60.342272
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@60.343296
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@60.343296
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@60.344320
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@60.344320
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@60.345344
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@60.345344
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@60.346368
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@60.346368
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@60.347392
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@60.347392
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@60.348416
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@60.348416
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@60.349440
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@60.349440
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:60.350464
+node:0, MacAwsn::SuperFrameHandler:12 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@60.350464
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:60.350464
+node:1, MacAwsn::SuperFrameHandler:15 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@60.350464
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@66.371584
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@60.316672
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:60.316672
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@60.316672
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@60.316672
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.316672
-node:0, WirelessChargingPhy::sendUp: @60.316672 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@60.316672
-node:1, WirelessChargingPhy::sendUp: @60.316672 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@60.316672
-node:0, MacAwsn::recvHandler: time@60.317184
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@60.317184
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@60.317184
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.317184
-node:1, MacAwsn::recvHandler: time@60.317184
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@60.317184
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@60.317184
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 60.317184
-node:1, WirelessChargingPhy::sendUp: @60.317184 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@60.317184
-node:0, WirelessChargingPhy::sendUp: @60.317184 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@60.317184
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@60.317696
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@60.317696
-node:1, MacAwsn::recvHandler: time@60.317696
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@60.317696
-node:0, MacAwsn::recvHandler: time@60.317696
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@60.317696
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@60.318720
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@60.318720
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@60.319744
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@60.319744
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@60.320768
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@60.320768
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@60.321792
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@60.321792
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@60.322816
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@60.322816
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@60.323840
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@60.323840
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@60.324864
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@60.324864
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@60.325888
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@60.325888
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:60.326912
-node:1, MacAwsn::SuperFrameHandler:13 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@60.326912
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:60.326912
-node:0, MacAwsn::SuperFrameHandler:12 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@60.326912
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@66.348032
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@66.371584
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:66.371584
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@66.371584
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@66.371584
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.371584
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@66.371584
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@66.348032
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:66.348032
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@66.348032
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@66.348032
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.348032
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@66.348032
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@66.371584
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:66.371584
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@66.371584
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@66.371584
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.371584
+node:1, WirelessChargingPhy::sendUp: @66.371584 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@66.371584
+node:0, WirelessChargingPhy::sendUp: @66.371584 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@66.371584
+node:1, MacAwsn::recvHandler: time@66.372096
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@66.372096
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@66.372096
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.372096
+node:0, MacAwsn::recvHandler: time@66.372096
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@66.372096
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@66.372096
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.372096
+node:0, WirelessChargingPhy::sendUp: @66.372096 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@66.372096
+node:1, WirelessChargingPhy::sendUp: @66.372096 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@66.372096
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@66.372608
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@66.372608
+node:0, MacAwsn::recvHandler: time@66.372608
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@66.372608
+node:1, MacAwsn::recvHandler: time@66.372608
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@66.372608
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@66.373632
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@66.373632
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@66.374656
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@66.374656
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@66.375680
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@66.375680
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@66.376704
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@66.376704
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@66.377728
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@66.377728
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@66.378752
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@66.378752
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@66.379776
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@66.379776
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@66.380800
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@66.380800
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:66.381824
+node:0, MacAwsn::SuperFrameHandler:13 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@66.381824
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:66.381824
+node:1, MacAwsn::SuperFrameHandler:16 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@66.381824
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@72.402944
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@66.348032
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:66.348032
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@66.348032
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@66.348032
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.348032
-node:0, WirelessChargingPhy::sendUp: @66.348032 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@66.348032
-node:1, WirelessChargingPhy::sendUp: @66.348032 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@66.348032
-node:0, MacAwsn::recvHandler: time@66.348544
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@66.348544
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@66.348544
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.348544
-node:1, MacAwsn::recvHandler: time@66.348544
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@66.348544
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@66.348544
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 66.348544
-node:1, WirelessChargingPhy::sendUp: @66.348544 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@66.348544
-node:0, WirelessChargingPhy::sendUp: @66.348544 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@66.348544
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@66.349056
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@66.349056
-node:1, MacAwsn::recvHandler: time@66.349056
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@66.349056
-node:0, MacAwsn::recvHandler: time@66.349056
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@66.349056
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@66.350080
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@66.350080
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@66.351104
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@66.351104
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@66.352128
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@66.352128
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@66.353152
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@66.353152
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@66.354176
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@66.354176
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@66.355200
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@66.355200
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@66.356224
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@66.356224
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@66.357248
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@66.357248
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:66.358272
-node:1, MacAwsn::SuperFrameHandler:14 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@66.358272
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:66.358272
-node:0, MacAwsn::SuperFrameHandler:13 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@66.358272
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@72.379392
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@72.402944
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:72.402944
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@72.402944
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@72.402944
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.402944
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@72.402944
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@72.379392
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:72.379392
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@72.379392
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@72.379392
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.379392
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@72.379392
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@72.402944
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:72.402944
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@72.402944
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@72.402944
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.402944
+node:1, WirelessChargingPhy::sendUp: @72.402944 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@72.402944
+node:0, WirelessChargingPhy::sendUp: @72.402944 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@72.402944
+node:1, MacAwsn::recvHandler: time@72.403456
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@72.403456
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@72.403456
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.403456
+node:0, MacAwsn::recvHandler: time@72.403456
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@72.403456
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@72.403456
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.403456
+node:0, WirelessChargingPhy::sendUp: @72.403456 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@72.403456
+node:1, WirelessChargingPhy::sendUp: @72.403456 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@72.403456
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@72.403968
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@72.403968
+node:0, MacAwsn::recvHandler: time@72.403968
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@72.403968
+node:1, MacAwsn::recvHandler: time@72.403968
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@72.403968
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@72.404992
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@72.404992
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@72.406016
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@72.406016
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@72.407040
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@72.407040
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@72.408064
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@72.408064
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@72.409088
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@72.409088
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@72.410112
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@72.410112
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@72.411136
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@72.411136
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@72.412160
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@72.412160
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:72.413184
+node:0, MacAwsn::SuperFrameHandler:14 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@72.413184
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:72.413184
+node:1, MacAwsn::SuperFrameHandler:17 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@72.413184
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@78.434304
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@72.379392
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:72.379392
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@72.379392
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@72.379392
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.379392
-node:0, WirelessChargingPhy::sendUp: @72.379392 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@72.379392
-node:1, WirelessChargingPhy::sendUp: @72.379392 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@72.379392
-node:0, MacAwsn::recvHandler: time@72.379904
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@72.379904
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@72.379904
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.379904
-node:1, MacAwsn::recvHandler: time@72.379904
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@72.379904
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@72.379904
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 72.379904
-node:1, WirelessChargingPhy::sendUp: @72.379904 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@72.379904
-node:0, WirelessChargingPhy::sendUp: @72.379904 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@72.379904
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@72.380416
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@72.380416
-node:1, MacAwsn::recvHandler: time@72.380416
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@72.380416
-node:0, MacAwsn::recvHandler: time@72.380416
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@72.380416
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@72.381440
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@72.381440
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@72.382464
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@72.382464
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@72.383488
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@72.383488
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@72.384512
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@72.384512
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@72.385536
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@72.385536
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@72.386560
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@72.386560
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@72.387584
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@72.387584
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@72.388608
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@72.388608
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:72.389632
-node:1, MacAwsn::SuperFrameHandler:15 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@72.389632
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:72.389632
-node:0, MacAwsn::SuperFrameHandler:14 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@72.389632
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@78.410752
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@78.434304
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:78.434304
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@78.434304
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@78.434304
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.434304
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@78.434304
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@78.410752
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:78.410752
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@78.410752
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@78.410752
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.410752
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@78.410752
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@78.434304
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:78.434304
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@78.434304
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@78.434304
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.434304
+node:1, WirelessChargingPhy::sendUp: @78.434304 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@78.434304
+node:0, WirelessChargingPhy::sendUp: @78.434304 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@78.434304
+node:1, MacAwsn::recvHandler: time@78.434816
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@78.434816
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@78.434816
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.434816
+node:0, MacAwsn::recvHandler: time@78.434816
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@78.434816
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@78.434816
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.434816
+node:0, WirelessChargingPhy::sendUp: @78.434816 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@78.434816
+node:1, WirelessChargingPhy::sendUp: @78.434816 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@78.434816
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@78.435328
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@78.435328
+node:0, MacAwsn::recvHandler: time@78.435328
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@78.435328
+node:1, MacAwsn::recvHandler: time@78.435328
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@78.435328
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@78.436352
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@78.436352
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@78.437376
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@78.437376
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@78.438400
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@78.438400
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@78.439424
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@78.439424
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@78.440448
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@78.440448
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@78.441472
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@78.441472
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@78.442496
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@78.442496
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@78.443520
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@78.443520
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:78.444544
+node:0, MacAwsn::SuperFrameHandler:15 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@78.444544
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:78.444544
+node:1, MacAwsn::SuperFrameHandler:18 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@78.444544
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@84.465664
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@78.410752
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:78.410752
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@78.410752
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@78.410752
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.410752
-node:0, WirelessChargingPhy::sendUp: @78.410752 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@78.410752
-node:1, WirelessChargingPhy::sendUp: @78.410752 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@78.410752
-node:0, MacAwsn::recvHandler: time@78.411264
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@78.411264
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@78.411264
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.411264
-node:1, MacAwsn::recvHandler: time@78.411264
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@78.411264
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@78.411264
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 78.411264
-node:1, WirelessChargingPhy::sendUp: @78.411264 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@78.411264
-node:0, WirelessChargingPhy::sendUp: @78.411264 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@78.411264
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@78.411776
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@78.411776
-node:1, MacAwsn::recvHandler: time@78.411776
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@78.411776
-node:0, MacAwsn::recvHandler: time@78.411776
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@78.411776
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@78.412800
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@78.412800
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@78.413824
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@78.413824
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@78.414848
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@78.414848
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@78.415872
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@78.415872
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@78.416896
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@78.416896
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@78.417920
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@78.417920
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@78.418944
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@78.418944
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@78.419968
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@78.419968
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:78.420992
-node:1, MacAwsn::SuperFrameHandler:16 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@78.420992
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:78.420992
-node:0, MacAwsn::SuperFrameHandler:15 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@78.420992
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@84.442112
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@84.465664
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:84.465664
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@84.465664
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@84.465664
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.465664
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@84.465664
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@84.442112
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:84.442112
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@84.442112
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@84.442112
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.442112
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@84.442112
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@84.465664
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:84.465664
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@84.465664
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@84.465664
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.465664
+node:1, WirelessChargingPhy::sendUp: @84.465664 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@84.465664
+node:0, WirelessChargingPhy::sendUp: @84.465664 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@84.465664
+node:1, MacAwsn::recvHandler: time@84.466176
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@84.466176
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@84.466176
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.466176
+node:0, MacAwsn::recvHandler: time@84.466176
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@84.466176
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@84.466176
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.466176
+node:0, WirelessChargingPhy::sendUp: @84.466176 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@84.466176
+node:1, WirelessChargingPhy::sendUp: @84.466176 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@84.466176
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@84.466688
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@84.466688
+node:0, MacAwsn::recvHandler: time@84.466688
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@84.466688
+node:1, MacAwsn::recvHandler: time@84.466688
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@84.466688
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@84.467712
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@84.467712
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@84.468736
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@84.468736
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@84.469760
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@84.469760
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@84.470784
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@84.470784
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@84.471808
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@84.471808
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@84.472832
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@84.472832
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@84.473856
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@84.473856
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@84.474880
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@84.474880
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:84.475904
+node:0, MacAwsn::SuperFrameHandler:16 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@84.475904
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:84.475904
+node:1, MacAwsn::SuperFrameHandler:19 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@84.475904
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@90.497024
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@84.442112
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:84.442112
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@84.442112
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@84.442112
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.442112
-node:0, WirelessChargingPhy::sendUp: @84.442112 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@84.442112
-node:1, WirelessChargingPhy::sendUp: @84.442112 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@84.442112
-node:0, MacAwsn::recvHandler: time@84.442624
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@84.442624
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@84.442624
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.442624
-node:1, MacAwsn::recvHandler: time@84.442624
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@84.442624
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@84.442624
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 84.442624
-node:1, WirelessChargingPhy::sendUp: @84.442624 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@84.442624
-node:0, WirelessChargingPhy::sendUp: @84.442624 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@84.442624
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@84.443136
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@84.443136
-node:1, MacAwsn::recvHandler: time@84.443136
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@84.443136
-node:0, MacAwsn::recvHandler: time@84.443136
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@84.443136
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@84.444160
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@84.444160
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@84.445184
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@84.445184
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@84.446208
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@84.446208
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@84.447232
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@84.447232
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@84.448256
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@84.448256
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@84.449280
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@84.449280
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@84.450304
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@84.450304
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@84.451328
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@84.451328
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:84.452352
-node:1, MacAwsn::SuperFrameHandler:17 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@84.452352
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:84.452352
-node:0, MacAwsn::SuperFrameHandler:16 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@84.452352
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@90.473472
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@90.497024
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:90.497024
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@90.497024
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@90.497024
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.497024
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@90.497024
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@90.473472
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:90.473472
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@90.473472
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@90.473472
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.473472
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@90.473472
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@90.497024
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:90.497024
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@90.497024
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@90.497024
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.497024
+node:1, WirelessChargingPhy::sendUp: @90.497024 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@90.497024
+node:0, WirelessChargingPhy::sendUp: @90.497024 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@90.497024
+node:1, MacAwsn::recvHandler: time@90.497536
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@90.497536
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@90.497536
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.497536
+node:0, MacAwsn::recvHandler: time@90.497536
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@90.497536
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@90.497536
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.497536
+node:0, WirelessChargingPhy::sendUp: @90.497536 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@90.497536
+node:1, WirelessChargingPhy::sendUp: @90.497536 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@90.497536
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@90.498048
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@90.498048
+node:0, MacAwsn::recvHandler: time@90.498048
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@90.498048
+node:1, MacAwsn::recvHandler: time@90.498048
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@90.498048
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@90.499072
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@90.499072
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@90.500096
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@90.500096
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@90.501120
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@90.501120
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@90.502144
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@90.502144
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@90.503168
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@90.503168
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@90.504192
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@90.504192
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@90.505216
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@90.505216
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@90.506240
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@90.506240
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:90.507264
+node:0, MacAwsn::SuperFrameHandler:17 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@90.507264
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:90.507264
+node:1, MacAwsn::SuperFrameHandler:20 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@90.507264
+node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@96.528384
 node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@90.473472
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:90.473472
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@90.473472
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@90.473472
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.473472
-node:0, WirelessChargingPhy::sendUp: @90.473472 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@90.473472
-node:1, WirelessChargingPhy::sendUp: @90.473472 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@90.473472
-node:0, MacAwsn::recvHandler: time@90.473984
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@90.473984
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@90.473984
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.473984
-node:1, MacAwsn::recvHandler: time@90.473984
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@90.473984
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@90.473984
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 90.473984
-node:1, WirelessChargingPhy::sendUp: @90.473984 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@90.473984
-node:0, WirelessChargingPhy::sendUp: @90.473984 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@90.473984
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@90.474496
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@90.474496
-node:1, MacAwsn::recvHandler: time@90.474496
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@90.474496
-node:0, MacAwsn::recvHandler: time@90.474496
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@90.474496
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@90.475520
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@90.475520
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@90.476544
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@90.476544
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@90.477568
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@90.477568
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@90.478592
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@90.478592
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@90.479616
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@90.479616
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@90.480640
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@90.480640
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@90.481664
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@90.481664
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@90.482688
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@90.482688
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:90.483712
-node:1, MacAwsn::SuperFrameHandler:18 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@90.483712
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:90.483712
-node:0, MacAwsn::SuperFrameHandler:17 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@90.483712
-node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@96.504832
+node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@96.528384
+node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:96.528384
+node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@96.528384
+node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@96.528384
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.528384
+node:1, MacAwsn::ChargeHandler: chargetime:6.021120, time@96.528384
 node:1 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@96.504832
-node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:96.504832
-node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@96.504832
-node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@96.504832
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.504832
-node:0, MacAwsn::ChargeHandler: chargetime:6.021120, time@96.504832
-node:0 EnergyModel::IncrChargeEnergy: energy:0.001000, chargetime:6.021120, increaseEnergy:0.000602
-node:0, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@96.504832
-node:0, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:96.504832
-node:0, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@96.504832
-node:0, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@96.504832
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.504832
-node:0, WirelessChargingPhy::sendUp: @96.504832 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@96.504832
-node:1, WirelessChargingPhy::sendUp: @96.504832 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@96.504832
-node:0, MacAwsn::recvHandler: time@96.505344
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@96.505344
-node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@96.505344
-node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.505344
-node:1, MacAwsn::recvHandler: time@96.505344
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@96.505344
-node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@96.505344
-node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.505344
-node:1, WirelessChargingPhy::sendUp: @96.505344 
-node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@96.505344
-node:0, WirelessChargingPhy::sendUp: @96.505344 
-node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@96.505344
-node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@96.505856
-node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@96.505856
-node:1, MacAwsn::recvHandler: time@96.505856
-node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@96.505856
-node:0, MacAwsn::recvHandler: time@96.505856
-node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@96.505856
-node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@96.506880
-node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@96.506880
-node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@96.507904
-node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@96.507904
-node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@96.508928
-node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@96.508928
-node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@96.509952
-node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@96.509952
-node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@96.510976
-node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@96.510976
-node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@96.512000
-node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@96.512000
-node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, timecalling stop function
+node:1, MacAwsn::FrameHandler: nodeEnergy:0.001000, time@96.528384
+node:1, WirelessChargingPhy::turnOnRadio: RadioStatus:0, current_energy:0.001000, time:96.528384
+node:1, MacAwsn::SlotHandler: slotNum:0, slotType:0, currentFrameSlots:10, time@96.528384
+node:1, MacAwsn::sendBeacon: ch->txtime@0.000512,  time@96.528384
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.528384
+node:1, WirelessChargingPhy::sendUp: @96.528384 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@96.528384
+node:0, WirelessChargingPhy::sendUp: @96.528384 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@96.528384
+node:1, MacAwsn::recvHandler: time@96.528896
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:1, on slotNum:1, time@96.528896
+node:1, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@96.528896
+node:1, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.528896
+node:0, MacAwsn::recvHandler: time@96.528896
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:1, on slotNum:1, time@96.528896
+node:0, MacAwsn::sendBeaconAck: ch->txtime@0.000512,  time@96.528896
+node:0, WirelessChargingPhy::sendDown: txtime 0.000512	actual_txtime 0.000512 @ 96.528896
+node:0, WirelessChargingPhy::sendUp: @96.528896 
+node:0, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 1, msg received, time@96.528896
+node:1, WirelessChargingPhy::sendUp: @96.528896 
+node:1, MacAwsn::recv: Msg in direction 1, alloc_slot:2, slotNum:1, txtime@0.000320, source_node: 0, msg received, time@96.528896
+node:0, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@96.529408
+node:1, MacAwsn::SlotHandler: slotNum:1, slotType:2, currentFrameSlots:10, time@96.529408
+node:0, MacAwsn::recvHandler: time@96.529408
+node:0, MacAwsn::recvBeacon: src:1, src_slotNum:2, on slotNum:2, time@96.529408
+node:1, MacAwsn::recvHandler: time@96.529408
+node:1, MacAwsn::recvBeacon: src:0, src_slotNum:2, on slotNum:2, time@96.529408
+node:0, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@96.530432
+node:1, MacAwsn::SlotHandler: slotNum:2, slotType:2, currentFrameSlots:10, time@96.530432
+node:0, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@96.531456
+node:1, MacAwsn::SlotHandler: slotNum:3, slotType:2, currentFrameSlots:10, time@96.531456
+node:0, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@96.532480
+node:1, MacAwsn::SlotHandler: slotNum:4, slotType:2, currentFrameSlots:10, time@96.532480
+node:0, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@96.533504
+node:1, MacAwsn::SlotHandler: slotNum:5, slotType:2, currentFrameSlots:10, time@96.533504
+node:0, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@96.534528
+node:1, MacAwsn::SlotHandler: slotNum:6, slotType:2, currentFrameSlots:10, time@96.534528
+node:0, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@96.535552
+node:1, MacAwsn::SlotHandler: slotNum:7, slotType:2, currentFrameSlots:10, time@96.535552
+node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@96.536576
+node:1, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@96.536576
+node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@96.537600
+node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, tcalling stop function
 NS EXITING...
-@96.513024
-node:0, MacAwsn::SlotHandler: slotNum:8, slotType:2, currentFrameSlots:10, time@96.513024
-node:1, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@96.514048
-node:0, MacAwsn::SlotHandler: slotNum:9, slotType:2, currentFrameSlots:10, time@96.514048
-node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:96.515072
-node:1, MacAwsn::SuperFrameHandler:19 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@96.515072
-node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:96.515072
-node:0, MacAwsn::SuperFrameHandler:18 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@96.515072
+ime@96.537600
+node:0, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:96.538624
+node:0, MacAwsn::SuperFrameHandler:18 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@96.538624
+node:1, WirelessChargingPhy::turnOffRadio: RadioStatus:1, radioOnTime:0.010240, energy_afterRadioOFF:0.000398, time:96.538624
+node:1, MacAwsn::SuperFrameHandler:21 energy:0.000398, isNodecharged:0, chargetime:6.021120, shiftFrameSlot:0 time@96.538624
