@@ -236,6 +236,7 @@ WirelessChargingPhy::sendUp(Packet *p)
 	int pkt_recvd = 0;
 
 	Pr = p->txinfo_.getTxPr();
+	//printf("node:%d, Pr:%f, RXThresh_:%f, propagation_:%d\n",node()->address(),Pr,RXThresh_,propagation_);
 	
 	// if the node is in sleeping mode, drop the packet simply
 	if (em()) {
@@ -260,13 +261,14 @@ WirelessChargingPhy::sendUp(Packet *p)
 			pkt_recvd = 0;
 			goto DONE;
 		}
+		//printf("node:%d, Propagation Pr:%f, RXThresh_:%f\n",node()->address(),Pr,RXThresh_);
 		if (Pr < RXThresh_) {
 			/*
 			 * We can detect, but not successfully receive
 			 * this packet.
 			 */
 			hdr_cmn *hdr = HDR_CMN(p);
-			hdr->error() = 1;
+			hdr->error() = 1; // Naval Need to enable it again
 #if DEBUG > 3
 			printf("SM %f.9 _%d_ drop pkt from %d low POWER %e/%e\n",
 			       Scheduler::instance().clock(), node()->index(),

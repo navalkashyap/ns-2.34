@@ -324,8 +324,9 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
 	if (rt) {
         int sinkid = God::instance()->sink_num();
 		int nexthop = getNextHop(ih->daddr(), &sinkid, p);
+		if (nexthop < 0) nexthop = 0;
 		if (nexthop < 0) {
-            printf("ChargingRT::forward: no route from node:%d to node:%d\n", ih->saddr(), ih->daddr());
+            printf("node:%d, ChargingRT::forward: no route to node:%d\n", ih->saddr(), ih->daddr());
 			Packet::free(p);
 			return;
 		}
@@ -349,8 +350,8 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
 	ch->xmit_failure_data_ = 0;
     ch->prev_hop_ = ra_addr_;
     packetSent_++;
-//    printf("ChargingRT::forward: route from node:%d to node:%d, prev_hop_: %d\n", ih->saddr(), ih->daddr(),ch->prev_hop_);
-    Scheduler::instance().schedule(target_, p, 0.001 * Random::uniform());
+    printf("node:%d, ChargingRT::forward: route to node:%d, prev_hop_: %d\n", ih->saddr(), ih->daddr(),ch->prev_hop_);
+    Scheduler::instance().schedule(target_, p, 0.0001 * Random::uniform());
 }
 
 void ChargingRT::recv_chargingrt_pkt(Packet* p) {

@@ -69,6 +69,8 @@ public:
 	bool 	isNodeCharged() { return em()->energy() >= em()->maxenergy();}
 	double	getNodeEnergy() { return em()->energy();}
 	double 	getResidualEnergy()	{ return em()->maxenergy() - em()->energy(); }
+	double 	getmaxRadioOnTime() {return em()->maxenergy() / Pt_consume_;}
+	double	getSuperFrameTime(double frameTime) {return frameTime * (1 + Pt_consume_/P_charge);}
 	EnergyModel* em() { return node()->energy_model(); }
 protected:
 	enum 	RadioStatus { RADIOON, RADIOOFF };	

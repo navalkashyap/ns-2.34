@@ -90,7 +90,7 @@ class EnergyModel : public TclObject {
 public:
 	EnergyModel(MobileNode* n, double energy, double l1, double l2) :
 		energy_(energy), er_(0), et_(0),ei_(0), es_(0), 
-		initialenergy_(energy), maxenergy_(energy),
+		initialenergy_(energy), maxenergy_(0.001),
 		level1_(l1), level2_(l2), node_(n), 
 		sleep_mode_(0), total_sleeptime_(0), total_rcvtime_(0), 
 		total_sndtime_(0), powersavingflag_(0), 

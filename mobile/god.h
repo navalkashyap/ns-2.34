@@ -57,6 +57,9 @@
 #include "time.h"
 //#include "charger.h"
 #include "charging-energy-model.h"
+#include <vector>
+#include <queue>
+#include <string>
 // Added by Chalermek  12/1/99
 
 #define MIN_HOPS(i,j)    min_hops[i*num_nodes+j]
@@ -217,12 +220,25 @@ public:
 	double moveEng;
 	double* lastWorkload;
         // -Yang
-	// Naval - 1/27/2017
+	// Naval
 	inline void setMyParent(int nodeId, int parentId) { myParent[nodeId] = parentId;}
 	inline int getMyParent(int nodeId) {return myParent[nodeId]; }
-	inline bool getMyRole(int nodeId) {return myRole[nodeId]; }
+	inline void setRole(int nodeId, int role) {Role[nodeId] = role; }
+	inline bool getRole(int nodeId) {return Role[nodeId]; }
 	inline void setMySlot(int slotNum,int nodeID) {mySlot[nodeID] = slotNum;}
 	inline int getNodeSlot(int nodeID) {return mySlot[nodeID]; }
+	inline void setSchedule(int nodeID, vector<int> myschedule) {
+		Pschedule[nodeID] = myschedule;
+	}
+	inline vector<int> getSchedule(int nodeID) { return Pschedule[nodeID]; }
+	inline void pushMacQueueDummy(int nodeID, string data) {
+		macqueueDummy[nodeID].push(data);
+	}
+	inline string pullMacQueueDummy(int nodeID) {
+		string data = macqueueDummy[nodeID].front();
+		macqueueDummy[nodeID].pop();
+		return data;
+	}
 //-Naval
 private:
         int num_nodes;
@@ -250,8 +266,12 @@ private:
         int gridY;
         //Naval
         int* myParent;
-        bool* myRole;
+        bool* Role;			// Parent :0, Child: 1
         int* mySlot;
+        vector<int> sche;
+        vector<vector<int> > Pschedule;
+        queue<string> nodequeue;
+        vector<queue<string> > macqueueDummy;
         //~Naval
         // added by Yang 04/25/2010
         CTRACE* ctrace_;

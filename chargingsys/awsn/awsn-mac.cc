@@ -27,16 +27,184 @@ MacAwsn::MacAwsn():Mac(),startTimer(this),SFAwsnTimer(this), chargeAwsnTimer(thi
 	tx_active_ = 0;
 	sender_cw_ = cw_ = config_.cw_min;
 	shiftFrameSlot = 0;
+	totalSlotsShift = 0;
 	dischargetime = config_.slotTime * frameLen;
 	chargetime = 0;
 	alloc_slot[0] = slot_Beacon;
 	currentFrameSlots = maxSlots = frameLen;
 	slotNum = 0;
+	parentID = -2;
 	startTimer.start(0);
 }
 
 MacAwsn::~MacAwsn() {
 	// TODO Auto-generated destructor stub
+}
+
+
+void MacAwsn::runAtstartUp() {
+	int ranNum = Random::random();
+	randomTime = fmod(double(ranNum)/1000000, dischargetime);
+	randomTime = 0;
+	maxSlotShift = newnetif()->getSuperFrameTime(maxSlots);
+	if(God::instance()->isSink(index_)) {
+		myRole = PARENT;											// Parent node
+		randomTime = dischargetime * 10;
+		God::instance()->setMyParent(index_,index_); 		// Sink node to consider parent of itself
+	} else {
+		myRole = PARENT;
+		randomTime = dischargetime * 1 * index_;
+		God::instance()->setMyParent(index_,-2);
+	}
+	God::instance()->setRole(index_,0);						// Every node starts with empty MacBuffer and act as PARENT
+	printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomtime@%f, dischargetime:%f,chargetime:%f, myParent:%d, maxSlotShift:%d\n",
+			index_,ranNum,randomTime, dischargetime,chargetime,God::instance()->getMyParent(index_),maxSlotShift);
+	SFAwsnTimer.start(randomTime);
+
+}
+
+// Decide next SuperFrame here
+void MacAwsn::SuperFrameHandler() {
+	newnetif()->turnOffRadio();
+	superFrameNum++;
+	parentID = God::instance()->getMyParent(index_);
+	setAllSlotsRx();		// Same slots in case of receiving
+	if(myRole == PARENT) {
+		scheduleChildren();
+		alloc_slot[0] = slot_Beacon;
+	} else if( parentID == -2) {
+		alloc_slot[0] = slot_Beacon;
+	}					// else listen to Parent in first slot
+	chargetime = newnetif()->timeToFullCharge();
+	chargeAwsnTimer.restart(chargetime);
+	printf("node:%d, MacAwsn::SuperFrameHandler:%d, myRole:%d, energy:%f, isNodecharged:%d, chargetime:%f, parentID:%d, shiftFrameSlot:%d, totalSlotsShift:%d time@%f\n",
+			index_,superFrameNum,myRole,newnetif()->getNodeEnergy(),newnetif()->isNodeCharged(),chargetime,parentID,shiftFrameSlot,totalSlotsShift,NOW);
+}
+
+void MacAwsn::scheduleChildren() {
+	vector<int> newSchedule;
+	int slot_per_child = 0;
+	newSchedule.resize(maxSlots,-2);
+	if(ChildTable.size() != 0) {
+		vector<neighborNode>::iterator it = ChildTable.begin();
+		slot_per_child = (maxSlots - 1)/ChildTable.size();
+		int child_num = -1;
+		for (int i = 1; i< maxSlots;) {
+			if(child_num<ChildTable.size()-1) {
+				child_num++;
+			} else {
+				child_num = 0;
+			}
+			for (int j = 0; (j< slot_per_child) & (i < maxSlots);j++,i++) {
+				newSchedule[i] = ChildTable[child_num].id;
+			}
+		}
+	}
+	printf("node:%d, slot_per_child:%d, ChildTableSize:%d, My schedule as PARENT:- ",index_,slot_per_child,ChildTable.size());
+	for (int i =0;i<newSchedule.size();i++)
+		printf("%d:%d, ",i,newSchedule[i]);
+	printf("\n");
+	God::instance()->setSchedule(index_,newSchedule);
+	return;
+}
+
+void MacAwsn::setAllSlotsRx() {
+	for (int i = 1; i < currentFrameSlots; i++)
+		alloc_slot[i] = slot_Rx;
+	return;
+}
+
+void MacAwsn::ChargeHandler() {
+	printf("node:%d, MacAwsn::ChargeHandler: chargetime:%f, time@%f\n",index_,chargetime,NOW);
+	newnetif()->chargeNode(chargetime);
+	if(myRole == CHILD)
+		totalSlotsShift = totalSlotsShift + shiftFrameSlot;
+	if(shiftFrameSlot > 0) {
+		dischargetime = newnetif()->timeToCauseLead(shiftFrameSlot * config_.slotTime);
+		shiftFrameSlot = 0;
+		newnetif()->turnOnRadio();
+		tx_active_ = 1;
+		RadioOFFTimer.start(dischargetime);
+	} else if(shiftFrameSlot < 0) {
+		dischargetime = newnetif()->timeToCauseLag(-shiftFrameSlot * config_.slotTime);
+		shiftFrameSlot = 0;
+		newnetif()->turnOnRadio();
+		tx_active_ = 1;
+		RadioOFFTimer.start(dischargetime);
+	} else {					// shiftFrameSlot == 0
+		FAwsnTimer.start(0);
+	}
+}
+
+void MacAwsn::RadioOFFHandler() {
+	newnetif()->turnOffRadio();
+	printf("node:%d, MacAwsn::RadioOFFHandler: dischargetime:%f, time@%f\n",index_,dischargetime,NOW);
+	shiftFrameSlot = 0;
+	tx_active_ = 0;
+	SFAwsnTimer.start(0);
+	return;
+}
+
+void MacAwsn::FrameHandler() {
+	printf("node:%d, MacAwsn::FrameHandler: nodeEnergy:%f, time@%f\n",index_,newnetif()->getNodeEnergy(),NOW);
+	currentFrameSlots = maxSlots;
+	newnetif()->turnOnRadio();
+	slotAwsnTimer.start(0);
+}
+
+void MacAwsn::SlotHandler() {
+	printf("node:%d, MacAwsn::SlotHandler: slotNum:%d, slotType:%d, time@%f\n",
+			index_,slotNum,alloc_slot[slotNum],NOW);
+	switch(alloc_slot[slotNum]) {
+	case slot_Beacon:
+		sendBeacon(MAC_BROADCAST);
+		break;
+	case slot_Tx:
+		sendData();
+		break;
+	case slot_Rx:
+		break;
+	}
+
+	slotNum++;
+	slotNum = slotNum%currentFrameSlots;
+	God::instance()->setMySlot(slotNum,index_);
+	if(slotNum != 0)
+		slotAwsnTimer.restart(config_.slotTime);
+	else { // After all slots over
+		postFrameHandler();
+	}
+	return;
+}
+
+void MacAwsn::postFrameHandler() {
+	SFAwsnTimer.start(config_.slotTime);
+	if(God::instance()->isSink(index_))
+		return;
+	if(myRole == PARENT && macQueue.size() > MAC_BufferSize * 0.8) {
+		printf("node:%d, MacAwsn::postFrameHandler new Role as CHILD, macQueue.size:%d @time:%f\n",index_,macQueue.size(),NOW);
+		myRole = CHILD;
+		if(ParentTable.size()>0) {
+			neighborNode myParentNode = getParentInfo();
+			shiftFrameSlot = myParentNode.distSlots;
+			totalSlotsShift = 0;
+			God::instance()->setMyParent(index_,myParentNode.id);;
+		}
+	} else if(myRole == CHILD ) {
+		if(macQueue.size() < MAC_BufferSize * 0.3) {
+			printf("node:%d, MacAwsn::postFrameHandler new Role as Parent, macQueue.size:%d @time:%f\n",index_,macQueue.size(),NOW);
+			myRole = PARENT;
+			shiftFrameSlot = -(maxSlotShift + totalSlotsShift);
+			totalSlotsShift = 0;
+			God::instance()->setMyParent(index_,-2);;
+		}
+	}
+	if(God::instance()->getMyParent(index_) == -2 && myRole == CHILD) {
+		shiftFrameSlot = - maxSlots + 1;		// Linear search with minimum overlap slots
+		printf("node:%d, MacAwsn:: No parent found after super frame, shifting SuperFrame by %d slots @time:%f\n",
+				index_,shiftFrameSlot,NOW);
+	}
+	God::instance()->setRole(index_,myRole);
 }
 
 // set or get mac type, used for all messages
@@ -75,7 +243,6 @@ void MacAwsn::sendBeacon(int dst) {
 	ch->error() = 0;
 	ch->txtime() = (8.0 * ch->size()) / config_.data_rate;
 
-
 	char *mh = (char*)HDR_MAC(p);
 	hdr_mac::access(p)->sstime() = 0;
 	hdr_mactype(mh, MF_CONTROL);
@@ -88,63 +255,94 @@ void MacAwsn::sendBeacon(int dst) {
 	if (tx_state_ == MAC_IDLE && rx_state_ == MAC_IDLE && tx_active_ == 0) {
 	//tx_state_ = MAC_RIMACBEACON;
 	//tx_active_ = 1;
-		printf("node:%d, MacAwsn::sendBeacon: ch->txtime@%f,  time@%f\n",index_, ch->txtime(), NOW);
+		printf("node:%d, MacAwsn::sendBeacon: ch->txtime@%f, time@%f\n",index_, ch->txtime(), NOW);
 		downtarget_->recv(pktRRTS_->copy(), this);
 	} else {
-		printf("node:%d, MacAwsn::sendBeacon: Radio Busy:tx_state_:%d,rx_state_:%d,  time@%f\n",index_,tx_state_, rx_state_, NOW);
+		printf("node:%d, MacAwsn::sendBeacon: Radio Busy:tx_state_:%d,rx_state_:%d, tx_active_:%d, time@%f\n",
+				index_,tx_state_, rx_state_,tx_active_, NOW);
+	}
 }
 
-}
+void MacAwsn::sendData() {
+	if (macQueue.empty()) {
+		printf("node:%d, MacAwsn::sendData: no data to send when tempto send\n",index_);
+		return;
+	}
+	else {
+	  pktTx_ = macQueue.front();
+	  macQueue.pop_front();
+	}
 
-// get data tx time
-double MacAwsn::Txtime(Packet *p) {
-  struct hdr_cmn *ch = HDR_CMN(p);
-  double t = ch->txtime();
-  if (t < 0.0)
-  t = 0.0;
-  return t;
+	hdr_cmn* ch = HDR_CMN(pktTx_);
+	ch->txtime() = (8.0 * (ch->size() + config_.header_len)) / config_.data_rate;
+
+	char* mh = (char*)HDR_MAC(pktTx_);
+	hdr_mactype(mh, MF_DATA);
+	hdr_submactype(mh, MAC_RIL_DATA);
+	printf("node:%d, MacAwsn::sendData: ch->txtime@%f,  time@%f\n",index_, ch->txtime(), NOW);
+	downtarget_->recv(pktTx_->copy(), this);
 }
 
 void MacAwsn::recv(Packet *p, Handler *h) {
 	struct hdr_cmn *hdr = HDR_CMN(p);
 	char* mh = (char*)HDR_MAC(p);
 	int src = hdr_src(mh);
+	int dst = hdr_dst(mh);
 	// If we are transmitting, then set the error bit in the packet
 	if(tx_active_ && hdr->error() == 0) {
 	hdr->error() = 1;
 	}
 	//printf("MacAwsn::recv: node:%d\n",index_);
-	if(alloc_slot[slotNum] != slot_Tx && !newnetif()->getRadioStatus()) {
-		printf("node:%d, MacAwsn::recv: Msg in direction %d, alloc_slot:%d, slotNum:%d, txtime@%f, source_node: %d, msg received, time@%f\n",
-				index_,hdr->direction(),alloc_slot[slotNum],slotNum,txtime(p),src,NOW);
-	} else {
-		printf("node:%d, MacAwsn::recv: Msg in direction %d, alloc_slot:%d, slotNum:%d, source_node: %d, msg Dropped, time@%f\n",
-				index_,hdr->direction(),alloc_slot[slotNum],slotNum,src,NOW);
-		return;
-	}
-	if (rx_state_ == MAC_IDLE) {
-	    rx_state_ = MAC_RECV;
-	    pktRx_ = p;
-		recvTimer.start(config_.slotTime/2);
-	} else {
-		// decide whether this packet's power is high enough to cause collision
-	    if (pktRx_->txinfo_.RxPr / p->txinfo_.RxPr >= p->txinfo_.CPThresh) {
-	    	// power too low, ignore the incoming packet
-	    	Packet::free(p);
-	    } else {
-			// power is high enough to cause collision
-			rx_state_ = MAC_COLL;
-			// decide which packets to be left
-			if (txtime(p) > recvTimer.expire()) {
-				recvTimer.stop();
-				Packet::free(pktRx_);
-				pktRx_ = p;
-				recvTimer.start(txtime(pktRx_)); // start recv timer to process
+	if(hdr->direction() == hdr->UP) {
+		if(alloc_slot[slotNum] != slot_Tx && !newnetif()->getRadioStatus()) {
+			printf("node:%d, MacAwsn::recv: Msg in direction %d, alloc_slot:%d, slotNum:%d, txtime@%f, source_node: %d, msg received, time@%f\n",
+					index_,hdr->direction(),alloc_slot[slotNum],slotNum,txtime(p),src,NOW);
+		} else {
+			printf("node:%d, MacAwsn::recv: Msg in direction %d, alloc_slot:%d, slotNum:%d, source_node: %d, msg Dropped, time@%f\n",
+					index_,hdr->direction(),alloc_slot[slotNum],slotNum,src,NOW);
+			return;
+		}
+		if (rx_state_ == MAC_IDLE) {
+			    rx_state_ = MAC_RECV;
+			    pktRx_ = p;
+				recvTimer.start(config_.slotTime/2);
+		    	printf("node:%d, MacAwsn::recv: Successful, call handler in %f\n",index_,config_.slotTime/2);
 			} else {
-				Packet::free(p);
+				// decide whether this packet's power is high enough to cause collision
+			    if (pktRx_->txinfo_.RxPr / p->txinfo_.RxPr >= p->txinfo_.CPThresh) {
+			    	// power too low, ignore the incoming packet
+			    	printf("node:%d, MacAwsn::recv: power too low, ignore the incoming packet\n",index_);
+			    	Packet::free(p);
+			    } else {
+					// power is high enough to cause collision
+					rx_state_ = MAC_COLL;
+			    	printf("node:%d, MacAwsn::recv: power is high enough to cause collision\n",index_);
+					// decide which packets to be left
+					if (txtime(p) > recvTimer.expire()) {
+						recvTimer.stop();
+						Packet::free(pktRx_);
+						pktRx_ = p;
+						recvTimer.start(txtime(pktRx_)); // start recv timer to process
+					} else {
+						Packet::free(p);
+					}
+			    }
 			}
+	} else {    // hdr->DOWN
+	    if (macQueue.size() < MAC_BufferSize) {
+	    	macQueue.push_back(p);
+	    	printf("node:%d, MacAwsn::recv: Msg in direction %d, dst node: %d, source_node: %d, adding to macBuffer:%d, time@%f\n",
+	    							index_,hdr->direction(),dst,src,macQueue.size(),NOW);
+
+	    } else {
+	    	printf("node:%d, MacAwsn::recv: Msg in direction %d, dst node: %d, source_node: %d, Overflow as macBuffer:%d is full, time@%f\n",
+	    		    							index_,hdr->direction(),dst,src,macQueue.size(),NOW);
+	    	Packet::free(p);
 	    }
+	    h->handle((Event*) 0);
+		rx_state_ = MAC_IDLE;
 	}
+
 }
 
 // This method handles the packet received and change the state
@@ -153,13 +351,14 @@ void MacAwsn::recvHandler() {
 		printf("error_y!!! node %d wrong state in recvHandle\n",index_);
 		exit(-1);
 	}
-	printf("node:%d, MacAwsn::recvHandler: time@%f\n",index_,NOW);
 	Packet* p = pktRx_;
 	hdr_cmn *ch = HDR_CMN(p);
 	char* mh = (char*)HDR_MAC(p);
 	int dst = hdr_dst(mh);
+	int src = hdr_src((char*)HDR_MAC(p));
 	u_int16_t  type = hdr_mactype(mh,0);
 	u_int16_t  subtype = hdr_submactype(mh,0);
+	printf("node:%d, MacAwsn::recvHandler: src:%d, role:%d, tx_active_:%d, time@%f\n",index_,src,God::instance()->getRole(src),tx_active_,NOW);
 	if (tx_active_) {
 	    Packet::free(p);
 	    pktRx_ = 0;
@@ -170,19 +369,13 @@ void MacAwsn::recvHandler() {
 		Packet::free(p);
 		pktRx_ = 0;
 		rx_state_ = MAC_IDLE;
-		// two successive receiption cause collision
-//		double boundtime = collisionDetection(true);
-		//checktoSendBeacon(boundtime);
 		return;
 	}
 	if (ch->error()) {
 		Packet::free(p);
 		pktRx_ = 0;
 		rx_state_ = MAC_IDLE;
-		// error is caused by pre collision with tx or passed csthreshold
-		// it should not affect tx or rx
-//		double boundtime = collisionDetection(false);
-		//checktoSendBeacon(boundtime);
+	    printf("node:%d, MacAwsn::recvHandler--------: src:%d, time@%f\n",index_,src,NOW);
 		return;
 	}
 
@@ -196,8 +389,6 @@ void MacAwsn::recvHandler() {
 		Packet::free(p);
 		pktRx_ = 0;
 		rx_state_ = MAC_IDLE;
-//		double boundtime = collisionDetection(true);
-		// checktoSendBeacon(boundtime);
 		return;
 	}
 
@@ -208,23 +399,26 @@ void MacAwsn::recvHandler() {
 				//	recvACK(pktRx_);
 				break;
 				case MAC_RIL_RRTS:
+					if(God::instance()->getRole(index_))
+						if(God::instance()->getRole(src))
+							break;		// neighbor node is acting as child so Beacon from other children will be dropped
 					recvBeacon(pktRx_);
 				break;
 				case MAC_RIL_ONDEMAND:
 				//	recvOndemand(pktRx_);
 				break;
 				default:
-					fprintf(stderr,"Invalid MAC Control Subtype %x\n", subtype);
+					fprintf(stderr,"Invalid MAC Control SubType %x\n", subtype);
 					exit(1);
 			}
 		break;
 		case MF_DATA:
 			switch(subtype) {
 				case MAC_RIL_DATA:
-					//recvDATA(pktRx_);
+					recvData(pktRx_);
 					break;
 				default:
-					fprintf(stderr, "Invalid MAC Data Subtype %x\n", subtype);
+					fprintf(stderr, "Invalid MAC Data SubType %x\n", subtype);
 					exit(1);
 			}
 			break;
@@ -236,37 +430,84 @@ void MacAwsn::recvHandler() {
 
 }
 
+void MacAwsn::recvData(Packet *p) {
+	char* mh = (char*)HDR_MAC(p);
+	int dst = hdr_dst(mh);
+	int src = hdr_src(mh);
+	last_alive_ = NOW;
+	if (tx_state_ != MAC_IDLE || rx_state_ != MAC_RECV){
+		printf("error_z!!! node %d wrong state in recvDATA \n", index_);
+		exit(-1);
+	}
+	if (God::instance()->isSink(index_))
+		macQueue.push_back(p);
+	else if(macQueue.size() < MAC_BufferSize)
+		macQueue.push_back(p);
+
+	rx_state_ = MAC_IDLE;
+	printf("node:%d, MacAwsn::recvData src:%d, dst:%d, macQueue_size:%d\n",index_,src,dst,macQueue.size());
+}
+
 // receive a receivers beacon (an ack to other nodes or a bcast rrts)
 void MacAwsn::recvBeacon(Packet *p) {
 	int src = hdr_src((char*)HDR_MAC(p));
-	int dst = hdr_dst((char*)HDR_MAC(p));
-	unsigned int sendercw = hdr_backoff((char*)HDR_MAC(p),-1)/2;
-//	double backofftime = (Random::random()%sendercw+1)*config_.backoff_slot;
+	unsigned int dst = hdr_dst((char*)HDR_MAC(p));
+//	unsigned int sendercw = hdr_backoff((char*)HDR_MAC(p),-1)/2;
 	Packet::free(p); pktRx_ = 0; rx_state_ = MAC_IDLE;
 
 #ifdef log_normal
 	printf("node:%d, MacAwsn::recvBeacon: src:%d, src_slotNum:%d, on slotNum:%d, time@%f\n",
 			index_,src,God::instance()->getNodeSlot(src),slotNum, NOW);
 #endif
-	updateNeighborInfo(src);
-	if(God::instance()->getMyParent(index_) == -2) {
-		God::instance()->setMyParent(index_,src);
-		int src_slot = God::instance()->getNodeSlot(src) - 1;
-		if(src_slot>slotNum) {
-			shiftFrameSlot = src_slot - 1;
-			currentFrameSlots = maxSlots - shiftFrameSlot;
-			printf("node:%d, shiftFrameSlot:%d, currentFrameSlots:%d, maxSlots:%d\n",index_,shiftFrameSlot,currentFrameSlots,maxSlots);
-		} else if(src_slot < slotNum) {
-			shiftFrameSlot = -slotNum + 1;
-			printf("node:%d, shiftFrameSlot:%d, currentFrameSlots:%d, maxSlots:%d\n",index_,shiftFrameSlot,currentFrameSlots,maxSlots);
-		} else {
-			//start sending data Frames are aligned
 
+	updateNeighborInfo(src);
+	if(God::instance()->getRole(src) == 0) {
+		updateParentInfo(src);
+	} else {
+		updateChildInfo(src);
+	}
+	if(myRole == PARENT) {
+		if(dst == MAC_BROADCAST)
+			sendBeaconAck(src);
+	} else {   // myRole == CHILD
+		if(src == parentID) {  // Get the scheduling info
+			vector<int> schedule = God::instance()->getSchedule(src);
+			int myTxSlotsNum = 0;
+			printf("node:%d, My schedule as CHILD:: ",index_);
+			for (unsigned int i = 1; i < schedule.size(); i++) {
+				if(index_ == schedule[i]) {
+					alloc_slot[i] = slot_Tx;
+					myTxSlotsNum++;
+				} else {
+					alloc_slot[i] = slot_Rx;
+				}
+				printf("Slot:%d:%d, ",i,alloc_slot[i]);
+			}
+			printf("\n");
+			if(myTxSlotsNum < 1) {
+				God::instance()->setMyParent(index_,-2);
+				printf("node:%d, Reseting my parent:%d as it is not serving me",index_,parentID);
+			}
+		}
+		if(God::instance()->getMyParent(index_) == -2) {	// Still looking for parent
+			God::instance()->setMyParent(index_,src);
+			int src_slot = God::instance()->getNodeSlot(src) - 1;
+			if(src_slot>slotNum) {
+				shiftFrameSlot = src_slot - 1;
+				currentFrameSlots = maxSlots - shiftFrameSlot;
+				printf("node:%d, shiftFrameSlot:%d, currentFrameSlots:%d, maxSlots:%d, totalSlotsShift:%d \n",index_,shiftFrameSlot,currentFrameSlots,maxSlots,totalSlotsShift);
+			} else if(src_slot < slotNum) {
+				shiftFrameSlot = -slotNum + 1;
+				printf("node:%d, shiftFrameSlot:%d, currentFrameSlots:%d, maxSlots:%d, totalSlotsShift:%d \n",index_,shiftFrameSlot,currentFrameSlots,maxSlots,totalSlotsShift);
+			} else {
+				//start sending data Frames are aligned
+
+			}
+			//send Beacon Ack
+			if(dst == MAC_BROADCAST)
+				sendBeaconAck(src);
 		}
 	}
-	//send Beacon Ack
-	if(dst == MAC_BROADCAST)
-		sendBeaconAck(src);
 	return;
 }
 
@@ -301,117 +542,70 @@ void MacAwsn::sendBeaconAck(int src) {
 	}
 }
 
-void MacAwsn::findNeighbour() {
-	for (int i = 1; i < currentFrameSlots; i++)
-		alloc_slot[i] = slot_Rx;
-	return;
-}
-
 bool MacAwsn::updateNeighborInfo(int src) {
-vector<neighborEntry>::iterator it = neighborList.begin();
-	while (it!=rxTable.end()) {
+	vector<neighborNode>::iterator it = neighborList.begin();
+	while (it!=neighborList.end()) {
 		if (it->id == src) {
 			return true;
 		}
 		it++;
 	}
-	neighborEntry *r = new neighborEntry(src);
+	neighborNode *r = new neighborNode(src);
+	r->role = God::instance()->getRole(src);
 	neighborList.push_back(*r);
+	printf("node:%d, MacAwsn::updateNeighborInfo: tableSize:%d, src:%d\n",index_,neighborList.size(),src);
 	return true;
 }
-void MacAwsn::runAtstartUp() {
-	int ranNum = Random::random();
-	randomTime = fmod(double(ranNum)/1000000, dischargetime);
-	randomTime = 0;
-	if(!God::instance()->isSink(index_)) {
-		myRole = 1;
-		God::instance()->setMyParent(index_,-2);
 
-	} else {
-		God::instance()->setMyParent(index_,index_); 		// Sink node to consider parent of itself
-		randomTime = dischargetime * 2.6;
-	}
-	printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomtime@%f, dischargetime:%f,chargetime:%f, myParent:%d\n",
-			index_,ranNum,randomTime, dischargetime,chargetime,God::instance()->getMyParent(index_));
-	SFAwsnTimer.start(randomTime);
-
-}
-void MacAwsn::SlotHandler() {
-	printf("node:%d, MacAwsn::SlotHandler: slotNum:%d, slotType:%d, currentFrameSlots:%d, time@%f\n",
-			index_,slotNum,alloc_slot[slotNum],currentFrameSlots,NOW);
-	switch(alloc_slot[slotNum]) {
-	case slot_Beacon:
-		sendBeacon(MAC_BROADCAST);
-		break;
-	case slot_Tx:
-		break;
-	case slot_Rx:
-		break;
-	}
-
-	slotNum++;
-	slotNum = slotNum%currentFrameSlots;
-	God::instance()->setMySlot(slotNum,index_);
-	if(slotNum != 0)
-		slotAwsnTimer.restart(config_.slotTime);
-	else { // After all slots over
-		if(God::instance()->getMyParent(index_) == -2) {
-			shiftFrameSlot = - maxSlots + 1;		// Linear search with minimum overlap slots
-			printf("node:%d, MacAwsn:: No parent found after super frame, shifting SuperFrame by %d slots\n",index_,shiftFrameSlot);
+bool MacAwsn::updateParentInfo(int src) {
+	vector<neighborNode>::iterator it = ParentTable.begin();
+	while (it!=ParentTable.end()) {
+		if (it->id == src) {
+			it->role = God::instance()->getRole(src);
+			it->distSlots = totalSlotsShift;
+			return true;
 		}
-		SFAwsnTimer.start(config_.slotTime);
+		it++;
 	}
-	return;
+	neighborNode *r = new neighborNode(src);
+	r->role = God::instance()->getRole(src);
+	r->distSlots = totalSlotsShift;
+	ParentTable.push_back(*r);
+	printf("node:%d, MacAwsn::updateParentInfo: tableSize:%d\n",index_,ParentTable.size());
+	return true;
 }
 
-void MacAwsn::ChargeHandler() {
-	printf("node:%d, MacAwsn::ChargeHandler: chargetime:%f, time@%f\n",index_,chargetime,NOW);
-	newnetif()->chargeNode(chargetime);
-	if(shiftFrameSlot > 0) {
-		dischargetime = newnetif()->timeToCauseLead(shiftFrameSlot * config_.slotTime);
-		shiftFrameSlot = 0;
-		newnetif()->turnOnRadio();
-		RadioOFFTimer.start(dischargetime);
-	} else if(shiftFrameSlot < 0) {
-		dischargetime = newnetif()->timeToCauseLag(-shiftFrameSlot * config_.slotTime);
-		shiftFrameSlot = 0;
-		newnetif()->turnOnRadio();
-		RadioOFFTimer.start(dischargetime);
-	} else {
-		FAwsnTimer.start(0);
+neighborNode MacAwsn::getParentInfo() {
+	return ParentTable.front();
+}
+
+bool MacAwsn::updateChildInfo(int src) {
+	vector<neighborNode>::iterator it = ChildTable.begin();
+	while (it!=ChildTable.end()) {
+		if (it->id == src) {
+			return true;
+		}
+		it++;
 	}
+	neighborNode *r = new neighborNode(src);
+	r->role = God::instance()->getRole(src);
+	ChildTable.push_back(*r);
+	printf("node:%d, MacAwsn::updateChildInfo: tableSize:%d\n",index_,ChildTable.size());
+	return true;
 }
 
-void MacAwsn::RadioOFFHandler() {
-	newnetif()->turnOffRadio();
-	printf("node:%d, MacAwsn::RadioOFFHandler: time@%f\n",index_,NOW);
-	shiftFrameSlot = 0;
-	SFAwsnTimer.start(0);
-	return;
-}
 
-void MacAwsn::FrameHandler() {
-	printf("node:%d, MacAwsn::FrameHandler: nodeEnergy:%f, time@%f\n",index_,newnetif()->getNodeEnergy(),NOW);
-	currentFrameSlots = maxSlots;
-	newnetif()->turnOnRadio();
-	slotAwsnTimer.start(0);
+// get data tx time
+double MacAwsn::Txtime(Packet *p) {
+  struct hdr_cmn *ch = HDR_CMN(p);
+  double t = ch->txtime();
+  if (t < 0.0)
+  t = 0.0;
+  return t;
 }
-
-// Decide next SuperFrame here
-void MacAwsn::SuperFrameHandler() {
-	newnetif()->turnOffRadio();
-	superFrameNum++;
-	findNeighbour();
-	chargetime = newnetif()->timeToFullCharge();
-	chargeAwsnTimer.restart(chargetime);
-	printf("node:%d, MacAwsn::SuperFrameHandler:%d energy:%f, isNodecharged:%d, chargetime:%f, shiftFrameSlot:%d time@%f\n",
-			index_,superFrameNum,newnetif()->getNodeEnergy(),newnetif()->isNodeCharged(),chargetime,shiftFrameSlot,NOW);
-}
-
 
 /* Timers */
-void MacAwsnTimer::start(double time)
-{
+void MacAwsnTimer::start(double time) {
 	Scheduler &s = Scheduler::instance();
 	assert(busy_ == 0);
 	busy_ = 1;
@@ -422,8 +616,7 @@ void MacAwsnTimer::start(double time)
 	s.schedule(this, &intr, rtime);
 }
 
-void MacAwsnTimer::stop()
-{
+void MacAwsnTimer::stop() {
 	Scheduler &s = Scheduler::instance();
 	assert(busy_);
 	s.cancel(&intr);

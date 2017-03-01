@@ -991,7 +991,7 @@ God::command(int argc, const char* const* argv)
 			
 			printf("num_nodes is set %d\n", num_nodes);
 			
-                        min_hops = new int[num_nodes * num_nodes];
+            min_hops = new int[num_nodes * num_nodes];
 			mb_node = new MobileNode*[num_nodes];
 			node_status = new NodeStatus[num_nodes];
 			next_hop = new int[num_nodes * num_nodes];
@@ -1016,10 +1016,15 @@ God::command(int argc, const char* const* argv)
 
                         instance_ = this;
             // Naval
+            Role = new bool[num_nodes];
             myParent = new int[num_nodes];
 			//bzero((char*)myParent, sizeof(int)*num_nodes);
 			mySlot = new int[num_nodes];
 			bzero((char*)mySlot, sizeof(int)*num_nodes);  // marking current slot as zero slot
+			sche.resize(10,0);
+			Pschedule.resize(num_nodes,sche);
+			//nodequeue.resize(10,"");
+			macqueueDummy.resize(num_nodes);
 			//-Naval
             return TCL_OK;
      }

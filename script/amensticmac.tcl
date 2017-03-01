@@ -24,7 +24,7 @@ set val(rp)             ChargingRT                 ;# use our own routing
 #set val(fulleng)        20000.0
 
 set val(nn)             2
-set val(datarate)       100
+set val(datarate)       2
 set val(et)             1
 set val(nsseed)         100
 set val(rtype)          1
@@ -34,6 +34,7 @@ set val(logfile)        log
 set val(routeinterval)  3
 set val(trvalue)  		1
 set val(fulleng)        0.001
+
 
 # some ns2 default settings
 ns-random 		$val(nsseed)
@@ -80,22 +81,23 @@ set val(mylog) [new CTRACE $val(logfile)]
 set god_ [create-god $val(total)]
 $god_ add-logfile $val(mylog)
 
-Application/RILApp set DataRate 	$val(datarate)
 
 for {set i 0} {$i <  $val(total)} {incr i} {
     set node_($i) [$ns_ node]
+	$node_($i) random-motion 0
     set rtagent [$node_($i) set ragent_]
     $rtagent add-node $node_($i)
-    #set val(myenergy) [expr $val(fulleng)-$i*0.5]
-    set val(myenergy) $val(fulleng)
-    set engmodel_($i) [new EnergyModel $node_($i) $val(myenergy) 0 0]
+    set val(myenergy) [expr $val(fulleng)*$i/$val(total)]
+    set val(maxenergy) $val(fulleng)
+    set engmodel_($i) [new EnergyModel $node_($i) $val(maxenergy) 0 0]
     $node_($i) addenergymodel $engmodel_($i)
     $god_ new_node $node_($i)
 
-    set RILapp_($i) [new Application/RILApp $i]
-    set RILagent_($i) [new Agent/RILAgent]
+	Application/RILApp 		set DataRate 	$val(datarate)
+    set RILapp_($i) 		[new Application/RILApp $i]
+    set RILagent_($i) 		[new Agent/RILAgent]
     $ns_ attach-agent $node_($i) $RILagent_($i)
-    $RILapp_($i) attach-agent $RILagent_($i)
+    $RILapp_($i) 			attach-agent $RILagent_($i)
 
 	if {$val(rtype) == 1} {
 		# line
@@ -106,12 +108,23 @@ for {set i 0} {$i <  $val(total)} {incr i} {
         }
         #$node_($i) set X_ [expr 70.0*$i]
         #$node_($i) set Y_ 100.0
-	}
+	} else {
+        puts "wrong input"
+    }
+
+    $node_($i) set Z_ 0.0  
+    $ns_ at 5.0 "$RILapp_($i) start"
 }
+
+for {set i 0} {$i < $val(total) } {incr i} {
+    $ns_ at [expr {$val(et)+0.5}] "$RILapp_($i) stop";
+    $ns_ at [expr {$val(et)+1.5}] "$node_($i) reset";
+}
+
 #$ns_ at [expr {$val(et)+2.0}] "stop"
 #$ns_ at [expr {$val(et)+2.1}] "puts \"NS EXITING...\"; $ns_ halt;"
-$ns_ at 100.0 "stop"
-$ns_ at 100.0 "puts \"NS EXITING...\"; $ns_ halt;"
+$ns_ at 10000.0 "stop"
+$ns_ at 10000.0 "puts \"NS EXITING...\"; $ns_ halt;"
 
 proc stop {} {
     puts "calling stop function"

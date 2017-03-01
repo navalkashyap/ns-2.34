@@ -8,6 +8,7 @@
 #ifndef CHARGINGSYS_MAC_AWSN_MAC_H_
 #define CHARGINGSYS_MAC_AWSN_MAC_H_
 
+#define MAC_BufferSize				20
 #define frameLen 					10
 #define slot_Beacon 				0
 #define slot_Tx						1
@@ -32,9 +33,16 @@ enum MacFrameSubType {
   MAC_RIL_ONDEMAND = 5,
 };
 
-struct neighborEntry {
+enum myRoleType {
+	PARENT = 0,
+	CHILD = 1,
+};
+
+struct neighborNode {
 	int id;
-	neighborEntry(int i):id(i){}
+	int role;
+	int	distSlots;
+	neighborNode(int i):id(i),role(0),distSlots(-1){}
 };
 
 class MacAwsnTimer: public Handler {
@@ -163,12 +171,19 @@ public:
 	void ChargeHandler();
 	void recvHandler();
 	void RadioOFFHandler();
+	void postFrameHandler();
+	void recvData(Packet *p);
 	void recvBeacon(Packet *p);
 	void sendBeaconAck(int src);
 
-	void findNeighbour();
+	void setAllSlotsRx();
+	void scheduleChildren();
 	bool updateNeighborInfo(int src);
+	bool updateParentInfo(int src);
+	neighborNode getParentInfo();
+	bool updateChildInfo(int src);
 	void sendBeacon(int dst);
+	void sendData();
 	double Txtime(Packet *p);
 
 private:
@@ -182,18 +197,22 @@ private:
 	int             	tx_active_;     // transmission active flag
 	unsigned int    	cw_;			      // contention window
 
-	std::vector<neighborEntry> 	neighborList;	// store neighbor'sinformation
-	std::vector<neighborEntry> 	txTable;  // store sender's information
-	std::vector<neighborEntry> 	rxTable;  // store receiver's information
-	std::vector< Packet* > 		macqueue;  // mac buffer
+	std::vector<neighborNode> 	neighborList;	// store neighbor'sinformation
+	std::vector<neighborNode> 	ParentTable;  // store sender's information
+	std::vector<neighborNode> 	ChildTable;  // store receiver's information
+	std::list< Packet* > 		macQueue;  // mac buffer
 	u_int16_t retryCount_;          // retry count for one data packet
+	  double last_alive_;             // last time a data message is received
 
 	int 				alloc_slot[frameLen];
 	int 				maxSlots;
 	int					slotNum;
 	int					currentFrameSlots;
 	int 				shiftFrameSlot;
-	bool 				myRole;
+	int					totalSlotsShift;
+	int					maxSlotShift;
+	bool 				myRole;				// 0: Parent, 1: Child
+	int 				parentID;
 	StartAwsnTimer		startTimer;			// To start a node
 	SuperFrameAwsnTimer SFAwsnTimer; 		// Charging + discharging cycle
 	ChargeAwsnTimer		chargeAwsnTimer;	// Charge Timer

@@ -8,6 +8,7 @@ Phy/WirelessCPhy set RXThresh_ 3.41828e-08
 #150m
 Phy/WirelessCPhy set CSThresh_ 2.81838e-09
 #Phy/WirelessCPhy set CSThresh_ 3.61828e-08
+#RXThresh. 6.35631e-08W(55m)
 
 set opt(radioBW)	        2.5e5 ; # 250 kbps
 set opt(RTSThreshold) 		20000
