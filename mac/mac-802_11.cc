@@ -3164,7 +3164,7 @@ void Mac802_11::deletelist() {
 void Mac802_11::add_priority_queue(int num)
 {
 	if (queue_head == NULL) {
-		queue_head = (struct priority_queue*)malloc(sizeof(struct priority_queue));
+		queue_head = (struct priority_queue_*)malloc(sizeof(struct priority_queue_));
 		queue_head->frame_priority = num;
 		queue_head->next = NULL;
 	} else if (queue_head->next == NULL && queue_head->frame_priority == 0) {
@@ -3177,18 +3177,18 @@ void Mac802_11::add_priority_queue(int num)
 }
 
 void Mac802_11::push_priority(int num) {
-	struct priority_queue *temp;
+	struct priority_queue_ *temp;
 	temp = queue_head;
 	while (temp->next != NULL) {
 		temp=temp->next;
 	}
-	temp->next = (struct priority_queue*)malloc(sizeof(struct priority_queue));
+	temp->next = (struct priority_queue_*)malloc(sizeof(struct priority_queue_));
 	temp->next->frame_priority = num;
 	temp->next->next = NULL;
 }
 
 void Mac802_11::delete_lastnode() {
-	struct priority_queue *temp;
+	struct priority_queue_ *temp;
 	temp = queue_head;
 	if (queue_head == NULL) {
 		return;
@@ -3208,7 +3208,7 @@ void Mac802_11::delete_lastnode() {
 
 void Mac802_11::shift_priority_queue()
 {
-	struct priority_queue *temp;
+	struct priority_queue_ *temp;
 	
 	if (queue_head == NULL) {
 		return;

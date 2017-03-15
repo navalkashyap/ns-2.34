@@ -43,13 +43,13 @@
 
 #ifndef __god_h
 #define __god_h
+#include <vector>  // vector use causes overriding problem with in some methods
 
 #include <stdarg.h>
 #include "bi-connector.h"
 #include "object.h"
 #include "packet.h"
 #include "trace.h"
-
 #include "node.h"
 #include "diffusion/hash_table.h"
 
@@ -57,9 +57,6 @@
 #include "time.h"
 //#include "charger.h"
 #include "charging-energy-model.h"
-#include <vector>
-#include <queue>
-#include <string>
 // Added by Chalermek  12/1/99
 
 #define MIN_HOPS(i,j)    min_hops[i*num_nodes+j]
@@ -80,48 +77,6 @@ public:
 };
 
 
-// Cut and Paste from setdest.h   -- Chalermek 12/1/99
-#if 0
-class vector {
-public:
-	vector(double x = 0.0, double y = 0.0, double z = 0.0) {
-		X = x; Y = y; Z = z;
-	}
-	double length() {
-		return sqrt(X*X + Y*Y + Z*Z);
-	}
-
-	inline void operator=(const vector a) {
-		X = a.X;
-		Y = a.Y;
-		Z = a.Z;
-	}
-	inline void operator+=(const vector a) {
-		X += a.X;
-		Y += a.Y;
-		Z += a.Z;
-	}
-	inline int operator==(const vector a) {
-		return (X == a.X && Y == a.Y && Z == a.Z);
-	}
-	inline int operator!=(const vector a) {
-		return (X != a.X || Y != a.Y || Z != a.Z);
-	}
-	inline vector operator-(const vector a) {
-		return vector(X-a.X, Y-a.Y, Z-a.Z);
-	}
-	friend inline vector operator*(const double a, const vector b) {
-		return vector(a*b.X, a*b.Y, a*b.Z);
-	}
-	friend inline vector operator/(const vector a, const double b) {
-		return vector(a.X/b, a.Y/b, a.Z/b);
-	}
-
-	double X;
-	double Y;
-	double Z;
-};
-#endif
 // ------------------------
 
 
@@ -227,18 +182,16 @@ public:
 	inline bool getRole(int nodeId) {return Role[nodeId]; }
 	inline void setMySlot(int slotNum,int nodeID) {mySlot[nodeID] = slotNum;}
 	inline int getNodeSlot(int nodeID) {return mySlot[nodeID]; }
-	inline void setSchedule(int nodeID, vector<int> myschedule) {
-		Pschedule[nodeID] = myschedule;
-	}
-	inline vector<int> getSchedule(int nodeID) { return Pschedule[nodeID]; }
-	inline void pushMacQueueDummy(int nodeID, string data) {
-		macqueueDummy[nodeID].push(data);
-	}
-	inline string pullMacQueueDummy(int nodeID) {
-		string data = macqueueDummy[nodeID].front();
-		macqueueDummy[nodeID].pop();
-		return data;
-	}
+	inline void setSchedule(int nodeID, std::vector<int> myschedule) {NodeSchedule[nodeID] = myschedule;}
+	inline std::vector<int> getSchedule(int nodeID) { return NodeSchedule[nodeID]; }
+	inline double getP_charge(int nodeID) {return P_charge[nodeID];}
+	inline void setTotalSFslots(int nodeID,int totalSlots) {TotalSFslots[nodeID] = totalSlots;}
+	inline int getTotalSFslots(int nodeID) {return TotalSFslots[nodeID];}
+	inline void setmaxSFslots(int nodeID,int totalSlots) {maxSFslots[nodeID] = totalSlots;}
+	inline int getmaxSFslots(int nodeID) {return maxSFslots[nodeID];}
+	inline void setslotDataAck(int nodeID, int slotNum, int val) {slotDataAck[nodeID][slotNum] = val;}
+	inline int getslotDataAck(int nodeID, int slotNum) {return slotDataAck[nodeID][slotNum];}
+
 //-Naval
 private:
         int num_nodes;
@@ -269,9 +222,12 @@ private:
         bool* Role;			// Parent :0, Child: 1
         int* mySlot;
         vector<int> sche;
-        vector<vector<int> > Pschedule;
-        queue<string> nodequeue;
-        vector<queue<string> > macqueueDummy;
+        vector<vector<int> > NodeSchedule;
+        int** slotDataAck;		//dataAck[i] gives pointer to array of int
+        int chargeid;
+        double* P_charge;
+        int* TotalSFslots;
+        int* maxSFslots;
         //~Naval
         // added by Yang 04/25/2010
         CTRACE* ctrace_;

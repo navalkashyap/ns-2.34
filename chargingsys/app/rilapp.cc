@@ -59,7 +59,7 @@ void RILApp::timeout(int type) {
         if (myID != 0) {
 	        produceMsg(&msg, DATA_SENSING);
             sendMsg(&msg);
-            printf("RILApp::timeout: node %d send app msg seq %d @ %f\n", myID, msg.seq, NOW);
+//            printf("RILApp::timeout: node:%d send app, msg seq:%d, msg size:%d @ %f\n", myID, msg.seq,msg.len, NOW);
         }
         dataT_->resched(next_interval());
     }
@@ -105,7 +105,7 @@ void RILApp::sendMsg(RILAppMessageT_* msg) {
     msg->netType = UCAST;
 	PacketData* data = new PacketData(sizeof(RILAppMessageT_));
 	memcpy(data->data(), msg, sizeof(RILAppMessageT_));
-    //printf("node %d dataarrival @ %f\n", myID, NOW);
+    printf("node:%d, RILApp::sendMsg: data arrival msg->seq:%d, @%f\n", myID, msg->seq,NOW);
 	agent_->sendmsg(sizeof(RILAppMessageT_), data);
 }
 
@@ -115,7 +115,7 @@ void RILApp::recvMsg(RILAppMessageT_* msg) {
     if (msg->msgType == DATA_SENSING) {
         int src = msg->source;
         double delay = NOW-msg->timestamp;
-        printf("RILApp::recvMsg: node %d receive a data message from %d seq %d delay %f@ %f\n", myID,src, msg->seq,delay,NOW);
+        printf("node:%d, RILApp::recvMsg: receive a data message from node-%d msg->seq %d delay %f@ %f\n", myID,src, msg->seq,delay,NOW);
         trace_->log("node %d receive a data message from %d seq %d delay %f @ %f\n", myID,src, msg->seq,delay,NOW);
         //printf("node %d received %f\n", src, NOW);
     }

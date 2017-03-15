@@ -34,7 +34,7 @@ void RILAgent::sendmsg(int nbytes, AppData* data, const char* flags) {
 	if (n > size_) {
 		return;
 	}
-	printf("RILAgent::sendmsg: node:%d send app\n", here_.addr_);
+//	printf("RILAgent::sendmsg: node:%d send app\n", here_.addr_);
 	//double local_time = NOWTIME;
 	PacketData* pd = (PacketData*)data;
 	RILAppMessageT_* cappmsgp = (RILAppMessageT_*)pd->data();
@@ -77,7 +77,7 @@ void RILAgent::recv(Packet* pkt, Handler* h) {
 		//PacketData* pd = (PacketData*)pkt->userdata();
 		//CAppMessageT_* msg = (CAppMessageT_*)pd->data();
 		// this is a unicast message sent to by me
-        printf("RILAgent::recv: node:%d recv app\n", here_.addr_);
+//        printf("RILAgent::recv: node:%d recv app\n", here_.addr_);
 		if (ih->daddr() == here_.addr_) {
 			app_->process_data(ch->size(), pkt->userdata());
 			Packet::free(pkt);

@@ -38,7 +38,6 @@
 
 #include <stdarg.h>
 #include <float.h>
-
 #include "random.h"
 #include "energy-model.h"
 #include "mobilenode.h"

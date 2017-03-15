@@ -71,6 +71,8 @@ public:
 	double 	getResidualEnergy()	{ return em()->maxenergy() - em()->energy(); }
 	double 	getmaxRadioOnTime() {return em()->maxenergy() / Pt_consume_;}
 	double	getSuperFrameTime(double frameTime) {return frameTime * (1 + Pt_consume_/P_charge);}
+	double 	getP_charge() {	return P_charge;}
+	void	setP_charge(double newPcharge) { P_charge = newPcharge;}
 	EnergyModel* em() { return node()->energy_model(); }
 protected:
 	enum 	RadioStatus { RADIOON, RADIOOFF };	

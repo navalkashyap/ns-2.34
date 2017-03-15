@@ -95,6 +95,7 @@ God::God()
 	sink_id = 0;
 	enableCharge_ = false;
 	moveEng = 0;
+	chargeid = 0;
 }
 
 // Added by Chalermek 12/1/99
@@ -945,6 +946,14 @@ God::command(int argc, const char* const* argv)
 			//printf("node %d x %f y %f\n", sourcenodeid, nx, ny);
 			return TCL_OK;
 		}
+		if (strcasecmp(argv[1], "setnodechargeID") == 0) {
+			chargeid = atoi(argv[2]);
+			return TCL_OK;
+		}
+		if (strcasecmp(argv[1], "setnodePcharge") == 0) {
+			P_charge[chargeid] = atof(argv[2]);
+			return TCL_OK;
+		}
 // -Yang 04/25/2010
 
 
@@ -1021,10 +1030,18 @@ God::command(int argc, const char* const* argv)
 			//bzero((char*)myParent, sizeof(int)*num_nodes);
 			mySlot = new int[num_nodes];
 			bzero((char*)mySlot, sizeof(int)*num_nodes);  // marking current slot as zero slot
+			P_charge = new double[num_nodes];
+			bzero((char*)P_charge, sizeof(double)*num_nodes);
 			sche.resize(10,0);
-			Pschedule.resize(num_nodes,sche);
-			//nodequeue.resize(10,"");
-			macqueueDummy.resize(num_nodes);
+			NodeSchedule.resize(num_nodes,sche);
+			TotalSFslots = new int[num_nodes];
+			bzero((char*)TotalSFslots, sizeof(int)*num_nodes);
+			maxSFslots = new int[num_nodes];
+			bzero((char*)maxSFslots, sizeof(int)*num_nodes);
+			slotDataAck = new int*[num_nodes];
+			for(int i =0; i<num_nodes;i++) {
+				slotDataAck[i] = new int[10];
+			}
 			//-Naval
             return TCL_OK;
      }

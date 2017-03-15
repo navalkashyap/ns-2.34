@@ -160,12 +160,12 @@ WirelessChargingPhy::sendDown(Packet *p)
 
 		    /* It turns out that MAC sends packet even though, it's
 		       receiving some packets.
-		    
+		    */
 		    if (txtime-actual_txtime > 0.000001) {
 			    fprintf(stderr,"Something may be wrong at MAC\n");
 			    fprintf(stderr,"act_tx = %lf, tx = %lf\n", actual_txtime, txtime);
 		    }
-		    */
+
 
 		   // Sanity check
 		   double temp = MAX(NOW,last_send_time_);
@@ -242,6 +242,7 @@ WirelessChargingPhy::sendUp(Packet *p)
 	if (em()) {
 			if (radioStatus_ != RADIOON){
 				pkt_recvd = 0;
+				printf("node:%d, WirelessChargingPhy::sendUp: RadioStatus != RADIOON msg_dropped @%f \n",node()->address(),NOW);
 				goto DONE;
 			}
 			

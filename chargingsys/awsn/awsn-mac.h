@@ -13,7 +13,7 @@
 #define slot_Beacon 				0
 #define slot_Tx						1
 #define slot_Rx						2
-
+#define slot_Ack					3
 
 #include <vector>
 #include <list>
@@ -42,7 +42,8 @@ struct neighborNode {
 	int id;
 	int role;
 	int	distSlots;
-	neighborNode(int i):id(i),role(0),distSlots(-1){}
+	int SFslots;
+	neighborNode(int i):id(i),role(0),distSlots(-1),SFslots(0){}
 };
 
 class MacAwsnTimer: public Handler {
@@ -114,6 +115,27 @@ public:
 	void	handle(Event *e);
 };
 
+class BeaconRxAwsnTimer : public MacAwsnTimer {
+public:
+	BeaconRxAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
+
+	void	handle(Event *e);
+};
+
+class BeaconTxAwsnTimer : public MacAwsnTimer {
+public:
+	BeaconTxAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
+
+	void	handle(Event *e);
+};
+
+class sendBeaconTxAwsnTimer : public MacAwsnTimer {
+public:
+	sendBeaconTxAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
+
+	void	handle(Event *e);
+};
+
 class RadioOffAwsnTimer : public MacAwsnTimer {
 public:
 	RadioOffAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
@@ -132,7 +154,7 @@ public:
 		cw_max = 127;
 		header_len = 16;		//bytes
 		ack_len = 16;
-		slotTime = header_len*2*8/data_rate; //	0.001024 = ((16+16)*8/250000) One slot can carry 1 Beacon + 1 beaconAck
+		slotTime = 0.002400;//header_len*2*8/data_rate; //	0.001024 = ((16+16)*8/250000) One slot can carry 1 Beacon + 1 beaconAck
 		payload_len = slotTime * data_rate;		// 16 bytes
 	}
 	double data_rate;
@@ -148,7 +170,6 @@ public:
 	double P_slot;
 	double P_frame;
 	double P_superframe;
-
 };
 
 
@@ -173,6 +194,7 @@ public:
 	void RadioOFFHandler();
 	void postFrameHandler();
 	void recvData(Packet *p);
+	void recvAck(Packet *p);
 	void recvBeacon(Packet *p);
 	void sendBeaconAck(int src);
 
@@ -183,8 +205,11 @@ public:
 	neighborNode getParentInfo();
 	bool updateChildInfo(int src);
 	void sendBeacon(int dst);
+	void BeaconSent();
 	void sendData();
-	double Txtime(Packet *p);
+	void sendAck();
+	void calcNextSFslots();
+	double 	Txtime(Packet *p);
 
 private:
 	MacAwsn_config 		config_;
@@ -196,23 +221,28 @@ private:
 	MacState        	tx_state_;      // outgoing state
 	int             	tx_active_;     // transmission active flag
 	unsigned int    	cw_;			      // contention window
-
+	char 	TxRx[4];
+	char	direction[3][4];
 	std::vector<neighborNode> 	neighborList;	// store neighbor'sinformation
-	std::vector<neighborNode> 	ParentTable;  // store sender's information
-	std::vector<neighborNode> 	ChildTable;  // store receiver's information
-	std::list< Packet* > 		macQueue;  // mac buffer
+	std::vector<neighborNode> 	ParentTable;  	// store sender's information
+	std::vector<neighborNode> 	ChildTable;  	// store receiver's information
+	std::list< Packet* > 		macQueue;  		// mac buffer
+	std::vector<Packet*>        macQueueTx;		// Temporary buffer during Tx, waiting for Ack
 	u_int16_t retryCount_;          // retry count for one data packet
-	  double last_alive_;             // last time a data message is received
+	double last_alive_;             // last time a data message is received
 
+
+	int 				TotalDataSent;
 	int 				alloc_slot[frameLen];
-	int 				maxSlots;
+	int 				maxFrameSlots;
 	int					slotNum;
 	int					currentFrameSlots;
 	int 				shiftFrameSlot;
 	int					totalSlotsShift;
-	int					maxSlotShift;
+	int					myTotalSFslots;
 	bool 				myRole;				// 0: Parent, 1: Child
 	int 				parentID;
+	bool				adjustSFslots;		// true: lag according to other node
 	StartAwsnTimer		startTimer;			// To start a node
 	SuperFrameAwsnTimer SFAwsnTimer; 		// Charging + discharging cycle
 	ChargeAwsnTimer		chargeAwsnTimer;	// Charge Timer
@@ -221,14 +251,25 @@ private:
 	RxPktAwsnTimer		recvTimer;			// pkt receiption timer
 	TxPktAwsnTimer 		sendTimer;      	// pkt transmission timer
 	RadioOffAwsnTimer	RadioOFFTimer;		// timer to turn Radio OFF
-
+	BeaconTxAwsnTimer	BeaconTxTimer;		// Trigger the Timer once Beacon is tramitted
+	BeaconRxAwsnTimer	BeaconRxTimer;		// Trigger when beacon reciever time is over
+	sendBeaconTxAwsnTimer sendBeaconTimer;
 
 	unsigned int sender_cw_;
 	double chargetime;
 	double dischargetime;
+	double adjustmentTime;
 	double randomTime;
-	int		superFrameNum;
+	int		superFrameCount;
 	inline WirelessChargingPhy* newnetif(){return dynamic_cast<WirelessChargingPhy*>(netif_);}
 };
 
+class AwsnNode {
+protected:
+	int Id;
+
+public:
+	AwsnNode() {}
+	int getID() {return Id;}
+};
 #endif /* CHARGINGSYS_MAC_AWSN_MAC_H_ */

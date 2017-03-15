@@ -79,7 +79,7 @@ void ChargingRT::updateNeightorTable(neighborT_& node) {
     if (God::instance()->isSink(ra_addr_)) return;
 	list<neighborT_>::iterator itl = neighborL.begin();
 	list<neighborT_>::iterator end = neighborL.end();
-	printf("ChargingRT::updateNeightorTable: neighborinfo: node:%d x %f y %f eng %f cost %f sinkid %d\n", node.id, node.x, node.y, node.energy, node.cost, node.sinkID);
+//	printf("ChargingRT::updateNeightorTable: neighborinfo: node:%d x %f y %f eng %f cost %f sinkid %d\n", node.id, node.x, node.y, node.energy, node.cost, node.sinkID);
     while (itl!=end){
 		if (itl->id == node.id) {
 			itl->x = node.x;
@@ -151,7 +151,7 @@ double ChargingRT::getMinHop(int* sinkID, int* minid) {
 double ChargingRT::getMinCost(int* sinkID, int* minid) {
 	list<neighborT_>::iterator it = neighborL.begin();
 	list<neighborT_>::iterator end = neighborL.end();
-	printf("ChargingRT::getMinCost: number of neighbor- %d\n",neighborL.size());
+//	printf("ChargingRT::getMinCost: number of neighbor- %d\n",neighborL.size());
     double mincost = MAX_COST;
     *sinkID = sinkID_; *minid = -1;
 	double leftratio = em()->energy()/MAX_ENERGY;
@@ -160,7 +160,7 @@ double ChargingRT::getMinCost(int* sinkID, int* minid) {
 	else if (leftratio > 0.85 || leftratio < 0.15) {pktCost = 0.5;}
 	else pktCost = 0.1;
 	while (it!=end) {
-		printf("cost:%f, energy:%f, sinkID:%d, hopCnt:%d\n",it->cost,it->energy,it->sinkID,it->hopCnt);
+//		printf("cost:%f, energy:%f, sinkID:%d, hopCnt:%d\n",it->cost,it->energy,it->sinkID,it->hopCnt);
         if (it->energy<1) {it++;continue;}
         if (it->timestamp + 10.0*beaconInterval_ < NOW || it->parent == ra_addr_) {
             //printf("node:%d it %d timestamp %f now %f\n", ra_addr_, it->id, it->timestamp, NOW);
@@ -253,7 +253,7 @@ int ChargingRT::getNextHop(int destid, int* sinkID,Packet *p) {
         printf("routingType_ %d\n",routingType_);
         nexthop = -1;
     }
-    printf("ChargingRT::getNextHop:  node:%d dest %d nexthop %d\n", ra_addr_, *sinkID, nexthop);
+//    printf("ChargingRT::getNextHop:  node:%d dest %d nexthop %d\n", ra_addr_, *sinkID, nexthop);
 	return nexthop;
 }
  
@@ -261,7 +261,7 @@ void ChargingRT::recv(Packet* p, Handler* h) {
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
 	// it's a routing message, not an application message
-	printf("ChargingRT::recv: Packet type received: %d, node:%d to node:%d\n",ch->ptype_, ih->saddr(), ih->daddr());
+//	printf("ChargingRT::recv: Packet type received: %d, node:%d to node:%d\n",ch->ptype_, ih->saddr(), ih->daddr());
 	if(ch->ptype() == PT_CHARGINGRT) {
 		recv_chargingrt_pkt(p);
 		Packet::free(p);
@@ -301,7 +301,7 @@ void ChargingRT::recv(Packet* p, Handler* h) {
 void ChargingRT::forward(int rt, Packet *p, double delay) {
 	struct hdr_cmn *ch = HDR_CMN(p);
 	struct hdr_ip *ih = HDR_IP(p);
-    printf("ChargingRT::forward: node:%d, ih->daddr:%d, packet type:%d \n", ih->saddr(), ih->daddr(),ch->ptype());
+//    printf("ChargingRT::forward: node:%d, ih->daddr:%d, packet type:%d \n", ih->saddr(), ih->daddr(),ch->ptype());
 
 	if(ih->ttl_ == 0) {
 		Packet::free(p);
@@ -326,7 +326,7 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
 		int nexthop = getNextHop(ih->daddr(), &sinkid, p);
 		if (nexthop < 0) nexthop = 0;
 		if (nexthop < 0) {
-            printf("node:%d, ChargingRT::forward: no route to node:%d\n", ih->saddr(), ih->daddr());
+//            printf("node:%d, ChargingRT::forward: no route to node:%d\n", ih->saddr(), ih->daddr());
 			Packet::free(p);
 			return;
 		}
@@ -350,7 +350,7 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
 	ch->xmit_failure_data_ = 0;
     ch->prev_hop_ = ra_addr_;
     packetSent_++;
-    printf("node:%d, ChargingRT::forward: route to node:%d, prev_hop_: %d\n", ih->saddr(), ih->daddr(),ch->prev_hop_);
+//    printf("node:%d, ChargingRT::forward: route to node:%d, prev_hop_: %d\n", ih->saddr(), ih->daddr(),ch->prev_hop_);
     Scheduler::instance().schedule(target_, p, 0.0001 * Random::uniform());
 }
 
@@ -361,7 +361,7 @@ void ChargingRT::recv_chargingrt_pkt(Packet* p) {
 			PacketData* pp = (PacketData*)p->userdata();
 			BeaconMsgT_* bmsg = (BeaconMsgT_*)pp->data();
 			//if (bmsg->seq>curBseq && bmsg->time>curBtime) {
-                printf("ChargingRT::recv_chargingrt_pkt: node:%d recv beacon msg from %d seq %d\n", ra_addr_, ih->saddr(), bmsg->seq);
+//                printf("ChargingRT::recv_chargingrt_pkt: node:%d recv beacon msg from %d seq %d\n", ra_addr_, ih->saddr(), bmsg->seq);
 				updateNeightorTable(bmsg->myinfo);
 				return;
 			//}
@@ -421,7 +421,7 @@ void ChargingRT::sendBeacon(){
 	iph->daddr() = IP_BROADCAST;
 	iph->sport() = RT_PORT;
 	iph->dport() = RT_PORT;
-    printf("ChargingRT::sendBeacon: node:%d send beacon msg seq %d\n", ra_addr_, bmsg.seq);
+//    printf("ChargingRT::sendBeacon: node:%d send beacon msg seq %d\n", ra_addr_, bmsg.seq);
 	p->setdata(data);
     packetSent_++;
 	Scheduler::instance().schedule(target_, p, CHARGINGJITTER);
