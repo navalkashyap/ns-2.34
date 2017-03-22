@@ -1032,15 +1032,21 @@ God::command(int argc, const char* const* argv)
 			bzero((char*)mySlot, sizeof(int)*num_nodes);  // marking current slot as zero slot
 			P_charge = new double[num_nodes];
 			bzero((char*)P_charge, sizeof(double)*num_nodes);
-			sche.resize(10,0);
-			NodeSchedule.resize(num_nodes,sche);
 			TotalSFslots = new int[num_nodes];
 			bzero((char*)TotalSFslots, sizeof(int)*num_nodes);
+			TotalSFTime = new double[num_nodes];
+			bzero((char*)TotalSFTime, sizeof(double)*num_nodes);
+			maxSFTime = new double[num_nodes];
+			bzero((char*)maxSFTime, sizeof(double)*num_nodes);
 			maxSFslots = new int[num_nodes];
 			bzero((char*)maxSFslots, sizeof(int)*num_nodes);
 			slotDataAck = new int*[num_nodes];
 			for(int i =0; i<num_nodes;i++) {
 				slotDataAck[i] = new int[10];
+			}
+			nodeSchedule = new int*[num_nodes];
+			for(int i =0; i<num_nodes;i++) {
+				nodeSchedule[i] = new int[10];
 			}
 			//-Naval
             return TCL_OK;

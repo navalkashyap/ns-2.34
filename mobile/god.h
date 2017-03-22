@@ -43,7 +43,6 @@
 
 #ifndef __god_h
 #define __god_h
-#include <vector>  // vector use causes overriding problem with in some methods
 
 #include <stdarg.h>
 #include "bi-connector.h"
@@ -182,11 +181,15 @@ public:
 	inline bool getRole(int nodeId) {return Role[nodeId]; }
 	inline void setMySlot(int slotNum,int nodeID) {mySlot[nodeID] = slotNum;}
 	inline int getNodeSlot(int nodeID) {return mySlot[nodeID]; }
-	inline void setSchedule(int nodeID, std::vector<int> myschedule) {NodeSchedule[nodeID] = myschedule;}
-	inline std::vector<int> getSchedule(int nodeID) { return NodeSchedule[nodeID]; }
+	inline void setSchedule(int nodeID, int slotNum, int val) {nodeSchedule[nodeID][slotNum] = val;}
+	inline int getSchedule(int nodeID, int slotNum) { return nodeSchedule[nodeID][slotNum]; }
 	inline double getP_charge(int nodeID) {return P_charge[nodeID];}
 	inline void setTotalSFslots(int nodeID,int totalSlots) {TotalSFslots[nodeID] = totalSlots;}
 	inline int getTotalSFslots(int nodeID) {return TotalSFslots[nodeID];}
+	inline void setTotalSFTime(int nodeID,double totalTime) {TotalSFTime[nodeID] = totalTime;}
+	inline double getTotalSFTime(int nodeID) {return TotalSFTime[nodeID];}
+	inline void setmaxSFTime(int nodeID,double maxTime) {maxSFTime[nodeID] = maxTime;}
+	inline double getmaxSFTime(int nodeID) {return maxSFTime[nodeID];}
 	inline void setmaxSFslots(int nodeID,int totalSlots) {maxSFslots[nodeID] = totalSlots;}
 	inline int getmaxSFslots(int nodeID) {return maxSFslots[nodeID];}
 	inline void setslotDataAck(int nodeID, int slotNum, int val) {slotDataAck[nodeID][slotNum] = val;}
@@ -221,20 +224,21 @@ private:
         int* myParent;
         bool* Role;			// Parent :0, Child: 1
         int* mySlot;
-        vector<int> sche;
-        vector<vector<int> > NodeSchedule;
+        int** nodeSchedule;
         int** slotDataAck;		//dataAck[i] gives pointer to array of int
         int chargeid;
         double* P_charge;
+        double* TotalSFTime;
+        double* maxSFTime;
         int* TotalSFslots;
         int* maxSFslots;
         //~Naval
         // added by Yang 04/25/2010
         CTRACE* ctrace_;
         double* dutyontime_;
-	bool* sink_id;
-	int sink_num_;
-	bool enableCharge_;
+        bool* sink_id;
+        int sink_num_;
+        bool enableCharge_;
 };
 
 #endif

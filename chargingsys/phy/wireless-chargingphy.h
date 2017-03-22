@@ -73,6 +73,8 @@ public:
 	double	getSuperFrameTime(double frameTime) {return frameTime * (1 + Pt_consume_/P_charge);}
 	double 	getP_charge() {	return P_charge;}
 	void	setP_charge(double newPcharge) { P_charge = newPcharge;}
+	void 	printvalues() { 	printf("node:%d, WirelessChargingPhy::WirelessChargingPhy: P_charge:%f, Pt_consume_:%f\n",index_,P_charge,Pt_consume_);
+}
 	EnergyModel* em() { return node()->energy_model(); }
 protected:
 	enum 	RadioStatus { RADIOON, RADIOOFF };	

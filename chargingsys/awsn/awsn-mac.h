@@ -14,6 +14,7 @@
 #define slot_Tx						1
 #define slot_Rx						2
 #define slot_Ack					3
+#define  EPSILON    (1.0E-8)
 
 #include <vector>
 #include <list>
@@ -43,7 +44,8 @@ struct neighborNode {
 	int role;
 	int	distSlots;
 	int SFslots;
-	neighborNode(int i):id(i),role(0),distSlots(-1),SFslots(0){}
+	double SFtime;
+	neighborNode(int i):id(i),role(0),distSlots(-1),SFslots(0),SFtime(0){}
 };
 
 class MacAwsnTimer: public Handler {
@@ -125,23 +127,27 @@ public:
 class BeaconTxAwsnTimer : public MacAwsnTimer {
 public:
 	BeaconTxAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
-
 	void	handle(Event *e);
 };
 
 class sendBeaconTxAwsnTimer : public MacAwsnTimer {
 public:
 	sendBeaconTxAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
-
 	void	handle(Event *e);
 };
 
 class RadioOffAwsnTimer : public MacAwsnTimer {
 public:
 	RadioOffAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
-
 	void	handle(Event *e);
 };
+
+class postFrameAwsnTimer : public MacAwsnTimer {
+public:
+	postFrameAwsnTimer(MacAwsn *m) : MacAwsnTimer(m) {}
+	void	handle(Event *e);
+};
+
 
 class MacAwsn_config {
 public:
@@ -237,6 +243,9 @@ private:
 	int 				maxFrameSlots;
 	int					slotNum;
 	int					currentFrameSlots;
+	double				runTimeShiftTime;
+	double				mytotalSFTime;
+	bool				runTimeShiftReq;
 	int 				shiftFrameSlot;
 	int					totalSlotsShift;
 	int					myTotalSFslots;
@@ -254,10 +263,11 @@ private:
 	BeaconTxAwsnTimer	BeaconTxTimer;		// Trigger the Timer once Beacon is tramitted
 	BeaconRxAwsnTimer	BeaconRxTimer;		// Trigger when beacon reciever time is over
 	sendBeaconTxAwsnTimer sendBeaconTimer;
+	postFrameAwsnTimer	postFrameTimer;
 
 	unsigned int sender_cw_;
-	double chargetime;
-	double dischargetime;
+	double chargeTime;
+	double dischargeTime;
 	double adjustmentTime;
 	double randomTime;
 	int		superFrameCount;

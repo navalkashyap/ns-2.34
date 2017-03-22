@@ -24,7 +24,7 @@ set val(rp)             ChargingRT                 ;# use our own routing
 #set val(fulleng)        20000.0
 
 set val(nn)             2
-set val(datarate)       100
+set val(datainterval)   10
 set val(et)             100000
 set val(nsseed)         100
 set val(rtype)          1
@@ -85,9 +85,9 @@ $god_ add-logfile $val(mylog)
 for {set i 0} {$i <  $val(total)} {incr i} {
         $god_ setnodechargeID $i
 	if {$i==0} {
-        $god_ setnodePcharge 0.0001
-    } else {
         $god_ setnodePcharge 0.000102
+    } else {
+        $god_ setnodePcharge 0.000103
     }
     set node_($i) [$ns_ node]
 	$node_($i) random-motion 0
@@ -99,7 +99,7 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     $node_($i) addenergymodel $engmodel_($i)
     $god_ new_node $node_($i)
 
-	Application/RILApp 		set DataRate 	$val(datarate)
+	Application/RILApp 		set DataRate 	$val(datainterval)
     set RILapp_($i) 		[new Application/RILApp $i]
     set RILagent_($i) 		[new Agent/RILAgent]
     $ns_ attach-agent $node_($i) $RILagent_($i)
