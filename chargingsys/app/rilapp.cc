@@ -56,7 +56,7 @@ double RILApp::next_interval() {
 void RILApp::timeout(int type) {
     if (type == DTIMER) {
 	    RILAppMessageT_ msg;
-        if (myID != 0) {
+		if (myID != 0 && God::instance()->getparentDiscovered(myID)) {
 	        produceMsg(&msg, DATA_SENSING);
             sendMsg(&msg);
 //            printf("RILApp::timeout: node:%d send app, msg seq:%d, msg size:%d @ %f\n", myID, msg.seq,msg.len, NOW);
@@ -76,11 +76,13 @@ void RILApp::process_data(int size, AppData* data) {
 
 void RILApp::start() {
 	//God::instance()->ctrace()->log("node %d start charging app @ %f\n", myID, NOW);
-                                                                              
-    if (myID != 0) {
+	if (myID != 0 && God::instance()->isEdgeNode(myID)) {
 	    dataT_ = new RILAppTimer(this, DTIMER);
         dataT_->sched(next_interval());
         //printf("node %d data rate %f\n",myID, dataInterval_);
+        printf("node:%d, RILApp::start: isEdgeNode:%d\n",myID,God::instance()->isEdgeNode(myID));
+    } else {
+    	printf("node:%d, RILApp::start: Does not started, isEdgeNode:%d\n",myID,God::instance()->isEdgeNode(myID));
     }
 }
 

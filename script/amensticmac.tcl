@@ -23,8 +23,8 @@ set val(rp)             ChargingRT                 ;# use our own routing
 #set val(trvalue)  		 [lindex $argv 9]
 #set val(fulleng)        20000.0
 
-set val(nn)             2
-set val(datainterval)   10
+set val(nn)             4
+set val(datainterval)   25
 set val(et)             100000
 set val(nsseed)         100
 set val(rtype)          1
@@ -81,13 +81,14 @@ set val(mylog) [new CTRACE $val(logfile)]
 set god_ [create-god $val(total)]
 $god_ add-logfile $val(mylog)
 
+source treeStructure.tcl
 
 for {set i 0} {$i <  $val(total)} {incr i} {
         $god_ setnodechargeID $i
 	if {$i==0} {
-        $god_ setnodePcharge 0.000102
+        $god_ setnodePcharge 0.00010
     } else {
-        $god_ setnodePcharge 0.000103
+        $god_ setnodePcharge 0.00010
     }
     set node_($i) [$ns_ node]
 	$node_($i) random-motion 0
@@ -123,6 +124,11 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     } else { 
 	    $node_($i) set X_ [expr 10.0*$i]
 	    $node_($i) set Y_ 0.0
+    }
+    if {$i == 3} {
+    	$god_ setasEdgeNode $i
+    } else {
+    	$god_ setasNotEdgeNode $i
     }
     $node_($i) set Z_ 0.0      
 

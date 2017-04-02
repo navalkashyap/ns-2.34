@@ -14,8 +14,8 @@
 #define slot_Tx						1
 #define slot_Rx						2
 #define slot_Ack					3
-#define  EPSILON    (1.0E-8)
-
+#define EPSILON    (1.0E-8)
+#define UNKNOWN						-2
 #include <vector>
 #include <list>
 #include "mac.h"
@@ -42,10 +42,11 @@ enum myRoleType {
 struct neighborNode {
 	int id;
 	int role;
+	int minHops;
 	int	distSlots;
 	int SFslots;
 	double SFtime;
-	neighborNode(int i):id(i),role(0),distSlots(-1),SFslots(0),SFtime(0){}
+	neighborNode(int i):id(i),role(0),minHops(0),distSlots(-1),SFslots(0),SFtime(0){}
 };
 
 class MacAwsnTimer: public Handler {
@@ -228,6 +229,7 @@ private:
 	int             	tx_active_;     // transmission active flag
 	unsigned int    	cw_;			      // contention window
 	char 	TxRx[4];
+	char	Role[2];
 	char	direction[3][4];
 	std::vector<neighborNode> 	neighborList;	// store neighbor'sinformation
 	std::vector<neighborNode> 	ParentTable;  	// store sender's information
@@ -239,6 +241,7 @@ private:
 
 
 	int 				TotalDataSent;
+	int					ofPackets;
 	int 				alloc_slot[frameLen];
 	int 				maxFrameSlots;
 	int					slotNum;

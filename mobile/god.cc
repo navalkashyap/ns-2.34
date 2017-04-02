@@ -946,6 +946,7 @@ God::command(int argc, const char* const* argv)
 			//printf("node %d x %f y %f\n", sourcenodeid, nx, ny);
 			return TCL_OK;
 		}
+		// Naval
 		if (strcasecmp(argv[1], "setnodechargeID") == 0) {
 			chargeid = atoi(argv[2]);
 			return TCL_OK;
@@ -954,6 +955,25 @@ God::command(int argc, const char* const* argv)
 			P_charge[chargeid] = atof(argv[2]);
 			return TCL_OK;
 		}
+		if (strcasecmp(argv[1], "setasEdgeNode") == 0) {
+			int nodeID = atoi(argv[2]);
+			isEdgeNode_[nodeID] = true;
+			return TCL_OK;
+		}
+		if (strcasecmp(argv[1], "setasNotEdgeNode") == 0) {
+			int nodeID = atoi(argv[2]);
+			isEdgeNode_[nodeID] = false;
+			return TCL_OK;
+		}
+		if (strcasecmp(argv[1], "setasParentID") == 0) {
+			int nodeID = atoi(argv[2])%100;
+//			int ParentID = atoi(argv[3]);
+			int ParentID = atoi(argv[2])/100;
+			myParent[nodeID] = ParentID;
+			return TCL_OK;
+		}
+
+		//~Naval
 // -Yang 04/25/2010
 
 
@@ -1027,7 +1047,6 @@ God::command(int argc, const char* const* argv)
             // Naval
             Role = new bool[num_nodes];
             myParent = new int[num_nodes];
-			//bzero((char*)myParent, sizeof(int)*num_nodes);
 			mySlot = new int[num_nodes];
 			bzero((char*)mySlot, sizeof(int)*num_nodes);  // marking current slot as zero slot
 			P_charge = new double[num_nodes];
@@ -1048,6 +1067,14 @@ God::command(int argc, const char* const* argv)
 			for(int i =0; i<num_nodes;i++) {
 				nodeSchedule[i] = new int[10];
 			}
+			isEdgeNode_ = new bool[num_nodes];
+			bzero((char*)isEdgeNode_, sizeof(bool)*num_nodes);
+			knowSink  = new bool[num_nodes];
+			bzero((char*)knowSink, sizeof(bool)*num_nodes);
+			minHops  = new int[num_nodes];
+			bzero((char*)minHops, sizeof(int)*num_nodes);
+			parentDiscovered = new bool[num_nodes];
+			bzero((char*)parentDiscovered, sizeof(bool)*num_nodes);
 			//-Naval
             return TCL_OK;
      }

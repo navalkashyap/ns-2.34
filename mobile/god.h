@@ -194,7 +194,13 @@ public:
 	inline int getmaxSFslots(int nodeID) {return maxSFslots[nodeID];}
 	inline void setslotDataAck(int nodeID, int slotNum, int val) {slotDataAck[nodeID][slotNum] = val;}
 	inline int getslotDataAck(int nodeID, int slotNum) {return slotDataAck[nodeID][slotNum];}
-
+	inline bool isEdgeNode(int nodeID) {return isEdgeNode_[nodeID];}
+	inline void setknowSink(int nodeID, bool isknow) {knowSink[nodeID] = isknow;}
+	inline bool getknowSink(int nodeID) {return knowSink[nodeID];}
+	inline void setminHop(int nodeID, int min) {minHops[nodeID] = min;}
+	inline int getminHop(int nodeID) {return minHops[nodeID];}
+	inline void setparentDiscovered(int nodeID) {parentDiscovered[nodeID] = true;}
+	inline bool getparentDiscovered(int nodeID) {return parentDiscovered[nodeID];}
 //-Naval
 private:
         int num_nodes;
@@ -232,6 +238,10 @@ private:
         double* maxSFTime;
         int* TotalSFslots;
         int* maxSFslots;
+        bool* isEdgeNode_;
+        bool* knowSink;
+        int* minHops;
+        bool* parentDiscovered;
         //~Naval
         // added by Yang 04/25/2010
         CTRACE* ctrace_;
