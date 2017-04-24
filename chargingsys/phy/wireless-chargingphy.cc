@@ -96,7 +96,7 @@ WirelessChargingPhy::turnOnRadio(){
 	}
 	radioStatus_ = RADIOON;
 //	em()->DecrTxEnergy(radioOnTime, P_idle_);
-	printf("node:%d, WirelessChargingPhy::turnOnRadio: RadioStatus:%d, current_energy:%f, time:%f\n",index_,radioStatus_,em()->energy(),NOW);
+//	printf("node:%d, WirelessChargingPhy::turnOnRadio: RadioStatus:%d, current_energy:%f, time:%f\n",index_,radioStatus_,em()->energy(),NOW);
 
 //}
 }
@@ -114,7 +114,7 @@ WirelessChargingPhy::turnOffRadio(){
 		radioStatus_ = RADIOOFF;
 	}
 	//em()->DecrTxEnergy(radioOnTime, P_idle_);
-	printf("node:%d, WirelessChargingPhy::turnOffRadio: RadioStatus:%d, radioOnTime:%f, energy_afterRadioOFF:%f, time:%f\n",index_,radioStatus_,radioOnTime,em()->energy(),NOW);
+//	printf("node:%d, WirelessChargingPhy::turnOffRadio: RadioStatus:%d, radioOnTime:%f, energy_afterRadioOFF:%f, time:%f\n",index_,radioStatus_,radioOnTime,em()->energy(),NOW);
 //}
 }
 
@@ -136,7 +136,7 @@ WirelessChargingPhy::sendDown(Packet *p)
 	if (em()) {
 			//node is off here...
 			if (radioStatus_ != RADIOON ) {
-				printf("node:%d, WirelessChargingPhy::sendDown: radio is already off, eng %f!\n", index_, em()->energy());
+//				printf("node:%d, WirelessChargingPhy::sendDown: radio is already off, eng %f!\n", index_, em()->energy());
 				Packet::free(p);
 				return;
 			}
@@ -150,7 +150,7 @@ WirelessChargingPhy::sendDown(Packet *p)
 		    double start_time = MAX(channel_idle_time_, NOW);
 		    double end_time = MAX(channel_idle_time_, NOW+txtime);
 		    double actual_txtime = end_time-start_time;
-		    printf("node:%d, WirelessChargingPhy::sendDown: txtime %f\tactual_txtime %f @ %f\n",node()->address(),txtime,actual_txtime,NOW);
+//		    printf("node:%d, WirelessChargingPhy::sendDown: txtime %f\tactual_txtime %f @ %f\n",node()->address(),txtime,actual_txtime,NOW);
 
 		    if (start_time > update_energy_time_) {
 			    //em()->DecrIdleEnergy(start_time - 
@@ -229,7 +229,7 @@ WirelessChargingPhy::sendUp(Packet *p)
 	 * Sanity Check
 	 */
 	assert(initialized());
-	printf("node:%d, WirelessChargingPhy::sendUp: @%f \n",node()->address(),NOW);
+//	printf("node:%d, WirelessChargingPhy::sendUp: @%f \n",node()->address(),NOW);
 
 	PacketStamp s;
 	double Pr;
@@ -242,7 +242,7 @@ WirelessChargingPhy::sendUp(Packet *p)
 	if (em()) {
 			if (radioStatus_ != RADIOON){
 				pkt_recvd = 0;
-				printf("node:%d, WirelessChargingPhy::sendUp: RadioStatus != RADIOON msg_dropped @%f \n",node()->address(),NOW);
+//				printf("node:%d, WirelessChargingPhy::sendUp: RadioStatus != RADIOON msg_dropped @%f \n",node()->address(),NOW);
 				goto DONE;
 			}
 			

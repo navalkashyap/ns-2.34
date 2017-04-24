@@ -9,11 +9,14 @@
 #define CHARGINGSYS_MAC_AWSN_MAC_H_
 
 #define MAC_BufferSize				20
+#define pktSendLatency				10
+#define pktDropLatency				30
 #define frameLen 					10
 #define slot_Beacon 				0
 #define slot_Tx						1
 #define slot_Rx						2
 #define slot_Ack					3
+#define slot_RxIdle					4
 #define EPSILON    (1.0E-8)
 #define UNKNOWN						-2
 #include <vector>
@@ -228,13 +231,14 @@ private:
 	MacState        	tx_state_;      // outgoing state
 	int             	tx_active_;     // transmission active flag
 	unsigned int    	cw_;			      // contention window
-	char 	TxRx[4];
+	char 	TxRx[5];
 	char	Role[2];
-	char	direction[3][4];
+	char	dir[3];
 	std::vector<neighborNode> 	neighborList;	// store neighbor'sinformation
 	std::vector<neighborNode> 	ParentTable;  	// store sender's information
 	std::vector<neighborNode> 	ChildTable;  	// store receiver's information
 	std::list< Packet* > 		macQueue;  		// mac buffer
+	std::list<double>			pktTimeStamp;	// Maintain pkt arrival time
 	std::vector<Packet*>        macQueueTx;		// Temporary buffer during Tx, waiting for Ack
 	u_int16_t retryCount_;          // retry count for one data packet
 	double last_alive_;             // last time a data message is received

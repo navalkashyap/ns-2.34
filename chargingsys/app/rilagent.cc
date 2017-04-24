@@ -45,7 +45,7 @@ void RILAgent::sendmsg(int nbytes, AppData* data, const char* flags) {
 		// fill common header content
 		hdr_cmn *ch = hdr_cmn::access(p);
 		ch->size() = n;
-		ch->timestamp() = (u_int32_t)(NOW);
+		ch->timestamp() = NOW;
 		ch->ptype() = PT_RILAGENT;
 		ch->num_forwards() = 0;
 		// fill ip header content

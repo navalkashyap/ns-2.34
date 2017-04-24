@@ -51,7 +51,10 @@ private:
 	RILAppTimer* dataT_;			// timer for data transmitting
     int     myID;
     int     packetseq;
-    double dataInterval_;
+    double  dataInterval_;
+    double 	averageDelay;
+    double 	totalReceivedpkt;
+    double	totalDelay;
 };
 
 #endif /* NRRAPPLICATION_H_ */

@@ -78,6 +78,9 @@ void RILApp::start() {
 	//God::instance()->ctrace()->log("node %d start charging app @ %f\n", myID, NOW);
 	if (myID != 0 && God::instance()->isEdgeNode(myID)) {
 	    dataT_ = new RILAppTimer(this, DTIMER);
+	    averageDelay = 0.0;
+	    totalDelay = 0;
+	    totalReceivedpkt = 0;
         dataT_->sched(next_interval());
         //printf("node %d data rate %f\n",myID, dataInterval_);
         printf("node:%d, RILApp::start: isEdgeNode:%d\n",myID,God::instance()->isEdgeNode(myID));
@@ -117,7 +120,11 @@ void RILApp::recvMsg(RILAppMessageT_* msg) {
     if (msg->msgType == DATA_SENSING) {
         int src = msg->source;
         double delay = NOW-msg->timestamp;
-        printf("node:%d, RILApp::recvMsg: receive a data message from node-%d msg->seq %d delay %f@ %f\n", myID,src, msg->seq,delay,NOW);
+        totalReceivedpkt += 1.0f;
+        totalDelay += delay;
+        averageDelay = totalDelay / totalReceivedpkt;
+        printf("node:%d, RILApp::recvMsg: receive a data message from node-%d msg->seq:%d delay:%f, averageDelay:%f, totalReceivedpkt:%f @%f\n",
+        		myID,src, msg->seq,delay,averageDelay,totalReceivedpkt,NOW);
         trace_->log("node %d receive a data message from %d seq %d delay %f @ %f\n", myID,src, msg->seq,delay,NOW);
         //printf("node %d received %f\n", src, NOW);
     }

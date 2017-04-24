@@ -11,8 +11,6 @@ set val(ant)            Antenna/OmniAntenna        ;# antenna model
 set val(ifqlen)         1000                       ;# max packet in ifq
 set val(rp)             ChargingRT                 ;# use our own routing
 
-# set val(nn)             [lindex $argv 0]
-#set val(datarate)       [lindex $argv 1]
 #set val(et)             [lindex $argv 2]
 #set val(nsseed)         [lindex $argv 3]
 #set val(rtype)          [lindex $argv 4]
@@ -23,8 +21,13 @@ set val(rp)             ChargingRT                 ;# use our own routing
 #set val(trvalue)  		 [lindex $argv 9]
 #set val(fulleng)        20000.0
 
-set val(nn)             4
-set val(datainterval)   25
+
+set val(nn)            [lindex $argv 0]
+set val(datainterval)   [lindex $argv 1]
+set val(firstLeafNode)  [lindex $argv 2]
+#set val(nn)             7
+#set val(datainterval)  25
+#set val(firstLeafNode)  3
 set val(et)             100000
 set val(nsseed)         100
 set val(rtype)          1
@@ -34,6 +37,10 @@ set val(logfile)        log
 set val(routeinterval)  3
 set val(trvalue)  		1
 set val(fulleng)        0.0015
+puts $val(nn)
+puts $val(datainterval)
+puts $val(firstLeafNode)
+
 
 
 # some ns2 default settings
@@ -84,7 +91,7 @@ $god_ add-logfile $val(mylog)
 source treeStructure.tcl
 
 for {set i 0} {$i <  $val(total)} {incr i} {
-        $god_ setnodechargeID $i
+    $god_ setnodechargeID $i
 	if {$i==0} {
         $god_ setnodePcharge 0.00010
     } else {
@@ -107,25 +114,31 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     $RILapp_($i) 			attach-agent $RILagent_($i)
 
 	if {$val(rtype) == 1} {
-		# line
         if {$i==0} {
             $god_ setassink $i
         } else {
             $god_ setassource $i
         }
-        #$node_($i) set X_ [expr 70.0*$i]
-        #$node_($i) set Y_ 100.0
 	} else {
         puts "wrong input"
     }
-	if { $i < 4 } {
-	    $node_($i) set X_ [expr 70.0*$i]
+	
+	if {$i < 1} {
+	    $node_($i) set X_ 0.0
 	    $node_($i) set Y_ 0.0
-    } else { 
-	    $node_($i) set X_ [expr 10.0*$i]
+    } elseif {$i < 3} {
+	    $node_($i) set X_ [expr 60.0 + $i]
+	    $node_($i) set Y_ 0.0
+    } elseif {$i < 8} {
+	    $node_($i) set X_ [expr 2*60.0 + $i]
+	    $node_($i) set Y_ 0.0
+    } elseif {$i >=8} {
+	    $node_($i) set X_ [expr 3*60.0 + $i]
 	    $node_($i) set Y_ 0.0
     }
-    if {$i == 3} {
+    
+     
+    if {$i >= $val(firstLeafNode)} {
     	$god_ setasEdgeNode $i
     } else {
     	$god_ setasNotEdgeNode $i

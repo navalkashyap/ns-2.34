@@ -141,7 +141,7 @@ void EnergyModel::IncrChargeEnergy(double chargetime, double P_charge)
 		energy_ = maxenergy_;
 	else
 		energy_ = energy_ + iEng;
-	printf("EnergyModel::IncrChargeEnergy: energy:%f, chargetime:%f, increaseEnergy:%f\n",energy_,chargetime,iEng);
+//	printf("EnergyModel::IncrChargeEnergy: energy:%f, chargetime:%f, increaseEnergy:%f\n",energy_,chargetime,iEng);
 	return;
 }
 
