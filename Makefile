@@ -336,6 +336,7 @@ OBJ_CC = \
  	chargingsys/phy/wireless-chargingphy.o chargingsys/phy/charging-energy-model.o \
  	chargingsys/mac/rilmac.o \
  	chargingsys/awsn/awsn-mac.o \
+ 	chargingsys/awsn/BFMac.o \
  	chargingsys/ctrace.o \
 	$(OBJ_STL)
 

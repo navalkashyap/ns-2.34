@@ -5,6 +5,7 @@ set val(chan)           Channel/WirelessChannel    ;# channel type
 set val(prop)           Propagation/TwoRayGround   ;# radio-propagation model
 set val(netif)          Phy/WirelessCPhy           ;# network interface type
 set val(mac)            Mac/Awsn		           ;# user our own mac
+#set val(mac)            Mac/BF		           ;# user our own mac
 set val(ifq)            Queue/DropTail             ;# interface queue type
 set val(ll)             LL                         ;# link layer type
 set val(ant)            Antenna/OmniAntenna        ;# antenna model
@@ -22,9 +23,12 @@ set val(rp)             ChargingRT                 ;# use our own routing
 #set val(fulleng)        20000.0
 
 
-set val(nn)            [lindex $argv 0]
+set val(nn)             [lindex $argv 0]
 set val(datainterval)   [lindex $argv 1]
 set val(firstLeafNode)  [lindex $argv 2]
+set val(buffersize)		[lindex $argv 3]
+set val(maxParentCycle)	[lindex $argv 4]
+
 #set val(nn)             7
 #set val(datainterval)  25
 #set val(firstLeafNode)  3
@@ -52,6 +56,8 @@ set topo        [new Topography]
 $topo           load_flatgrid 1500 1500
 
 source ns2parameters.tcl
+Mac/BF				set MaxParentCycle 	$val(maxParentCycle)
+Mac/BF				set Buffersize  	$val(buffersize)
 
 Agent/ChargingRT    set RTYPE $val(rtype)
 Agent/ChargingRT    set routinginterval $val(routeinterval)
@@ -94,9 +100,15 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     $god_ setnodechargeID $i
 	if {$i==0} {
         $god_ setnodePcharge 0.00010
+    } elseif {$i < 5} {
+        $god_ setnodePcharge 0.00010
+    } elseif {$i < 15} {
+        $god_ setnodePcharge 0.00010
+    } elseif {$i < 31} {
+        $god_ setnodePcharge 0.00010
     } else {
         $god_ setnodePcharge 0.00010
-    }
+    } 
     set node_($i) [$ns_ node]
 	$node_($i) random-motion 0
     set rtagent [$node_($i) set ragent_]
@@ -132,8 +144,14 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     } elseif {$i < 8} {
 	    $node_($i) set X_ [expr 2*60.0 + $i]
 	    $node_($i) set Y_ 0.0
-    } elseif {$i >=8} {
+    } elseif {$i < 16} {
 	    $node_($i) set X_ [expr 3*60.0 + $i]
+	    $node_($i) set Y_ 0.0
+    } elseif {$i < 32} {
+	    $node_($i) set X_ [expr 4*60.0 + $i]
+	    $node_($i) set Y_ 0.0
+    } elseif {$i >=32} {
+	    $node_($i) set X_ [expr 5*60.0 + $i]
 	    $node_($i) set Y_ 0.0
     }
     

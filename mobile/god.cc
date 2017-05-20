@@ -96,6 +96,8 @@ God::God()
 	enableCharge_ = false;
 	moveEng = 0;
 	chargeid = 0;
+	MaxparentCycle = 5;
+	nodebufferSize = 25;
 }
 
 // Added by Chalermek 12/1/99
@@ -970,6 +972,14 @@ God::command(int argc, const char* const* argv)
 //			int ParentID = atoi(argv[3]);
 			int ParentID = atoi(argv[2])/100;
 			myParent[nodeID] = ParentID;
+			return TCL_OK;
+		}
+		if (strcasecmp(argv[1], "setbufferSize") == 0) {
+			nodebufferSize = atoi(argv[2]);
+			return TCL_OK;
+		}
+		if (strcasecmp(argv[1], "MaxparentCycle") == 0) {
+			MaxparentCycle = atoi(argv[2]);
 			return TCL_OK;
 		}
 

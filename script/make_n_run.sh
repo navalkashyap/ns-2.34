@@ -24,7 +24,7 @@ do
 	TotalpktRecvd=$TotalpktRecvd+$pktRecvd
 #	echo Node=$node, Pkts Sent=$pktSent, PktsRecvd=$pktRecvd, AvgDelay=$Delay
 done
-echo Nodes,3, Interval,$interval, EverageDelay,$averageDelay
+echo Nodes,3, Interval,$interval, EverageDelay,$averageDelay, TotalpktRecvd,$TotalpktRecvd, TotalpktSent,$TotalpktSent
 
 
 averageDelay=0
@@ -41,7 +41,7 @@ do
 	TotalpktRecvd=$TotalpktRecvd+$pktRecvd
 #	echo Node=$node, Pkts Sent=$pktSent, PktsRecvd=$pktRecvd, AvgDelay=$Delay
 done
-echo Nodes,7, Interval,$interval, EverageDelay,$averageDelay
+echo Nodes,7, Interval,$interval, EverageDelay,$averageDelay, TotalpktRecvd,$TotalpktRecvd, TotalpktSent,$TotalpktSent
 
 
 averageDelay=0
@@ -58,7 +58,7 @@ do
 	TotalpktRecvd=$TotalpktRecvd+$pktRecvd
 #	echo Node=$node, Pkts Sent=$pktSent, PktsRecvd=$pktRecvd, AvgDelay=$Delay
 done
-echo Nodes,15, Interval,$interval, EverageDelay,$averageDelay
+echo Nodes,15, Interval,$interval, EverageDelay,$averageDelay, TotalpktRecvd,$TotalpktRecvd, TotalpktSent,$TotalpktSent
 
 done
 

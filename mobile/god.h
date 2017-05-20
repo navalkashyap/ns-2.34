@@ -201,6 +201,8 @@ public:
 	inline int getminHop(int nodeID) {return minHops[nodeID];}
 	inline void setparentDiscovered(int nodeID) {parentDiscovered[nodeID] = true;}
 	inline bool getparentDiscovered(int nodeID) {return parentDiscovered[nodeID];}
+	inline int getMaxparentCycle(){return MaxparentCycle;}
+	inline int getnodebufferSize(){return nodebufferSize;}
 //-Naval
 private:
         int num_nodes;
@@ -242,6 +244,8 @@ private:
         bool* knowSink;
         int* minHops;
         bool* parentDiscovered;
+        int nodebufferSize;
+        int MaxparentCycle;
         //~Naval
         // added by Yang 04/25/2010
         CTRACE* ctrace_;

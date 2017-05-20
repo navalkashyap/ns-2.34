@@ -1,0 +1,21 @@
+$god_ setasParentID 000
+$god_ setasParentID 001
+$god_ setasParentID 102
+$god_ setasParentID 203
+$god_ setasParentID 304
+$god_ setasParentID 405
+$god_ setasParentID 506
+
+$god_ setasParentID 607
+$god_ setasParentID 708
+$god_ setasParentID 809
+$god_ setasParentID 910
+$god_ setasParentID 1011
+$god_ setasParentID 1112
+$god_ setasParentID 1213
+$god_ setasParentID 1314
+$god_ setasParentID 1415
+$god_ setasParentID 1516
+$god_ setasParentID 1617
+$god_ setasParentID 1718
+$god_ setasParentID 1819

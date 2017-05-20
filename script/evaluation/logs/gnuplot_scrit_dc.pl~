@@ -1,0 +1,19 @@
+#!/usr/bin/env perl
+
+set grid
+set term png
+set title 'Daisy Chain Topology - Latency'
+set output "daisychain_latency.png"
+set xlabel "data generation interval (sec)" font "Helvetica,16"
+set ylabel "latency (sec)" font "Helvetica,16"
+plot [] [:1200] 'daisy_latency_node_3.log' title 'Number of nodes: 3' with lines, 'daisy_latency_node_7.log' title 'Number of nodes: 7' with lines
+
+set grid
+set term png
+set title 'Daisy Chain Topology - Drop Ratio'
+set output "daisychain_drop.png"
+set xlabel "data generation interval (sec)" font "Helvetica,16"
+set ylabel "drop ratio (%)" font "Helvetica,16"
+plot [] [:100] 'daisy_drop_node_3.log' title 'Number of nodes: 3' with lines, 'daisy_drop_node_7.log' title 'Number of nodes: 7' with lines
+
+

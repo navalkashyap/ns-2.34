@@ -17,6 +17,9 @@
 #define slot_Rx						2
 #define slot_Ack					3
 #define slot_RxIdle					4
+#define slot_RTS					5
+
+
 #define EPSILON    (1.0E-8)
 #define UNKNOWN						-2
 #include <vector>
@@ -30,11 +33,11 @@
 
 class MacAwsn;
 enum MacFrameSubType {
-  MAC_RIL_RRTS = 1,
-  MAC_RIL_ACK = 2,
-  MAC_RIL_RESPONSE = 3,
-  MAC_RIL_DATA = 4,
-  MAC_RIL_ONDEMAND = 5,
+  MAC_AWSN_Beacon = 1,
+  MAC_AWSN_ACK = 2,
+  MAC_AWSN_RTS = 3,
+  MAC_AWSN_DATA = 4,
+  MAC_AWSN_ONDEMAND = 5,
 };
 
 enum myRoleType {
@@ -206,9 +209,9 @@ public:
 	void recvData(Packet *p);
 	void recvAck(Packet *p);
 	void recvBeacon(Packet *p);
-	void sendBeaconAck(int src);
+	void recvRTS(Packet *p);
 
-	void setAllSlotsRx();
+	void setAllSlots();
 	void scheduleChildren();
 	bool updateNeighborInfo(int src);
 	bool updateParentInfo(int src);
@@ -218,6 +221,7 @@ public:
 	void BeaconSent();
 	void sendData();
 	void sendAck();
+	void sendRTS(int src);
 	void calcNextSFslots();
 	double 	Txtime(Packet *p);
 
@@ -244,14 +248,17 @@ private:
 	double last_alive_;             // last time a data message is received
 
 
+	int					parentCycleNum;
+	int					maxParentCycle;
 	int 				TotalDataSent;
 	int					ofPackets;
 	int 				alloc_slot[frameLen];
+	int 				alloc_slot_prev[frameLen];
 	int 				maxFrameSlots;
 	int					slotNum;
 	int					currentFrameSlots;
-	double				runTimeShiftTime;
-	double				mytotalSFTime;
+	double				runTimeShift;
+	double				mySFTime;
 	bool				runTimeShiftReq;
 	int 				shiftFrameSlot;
 	int					totalSlotsShift;
@@ -273,11 +280,14 @@ private:
 	postFrameAwsnTimer	postFrameTimer;
 
 	unsigned int sender_cw_;
-	double chargeTime;
-	double dischargeTime;
-	double adjustmentTime;
-	double randomTime;
+	double 	chargeTime;
+	double 	dischargeTime;
+	double 	adjustmentTime;
+	double 	randomTime;
 	int		superFrameCount;
+	bool	adjustSF;
+	bool 	adjustF;
+	bool 	checkForAck;
 	inline WirelessChargingPhy* newnetif(){return dynamic_cast<WirelessChargingPhy*>(netif_);}
 };
 

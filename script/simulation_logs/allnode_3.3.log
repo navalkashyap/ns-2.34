@@ -1,0 +1,1845 @@
+3
+3
+1
+Starting Simulation...
+num_nodes is set 3
+node 0 x 0.000000 y 0.000000
+ChargingRT::command: node:0 x 0.000000 y 0.000000 
+node:0, isEdgeNode:0
+node:0, AWSNMac::AWSNMac: ranNum:71802775, randomTime@2.416800, dischargeTime:0.024000,chargeTime:0.000000, myParent:0, myTreeParentID:0, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:0, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:1 x 61.000000 y 0.000000 
+node:1, isEdgeNode:1
+node:1, AWSNMac::AWSNMac: ranNum:1262376000, randomTime@0.050400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:0, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:1, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:2 x 62.000000 y 0.000000 
+node:2, isEdgeNode:1
+node:2, AWSNMac::AWSNMac: ranNum:902128816, randomTime@0.100800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:0, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:2, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+node:1, MacAwsn::SuperFrameHandler:1, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:0, totalSlotsShift:0 time@0.050400
+node:1 node:1, MacAwsn::SuperFrameHandler:2, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-10 time@0.074400
+node:2, MacAwsn::SuperFrameHandler:1, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:0, totalSlotsShift:0 time@0.100800
+node:2 node:2, MacAwsn::SuperFrameHandler:2, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-10 time@0.124800
+node:0, MacAwsn::SuperFrameHandler:1, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2.416800
+node:0 
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 150.0
+node:0, MacAwsn::SuperFrameHandler:2, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2.440800
+node:0, RILApp::start: Does not started, isEdgeNode:0
+node:1, RILApp::start: isEdgeNode:1
+node:2, RILApp::start: isEdgeNode:1
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:3, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-20 time@14.234400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:3, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-20 time@14.284800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:3, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@16.576800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:4, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-30 time@28.394400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:4, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-30 time@28.444800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:4, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@30.712800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:5, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-40 time@42.554400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:5, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-40 time@42.604800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:5, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@44.848800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:6, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-50 time@56.714400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:6, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-50 time@56.764800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:6, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@58.984800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:7, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-60 time@70.874400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:7, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-60 time@70.924800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:7, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@73.120800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:8, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-70 time@85.034400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:8, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-70 time@85.084800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:8, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@87.256800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:9, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-80 time@99.194400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:9, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-80 time@99.244800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:9, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@101.392800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:10, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-90 time@113.354400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:10, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-90 time@113.404800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:10, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@115.528800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:11, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-100 time@127.514400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:11, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-100 time@127.564800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:11, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@129.664800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:12, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-110 time@141.674400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:12, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-110 time@141.724800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:12, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@143.800800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:13, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-120 time@155.834400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:13, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-120 time@155.884800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:13, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@157.936800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:14, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-130 time@169.994400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:14, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-130 time@170.044800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:14, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@172.072800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:15, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-140 time@184.154400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:15, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-140 time@184.204800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:15, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@186.208800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:16, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-150 time@198.314400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:16, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-150 time@198.364800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:16, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@200.344800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:17, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-160 time@212.474400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:17, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-160 time@212.524800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:17, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@214.480800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:18, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-170 time@226.634400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:18, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-170 time@226.684800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:18, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@228.616800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:19, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-180 time@240.794400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:19, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-180 time@240.844800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:19, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@242.752800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:20, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-190 time@254.954400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:20, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-190 time@255.004800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:20, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@256.888800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:21, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-200 time@269.114400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:21, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-200 time@269.164800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:21, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@271.024800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:22, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-210 time@283.274400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:22, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-210 time@283.324800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:22, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@285.160800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:23, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-220 time@297.434400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:23, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-220 time@297.484800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:23, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@299.296800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:24, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-230 time@311.594400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:24, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-230 time@311.644800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:24, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@313.432800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:25, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-240 time@325.754400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:25, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-240 time@325.804800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:25, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@327.568800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:26, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-250 time@339.914400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:26, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-250 time@339.964800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:26, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@341.704800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:27, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-260 time@354.074400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:27, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-260 time@354.124800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:27, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@355.840800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:28, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-270 time@368.234400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:28, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-270 time@368.284800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:28, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@369.976800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:29, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-280 time@382.394400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:29, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-280 time@382.444800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:29, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@384.112800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:30, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-290 time@396.554400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:30, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-290 time@396.604800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:30, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@398.248800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:31, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-300 time@410.714400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:31, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-300 time@410.764800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:31, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@412.384800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:32, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-310 time@424.874400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:32, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-310 time@424.924800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:32, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@426.520800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:33, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-320 time@439.034400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:33, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-320 time@439.084800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:33, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@440.656800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:34, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-330 time@453.194400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:34, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-330 time@453.244800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:34, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@454.792800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:35, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-340 time@467.354400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:35, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-340 time@467.404800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:35, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@468.928800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:36, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-350 time@481.514400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:36, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-350 time@481.564800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:36, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@483.064800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:37, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-360 time@495.674400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:37, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-360 time@495.724800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:37, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@497.200800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:38, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-370 time@509.834400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:38, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-370 time@509.884800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:38, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@511.336800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:39, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-380 time@523.994400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:39, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-380 time@524.044800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:39, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@525.472800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:40, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-390 time@538.154400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:40, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-390 time@538.204800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:40, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@539.608800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:41, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-400 time@552.314400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:41, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-400 time@552.364800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:41, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@553.744800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:42, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-410 time@566.474400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:42, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-410 time@566.524800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:42, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@567.880800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:43, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-420 time@580.634400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:43, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-420 time@580.684800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:43, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@582.016800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:44, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-430 time@594.794400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:44, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-430 time@594.844800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:44, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@596.152800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:45, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-440 time@608.954400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:45, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-440 time@609.004800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:45, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@610.288800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:46, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-450 time@623.114400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:46, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-450 time@623.164800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:46, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@624.424800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:47, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-460 time@637.274400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:47, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-460 time@637.324800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:47, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@638.560800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:48, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-470 time@651.434400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:48, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-470 time@651.484800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:48, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@652.696800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:49, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-480 time@665.594400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:49, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-480 time@665.644800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:49, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@666.832800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:50, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-490 time@679.754400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:50, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-490 time@679.804800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:50, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@680.968800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:51, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-500 time@693.914400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:51, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-500 time@693.964800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:51, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@695.104800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:52, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-510 time@708.074400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:52, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-510 time@708.124800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:52, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@709.240800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:53, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-520 time@722.234400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:53, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-520 time@722.284800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:53, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@723.376800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:54, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-530 time@736.394400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:54, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-530 time@736.444800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:54, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@737.512800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:55, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-540 time@750.554400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:55, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-540 time@750.604800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:55, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@751.648800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:56, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-550 time@764.714400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:56, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-550 time@764.764800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:56, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@765.784800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:57, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-560 time@778.874400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:57, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-560 time@778.924800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:57, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@779.920800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:58, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-570 time@793.034400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:58, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-570 time@793.084800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:58, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@794.056800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:59, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-580 time@807.194400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:59, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-580 time@807.244800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:59, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@808.192800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:60, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-590 time@821.354400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:60, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-590 time@821.404800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:60, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@822.328800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:61, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-600 time@835.514400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:61, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-600 time@835.564800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:61, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@836.464800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:62, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-610 time@849.674400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:62, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-610 time@849.724800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:62, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@850.600800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:63, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-620 time@863.834400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:63, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-620 time@863.884800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:63, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@864.736800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:64, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-630 time@877.994400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:64, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-630 time@878.044800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:64, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@878.872800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:65, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-640 time@892.154400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:65, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-640 time@892.204800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:65, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@893.008800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:66, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-650 time@906.314400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:66, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-650 time@906.364800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:66, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@907.144800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:67, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-660 time@920.474400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:67, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-660 time@920.524800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:67, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@921.280800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:68, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-670 time@934.634400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:68, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-670 time@934.684800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:68, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@935.416800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:69, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-680 time@948.794400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:69, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-680 time@948.844800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:69, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@949.552800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:70, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-690 time@962.954400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:70, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-690 time@963.004800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:70, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@963.688800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:71, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-700 time@977.114400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:71, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-700 time@977.164800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:71, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@977.824800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:72, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-710 time@991.274400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:72, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-710 time@991.324800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:72, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@991.960800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:73, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-720 time@1005.434400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:73, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-720 time@1005.484800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:73, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1006.096800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:74, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-730 time@1019.594400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:74, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-730 time@1019.644800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:74, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1020.232800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:75, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-740 time@1033.754400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:75, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-740 time@1033.804800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:75, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1034.368800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:76, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-750 time@1047.914400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:76, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-750 time@1047.964800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:76, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1048.504800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:77, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-760 time@1062.074400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:77, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-760 time@1062.124800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:77, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1062.640800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:78, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-770 time@1076.234400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:78, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-770 time@1076.284800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:78, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1076.776800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:79, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-780 time@1090.394400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:79, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-780 time@1090.444800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:79, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1090.912800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:80, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-790 time@1104.554400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:80, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-790 time@1104.604800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:80, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1105.048800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:81, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-800 time@1118.714400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:81, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-800 time@1118.764800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:81, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1119.184800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:82, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-810 time@1132.874400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:82, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-810 time@1132.924800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:82, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1133.320800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:83, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-820 time@1147.034400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:83, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-820 time@1147.084800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:83, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1147.456800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:84, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-830 time@1161.194400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:84, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-830 time@1161.244800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:84, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1161.592800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:85, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-840 time@1175.354400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:85, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-840 time@1175.404800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:85, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1175.728800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:86, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-850 time@1189.514400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:86, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-850 time@1189.564800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:86, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1189.864800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:87, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-860 time@1203.674400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:87, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-860 time@1203.724800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:87, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1204.000800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:88, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-870 time@1217.834400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:88, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-870 time@1217.884800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:88, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1218.136800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:89, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-880 time@1231.994400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:89, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-880 time@1232.044800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:89, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1232.272800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:90, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-890 time@1246.154400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:90, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-890 time@1246.204800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:90, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1246.408800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:91, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-900 time@1260.314400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:91, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-900 time@1260.364800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:91, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1260.544800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:92, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-910 time@1274.474400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:92, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-910 time@1274.524800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:92, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1274.680800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:93, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-920 time@1288.634400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:93, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-920 time@1288.684800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:93, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1288.816800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:94, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-930 time@1302.794400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:94, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-930 time@1302.844800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:94, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1302.952800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:95, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-940 time@1316.954400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:95, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-940 time@1317.004800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:95, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1317.088800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:96, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-950 time@1331.114400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:96, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-950 time@1331.164800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:96, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1331.224800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:97, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-960 time@1345.274400
+node:2 node:2 node:2, MacAwsn::SuperFrameHandler:97, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-960 time@1345.324800
+node:0 
+node:0, MacAwsn::SuperFrameHandler:97, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1345.360800
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:98, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-970 time@1359.434400
+node:2 node:2 node:0 
+node:2, MacAwsn::SuperFrameHandler:98, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:-4925, totalSlotsShift:0 time@1359.484800
+node:0, MacAwsn::SuperFrameHandler:98, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1359.496800
+node:2, RILApp::sendMsg: data arrival msg->seq:0, @1359.613346
+node:2, RILApp::sendMsg: data arrival msg->seq:1, @1362.870793
+node:2, RILApp::sendMsg: data arrival msg->seq:2, @1366.118469
+node:2, RILApp::sendMsg: data arrival msg->seq:3, @1368.882610
+node:2, RILApp::sendMsg: data arrival msg->seq:4, @1372.018894
+node:1 node:1 node:1, MacAwsn::SuperFrameHandler:99, myRole:C, MacQueueSize:0, parentID:-2, shiftFrameSlot:-10, totalSlotsShift:-980 time@1373.594400
+node:2 node:0 
+node:2, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:0, MacAwsn::SuperFrameHandler:99, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1373.632800
+node:2, RILApp::sendMsg: data arrival msg->seq:5, @1374.993618
+node:2, RILApp::sendMsg: data arrival msg->seq:6, @1378.047376
+node:2, RILApp::sendMsg: data arrival msg->seq:7, @1380.782588
+node:2, RILApp::sendMsg: data arrival msg->seq:8, @1383.521430
+node:2 
+node:2, MacAwsn::SuperFrameHandler:99, myRole:P, MacQueueSize:9, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1385.440800
+node:2, RILApp::sendMsg: data arrival msg->seq:9, @1386.460700
+node:1 node:1 node:0 
+node:1, MacAwsn::SuperFrameHandler:100, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:-4904, totalSlotsShift:0 time@1387.754400
+node:0, MacAwsn::SuperFrameHandler:100, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1387.768800
+node:1, RILApp::sendMsg: data arrival msg->seq:0, @1387.961184
+node:2, RILApp::sendMsg: data arrival msg->seq:10, @1389.528527
+node:1, RILApp::sendMsg: data arrival msg->seq:1, @1390.926697
+node:2, RILApp::sendMsg: data arrival msg->seq:11, @1392.808161
+node:1, RILApp::sendMsg: data arrival msg->seq:2, @1394.030622
+node:2, RILApp::sendMsg: data arrival msg->seq:12, @1395.847931
+node:1, RILApp::sendMsg: data arrival msg->seq:3, @1396.811141
+node:2, RILApp::sendMsg: data arrival msg->seq:13, @1398.661045
+node:2 
+node:2, MacAwsn::SuperFrameHandler:100, myRole:P, MacQueueSize:14, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1399.576800
+node:1, RILApp::sendMsg: data arrival msg->seq:4, @1399.933156
+node:2, RILApp::sendMsg: data arrival msg->seq:14, @1401.839571
+node:1 node:0 
+node:1, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:0, MacAwsn::SuperFrameHandler:101, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1401.904800
+node:1, RILApp::sendMsg: data arrival msg->seq:5, @1402.854083
+node:2, RILApp::sendMsg: data arrival msg->seq:15, @1404.629731
+node:1, RILApp::sendMsg: data arrival msg->seq:6, @1406.033039
+node:2, RILApp::sendMsg: data arrival msg->seq:16, @1407.761934
+node:1, RILApp::sendMsg: data arrival msg->seq:7, @1408.938506
+node:2, RILApp::sendMsg: data arrival msg->seq:17, @1410.792465
+node:1, RILApp::sendMsg: data arrival msg->seq:8, @1411.821470
+node:2, RILApp::sendMsg: data arrival msg->seq:18, @1413.595318
+node:1 
+node:1, MacAwsn::SuperFrameHandler:101, myRole:P, MacQueueSize:9, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1413.660000
+node:2 
+node:2, MacAwsn::SuperFrameHandler:101, myRole:C, MacQueueSize:19, parentID:0, shiftFrameSlot:-965, totalSlotsShift:-965 time@1413.712800
+node:1, RILApp::sendMsg: data arrival msg->seq:9, @1414.701433
+node:0 
+node:0, MacAwsn::SuperFrameHandler:102, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1416.040800
+node:2, RILApp::sendMsg: data arrival msg->seq:19, @1416.462662
+node:1, RILApp::sendMsg: data arrival msg->seq:10, @1417.625357
+node:2, RILApp::sendMsg: data arrival msg->seq:20, @1419.556335
+node:1, RILApp::sendMsg: data arrival msg->seq:11, @1420.841413
+node:2, RILApp::sendMsg: data arrival msg->seq:21, @1422.309109
+node:1, RILApp::sendMsg: data arrival msg->seq:12, @1424.104159
+node:2, RILApp::sendMsg: data arrival msg->seq:22, @1425.523076
+node:1, RILApp::sendMsg: data arrival msg->seq:13, @1427.012282
+node:1 
+node:1, MacAwsn::SuperFrameHandler:102, myRole:P, MacQueueSize:14, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1427.796000
+node:2 node:2, RILApp::sendMsg: data arrival msg->seq:23, @1428.272138
+node:2 node:0 
+node:2, MacAwsn::SuperFrameHandler:102, myRole:C, MacQueueSize:20, parentID:0, shiftFrameSlot:-5, totalSlotsShift:-970 time@1430.164800
+node:0, MacAwsn::SuperFrameHandler:103, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1430.176800
+node:1, RILApp::sendMsg: data arrival msg->seq:14, @1430.176980
+node:2, RILApp::sendMsg: data arrival msg->seq:24, @1431.475943
+node:1, RILApp::sendMsg: data arrival msg->seq:15, @1433.418159
+node:2, RILApp::sendMsg: data arrival msg->seq:25, @1434.245653
+node:1, RILApp::sendMsg: data arrival msg->seq:16, @1436.191970
+node:2, RILApp::sendMsg: data arrival msg->seq:26, @1437.326183
+node:1, RILApp::sendMsg: data arrival msg->seq:17, @1438.939856
+node:2, RILApp::sendMsg: data arrival msg->seq:27, @1440.541303
+node:1, RILApp::sendMsg: data arrival msg->seq:18, @1441.795506
+node:1 
+node:1, MacAwsn::SuperFrameHandler:103, myRole:C, MacQueueSize:19, parentID:0, shiftFrameSlot:-986, totalSlotsShift:-986 time@1441.932000
+node:2, RILApp::sendMsg: data arrival msg->seq:28, @1443.815153
+node:2 node:2 node:0 
+
+node:0, MacAwsn::recvHandler: MAC_AWSN_RTS
+node:2, MacAwsn::SuperFrameHandler:103, myRole:C, MacQueueSize:20, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1444.312800
+node:0, MacAwsn::SuperFrameHandler:104, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1444.312800
+node:1, RILApp::sendMsg: data arrival msg->seq:19, @1445.095008
+node:2, RILApp::sendMsg: data arrival msg->seq:29, @1446.656979
+node:1, RILApp::sendMsg: data arrival msg->seq:20, @1447.934217
+node:2, RILApp::sendMsg: data arrival msg->seq:30, @1449.382696
+node:1, RILApp::sendMsg: data arrival msg->seq:21, @1451.088132
+node:2, RILApp::sendMsg: data arrival msg->seq:31, @1452.534451
+node:1, RILApp::sendMsg: data arrival msg->seq:22, @1453.905574
+node:2, RILApp::sendMsg: data arrival msg->seq:32, @1455.271357
+node:1 node:1, RILApp::sendMsg: data arrival msg->seq:23, @1456.917492
+node:2, RILApp::sendMsg: data arrival msg->seq:33, @1457.988992
+node:1 node:2 node:0 
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:1 delay:95.561008, averageDelay:95.561008, totalReceivedpkt:1.000000 @1458.431801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:2 delay:92.315732, averageDelay:93.938370, totalReceivedpkt:2.000000 @1458.434201
+node:1, MacAwsn::SuperFrameHandler:104, myRole:C, MacQueueSize:20, parentID:0, shiftFrameSlot:-6, totalSlotsShift:-992 time@1458.434400
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:3 delay:89.553992, averageDelay:92.476911, totalReceivedpkt:3.000000 @1458.436601
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:4 delay:86.420107, averageDelay:90.962710, totalReceivedpkt:4.000000 @1458.439001
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:5 delay:83.447783, averageDelay:89.459724, totalReceivedpkt:5.000000 @1458.441401
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:6 delay:80.396425, averageDelay:87.949175, totalReceivedpkt:6.000000 @1458.443801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:7 delay:77.663613, averageDelay:86.479809, totalReceivedpkt:7.000000 @1458.446201
+node:2, MacAwsn::SuperFrameHandler:104, myRole:C, MacQueueSize:12, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1458.448800
+node:0, MacAwsn::SuperFrameHandler:105, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1458.448800
+node:1, RILApp::sendMsg: data arrival msg->seq:24, @1459.861282
+node:2, RILApp::sendMsg: data arrival msg->seq:34, @1460.768387
+node:1, RILApp::sendMsg: data arrival msg->seq:25, @1463.062464
+node:2, RILApp::sendMsg: data arrival msg->seq:35, @1463.476048
+node:1, RILApp::sendMsg: data arrival msg->seq:26, @1466.311453
+node:2, RILApp::sendMsg: data arrival msg->seq:36, @1466.672308
+node:1, RILApp::sendMsg: data arrival msg->seq:27, @1469.514459
+node:2, RILApp::sendMsg: data arrival msg->seq:37, @1469.864976
+node:1 node:1 node:2 node:0 
+
+node:2, MacAwsn::recv: power is high enough to cause collision
+node:0, MacAwsn::recvHandler: MAC_AWSN_RTS
+node:1, RILApp::sendMsg: data arrival msg->seq:28, @1472.581636
+node:1, MacAwsn::SuperFrameHandler:105, myRole:C, MacQueueSize:20, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1472.584800
+node:2, MacAwsn::SuperFrameHandler:105, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1472.584800
+node:0, MacAwsn::SuperFrameHandler:106, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1472.584800
+node:2, RILApp::sendMsg: data arrival msg->seq:38, @1473.033791
+node:1, RILApp::sendMsg: data arrival msg->seq:29, @1475.344096
+node:2, RILApp::sendMsg: data arrival msg->seq:39, @1476.293972
+node:1, RILApp::sendMsg: data arrival msg->seq:30, @1478.404123
+node:2, RILApp::sendMsg: data arrival msg->seq:40, @1479.543151
+node:1, RILApp::sendMsg: data arrival msg->seq:31, @1481.294612
+node:2, RILApp::sendMsg: data arrival msg->seq:41, @1482.548086
+node:1, RILApp::sendMsg: data arrival msg->seq:32, @1484.282913
+node:2, RILApp::sendMsg: data arrival msg->seq:42, @1485.649433
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:9 delay:100.243102, averageDelay:88.200220, totalReceivedpkt:8.000000 @1486.703801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:10 delay:97.177674, averageDelay:89.197715, totalReceivedpkt:9.000000 @1486.706201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:11 delay:93.900440, averageDelay:89.667988, totalReceivedpkt:10.000000 @1486.708601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:0 delay:98.749817, averageDelay:90.493609, totalReceivedpkt:11.000000 @1486.711001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:1 delay:95.786705, averageDelay:90.934700, totalReceivedpkt:12.000000 @1486.713401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:2 delay:92.685179, averageDelay:91.069352, totalReceivedpkt:13.000000 @1486.715801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:3 delay:89.907061, averageDelay:90.986331, totalReceivedpkt:14.000000 @1486.718201
+node:1, MacAwsn::SuperFrameHandler:106, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1486.720800
+node:2, MacAwsn::SuperFrameHandler:106, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1486.720800
+node:0, MacAwsn::SuperFrameHandler:107, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1486.720800
+node:1, RILApp::sendMsg: data arrival msg->seq:33, @1487.535148
+node:2, RILApp::sendMsg: data arrival msg->seq:43, @1488.517602
+node:1, RILApp::sendMsg: data arrival msg->seq:34, @1490.635778
+node:2, RILApp::sendMsg: data arrival msg->seq:44, @1491.403707
+node:1, RILApp::sendMsg: data arrival msg->seq:35, @1493.713033
+node:2, RILApp::sendMsg: data arrival msg->seq:45, @1494.228457
+node:1, RILApp::sendMsg: data arrival msg->seq:36, @1496.586337
+node:2, RILApp::sendMsg: data arrival msg->seq:46, @1496.957887
+node:1, RILApp::sendMsg: data arrival msg->seq:37, @1499.547774
+node:2, RILApp::sendMsg: data arrival msg->seq:47, @1500.106775
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:13 delay:102.178756, averageDelay:91.732493, totalReceivedpkt:15.000000 @1500.839801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:14 delay:99.002630, averageDelay:92.186877, totalReceivedpkt:16.000000 @1500.842201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:15 delay:96.214870, averageDelay:92.423817, totalReceivedpkt:17.000000 @1500.844601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:4 delay:100.913845, averageDelay:92.895486, totalReceivedpkt:18.000000 @1500.847001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:5 delay:97.995319, averageDelay:93.163898, totalReceivedpkt:19.000000 @1500.849401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:6 delay:94.818762, averageDelay:93.246641, totalReceivedpkt:20.000000 @1500.851801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:7 delay:91.915695, averageDelay:93.183263, totalReceivedpkt:21.000000 @1500.854201
+node:1, MacAwsn::SuperFrameHandler:107, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1500.856800
+node:2, MacAwsn::SuperFrameHandler:107, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1500.856800
+node:0, MacAwsn::SuperFrameHandler:108, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1500.856800
+node:1, RILApp::sendMsg: data arrival msg->seq:38, @1502.250330
+node:2, RILApp::sendMsg: data arrival msg->seq:48, @1503.334674
+node:1, RILApp::sendMsg: data arrival msg->seq:39, @1505.294915
+node:2, RILApp::sendMsg: data arrival msg->seq:49, @1506.113307
+node:1, RILApp::sendMsg: data arrival msg->seq:40, @1508.067649
+node:2, RILApp::sendMsg: data arrival msg->seq:50, @1509.087645
+node:1, RILApp::sendMsg: data arrival msg->seq:41, @1511.318516
+node:2, RILApp::sendMsg: data arrival msg->seq:51, @1511.813971
+node:1, RILApp::sendMsg: data arrival msg->seq:42, @1514.550698
+node:2, RILApp::sendMsg: data arrival msg->seq:52, @1514.855103
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:17 delay:104.183336, averageDelay:93.683266, totalReceivedpkt:22.000000 @1514.975801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:18 delay:101.382883, averageDelay:94.018032, totalReceivedpkt:23.000000 @1514.978201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:19 delay:98.517939, averageDelay:94.205528, totalReceivedpkt:24.000000 @1514.980601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:8 delay:103.161531, averageDelay:94.563768, totalReceivedpkt:25.000000 @1514.983001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:9 delay:100.283968, averageDelay:94.783776, totalReceivedpkt:26.000000 @1514.985401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:10 delay:97.362444, averageDelay:94.879282, totalReceivedpkt:27.000000 @1514.987801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:11 delay:94.148788, averageDelay:94.853193, totalReceivedpkt:28.000000 @1514.990201
+node:1, MacAwsn::SuperFrameHandler:108, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1514.992800
+node:2, MacAwsn::SuperFrameHandler:108, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1514.992800
+node:0, MacAwsn::SuperFrameHandler:109, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1514.992800
+node:1, RILApp::sendMsg: data arrival msg->seq:43, @1517.833214
+node:2, RILApp::sendMsg: data arrival msg->seq:53, @1518.006814
+node:1, RILApp::sendMsg: data arrival msg->seq:44, @1520.962722
+node:2, RILApp::sendMsg: data arrival msg->seq:54, @1520.969295
+node:2, RILApp::sendMsg: data arrival msg->seq:55, @1523.856428
+node:1, RILApp::sendMsg: data arrival msg->seq:45, @1523.954753
+node:2, RILApp::sendMsg: data arrival msg->seq:56, @1526.707702
+node:1, RILApp::sendMsg: data arrival msg->seq:46, @1527.136633
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:35 delay:65.635754, averageDelay:93.845695, totalReceivedpkt:29.000000 @1529.111801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:36 delay:62.441893, averageDelay:92.798902, totalReceivedpkt:30.000000 @1529.114201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:37 delay:59.251625, averageDelay:91.716731, totalReceivedpkt:31.000000 @1529.116601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:12 delay:105.014842, averageDelay:92.132297, totalReceivedpkt:32.000000 @1529.119001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:13 delay:102.109119, averageDelay:92.434625, totalReceivedpkt:33.000000 @1529.121401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:14 delay:98.946821, averageDelay:92.626161, totalReceivedpkt:34.000000 @1529.123801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:15 delay:95.708042, averageDelay:92.714214, totalReceivedpkt:35.000000 @1529.126201
+node:1, MacAwsn::SuperFrameHandler:109, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1529.128800
+node:2, MacAwsn::SuperFrameHandler:109, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1529.128800
+node:0, MacAwsn::SuperFrameHandler:110, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1529.128800
+node:2, RILApp::sendMsg: data arrival msg->seq:57, @1529.435301
+node:1, RILApp::sendMsg: data arrival msg->seq:47, @1530.324427
+node:2, RILApp::sendMsg: data arrival msg->seq:58, @1532.695641
+node:1, RILApp::sendMsg: data arrival msg->seq:48, @1533.028394
+node:2, RILApp::sendMsg: data arrival msg->seq:59, @1535.916402
+node:1, RILApp::sendMsg: data arrival msg->seq:49, @1535.993106
+node:1, RILApp::sendMsg: data arrival msg->seq:50, @1538.773639
+node:2, RILApp::sendMsg: data arrival msg->seq:60, @1539.163030
+node:1, RILApp::sendMsg: data arrival msg->seq:51, @1541.869082
+node:2, RILApp::sendMsg: data arrival msg->seq:61, @1542.294201
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:39 delay:66.953830, averageDelay:91.998648, totalReceivedpkt:36.000000 @1543.247801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:40 delay:63.707050, averageDelay:91.234010, totalReceivedpkt:37.000000 @1543.250201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:41 delay:60.704515, averageDelay:90.430603, totalReceivedpkt:38.000000 @1543.252601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:16 delay:107.063031, averageDelay:90.857075, totalReceivedpkt:39.000000 @1543.255001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:17 delay:104.317545, averageDelay:91.193587, totalReceivedpkt:40.000000 @1543.257401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:18 delay:101.464296, averageDelay:91.444092, totalReceivedpkt:41.000000 @1543.259801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:19 delay:98.167193, averageDelay:91.604166, totalReceivedpkt:42.000000 @1543.262201
+node:1, MacAwsn::SuperFrameHandler:110, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1543.264800
+node:2, MacAwsn::SuperFrameHandler:110, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1543.264800
+node:0, MacAwsn::SuperFrameHandler:111, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1543.264800
+node:1, RILApp::sendMsg: data arrival msg->seq:52, @1544.944637
+node:2, RILApp::sendMsg: data arrival msg->seq:62, @1545.001321
+node:1, RILApp::sendMsg: data arrival msg->seq:53, @1547.765299
+node:2, RILApp::sendMsg: data arrival msg->seq:63, @1548.268013
+node:1, RILApp::sendMsg: data arrival msg->seq:54, @1550.785387
+node:2, RILApp::sendMsg: data arrival msg->seq:64, @1551.281249
+node:1, RILApp::sendMsg: data arrival msg->seq:55, @1554.061949
+node:2, RILApp::sendMsg: data arrival msg->seq:65, @1554.462095
+node:1, RILApp::sendMsg: data arrival msg->seq:56, @1557.357758
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:44 delay:65.980095, averageDelay:91.008257, totalReceivedpkt:43.000000 @1557.383801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:45 delay:63.157744, averageDelay:90.375291, totalReceivedpkt:44.000000 @1557.386201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:46 delay:60.430714, averageDelay:89.709856, totalReceivedpkt:45.000000 @1557.388601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:33 delay:69.855853, averageDelay:89.278247, totalReceivedpkt:46.000000 @1557.391001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:34 delay:66.757623, averageDelay:88.799085, totalReceivedpkt:47.000000 @1557.393401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:35 delay:63.682768, averageDelay:88.275828, totalReceivedpkt:48.000000 @1557.395801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:36 delay:60.811864, averageDelay:87.715339, totalReceivedpkt:49.000000 @1557.398201
+node:1, MacAwsn::SuperFrameHandler:111, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1557.400800
+node:2, MacAwsn::SuperFrameHandler:111, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1557.400800
+node:0, MacAwsn::SuperFrameHandler:112, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1557.400800
+node:2, RILApp::sendMsg: data arrival msg->seq:66, @1557.709587
+node:1, RILApp::sendMsg: data arrival msg->seq:57, @1560.480516
+node:2, RILApp::sendMsg: data arrival msg->seq:67, @1560.705896
+node:2, RILApp::sendMsg: data arrival msg->seq:68, @1563.449025
+node:1, RILApp::sendMsg: data arrival msg->seq:58, @1563.720303
+node:2, RILApp::sendMsg: data arrival msg->seq:69, @1566.747315
+node:1, RILApp::sendMsg: data arrival msg->seq:59, @1566.774413
+node:1, RILApp::sendMsg: data arrival msg->seq:60, @1569.773726
+node:2, RILApp::sendMsg: data arrival msg->seq:70, @1569.917081
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:49 delay:65.406495, averageDelay:87.269162, totalReceivedpkt:50.000000 @1571.519801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:50 delay:62.434556, averageDelay:86.782209, totalReceivedpkt:51.000000 @1571.522201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:51 delay:59.710630, averageDelay:86.261602, totalReceivedpkt:52.000000 @1571.524601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:38 delay:69.276672, averageDelay:85.941132, totalReceivedpkt:53.000000 @1571.527001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:39 delay:66.234486, averageDelay:85.576194, totalReceivedpkt:54.000000 @1571.529401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:40 delay:63.464152, averageDelay:85.174157, totalReceivedpkt:55.000000 @1571.531801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:41 delay:60.215685, averageDelay:84.728470, totalReceivedpkt:56.000000 @1571.534201
+node:1, MacAwsn::SuperFrameHandler:112, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1571.536800
+node:2, MacAwsn::SuperFrameHandler:112, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1571.536800
+node:0, MacAwsn::SuperFrameHandler:113, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1571.536800
+node:1, RILApp::sendMsg: data arrival msg->seq:61, @1572.758683
+node:2, RILApp::sendMsg: data arrival msg->seq:71, @1573.027328
+node:2, RILApp::sendMsg: data arrival msg->seq:72, @1575.759982
+node:1, RILApp::sendMsg: data arrival msg->seq:62, @1575.859290
+node:1, RILApp::sendMsg: data arrival msg->seq:63, @1578.959929
+node:2, RILApp::sendMsg: data arrival msg->seq:73, @1579.059024
+node:1, RILApp::sendMsg: data arrival msg->seq:64, @1581.830260
+node:2, RILApp::sendMsg: data arrival msg->seq:74, @1582.127621
+node:2, RILApp::sendMsg: data arrival msg->seq:75, @1584.941723
+node:1, RILApp::sendMsg: data arrival msg->seq:65, @1584.949631
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:54 delay:64.686506, averageDelay:84.376856, totalReceivedpkt:57.000000 @1585.655801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:55 delay:61.801774, averageDelay:83.987631, totalReceivedpkt:58.000000 @1585.658201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:56 delay:58.952899, averageDelay:83.563313, totalReceivedpkt:59.000000 @1585.660601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:43 delay:67.829787, averageDelay:83.301088, totalReceivedpkt:60.000000 @1585.663001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:44 delay:64.702680, averageDelay:82.996196, totalReceivedpkt:61.000000 @1585.665401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:45 delay:61.713049, averageDelay:82.652919, totalReceivedpkt:62.000000 @1585.667801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:46 delay:58.533568, averageDelay:82.270072, totalReceivedpkt:63.000000 @1585.670201
+node:1, MacAwsn::SuperFrameHandler:113, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1585.672800
+node:2, MacAwsn::SuperFrameHandler:113, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1585.672800
+node:0, MacAwsn::SuperFrameHandler:114, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1585.672800
+node:2, RILApp::sendMsg: data arrival msg->seq:76, @1587.970277
+node:1, RILApp::sendMsg: data arrival msg->seq:66, @1588.231496
+node:2, RILApp::sendMsg: data arrival msg->seq:77, @1591.250378
+node:1, RILApp::sendMsg: data arrival msg->seq:67, @1591.493892
+node:2, RILApp::sendMsg: data arrival msg->seq:78, @1594.499188
+node:1, RILApp::sendMsg: data arrival msg->seq:68, @1594.752966
+node:2, RILApp::sendMsg: data arrival msg->seq:79, @1597.627031
+node:1, RILApp::sendMsg: data arrival msg->seq:69, @1597.873943
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:58 delay:67.096160, averageDelay:82.032980, totalReceivedpkt:64.000000 @1599.791801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:59 delay:63.877799, averageDelay:81.753670, totalReceivedpkt:65.000000 @1599.794201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:60 delay:60.633571, averageDelay:81.433668, totalReceivedpkt:66.000000 @1599.796601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:47 delay:69.474574, averageDelay:81.255174, totalReceivedpkt:67.000000 @1599.799001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:48 delay:66.773007, averageDelay:81.042201, totalReceivedpkt:68.000000 @1599.801401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:49 delay:63.810695, averageDelay:80.792469, totalReceivedpkt:69.000000 @1599.803801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:50 delay:61.032562, averageDelay:80.510185, totalReceivedpkt:70.000000 @1599.806201
+node:1, MacAwsn::SuperFrameHandler:114, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1599.808800
+node:2, MacAwsn::SuperFrameHandler:114, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1599.808800
+node:0, MacAwsn::SuperFrameHandler:115, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1599.808800
+node:2, RILApp::sendMsg: data arrival msg->seq:80, @1600.728401
+node:1, RILApp::sendMsg: data arrival msg->seq:70, @1600.783981
+node:1, RILApp::sendMsg: data arrival msg->seq:71, @1603.661001
+node:2, RILApp::sendMsg: data arrival msg->seq:81, @1603.682426
+node:1, RILApp::sendMsg: data arrival msg->seq:72, @1606.414227
+node:2, RILApp::sendMsg: data arrival msg->seq:82, @1606.487991
+node:1, RILApp::sendMsg: data arrival msg->seq:73, @1609.119341
+node:2, RILApp::sendMsg: data arrival msg->seq:83, @1609.215244
+node:2, RILApp::sendMsg: data arrival msg->seq:84, @1611.985040
+node:1, RILApp::sendMsg: data arrival msg->seq:74, @1612.029296
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:63 delay:65.659788, averageDelay:80.301024, totalReceivedpkt:71.000000 @1613.927801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:64 delay:62.648952, averageDelay:80.055857, totalReceivedpkt:72.000000 @1613.930201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:65 delay:59.470506, averageDelay:79.773865, totalReceivedpkt:73.000000 @1613.932601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:52 delay:68.990365, averageDelay:79.628142, totalReceivedpkt:74.000000 @1613.935001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:53 delay:66.172102, averageDelay:79.448729, totalReceivedpkt:75.000000 @1613.937401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:54 delay:63.154414, averageDelay:79.234330, totalReceivedpkt:76.000000 @1613.939801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:55 delay:59.880252, averageDelay:78.982978, totalReceivedpkt:77.000000 @1613.942201
+node:1, MacAwsn::SuperFrameHandler:115, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1613.944800
+node:2, MacAwsn::SuperFrameHandler:115, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1613.944800
+node:0, MacAwsn::SuperFrameHandler:116, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1613.944800
+node:2, RILApp::sendMsg: data arrival msg->seq:85, @1614.726929
+node:1, RILApp::sendMsg: data arrival msg->seq:75, @1615.061932
+node:1, RILApp::sendMsg: data arrival msg->seq:76, @1617.928231
+node:2, RILApp::sendMsg: data arrival msg->seq:86, @1618.009289
+node:1, RILApp::sendMsg: data arrival msg->seq:77, @1620.779209
+node:2, RILApp::sendMsg: data arrival msg->seq:87, @1621.280062
+node:1, RILApp::sendMsg: data arrival msg->seq:78, @1623.619678
+node:2, RILApp::sendMsg: data arrival msg->seq:88, @1624.276483
+node:1, RILApp::sendMsg: data arrival msg->seq:79, @1626.855664
+node:2, RILApp::sendMsg: data arrival msg->seq:89, @1627.182092
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:67 delay:67.357905, averageDelay:78.833939, totalReceivedpkt:78.000000 @1628.063801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:68 delay:64.617176, averageDelay:78.653980, totalReceivedpkt:79.000000 @1628.066201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:69 delay:61.321286, averageDelay:78.437321, totalReceivedpkt:80.000000 @1628.068601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:57 delay:67.590485, averageDelay:78.303409, totalReceivedpkt:81.000000 @1628.071001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:58 delay:64.353098, averageDelay:78.133284, totalReceivedpkt:82.000000 @1628.073401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:59 delay:61.301388, averageDelay:77.930490, totalReceivedpkt:83.000000 @1628.075801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:60 delay:58.304475, averageDelay:77.696847, totalReceivedpkt:84.000000 @1628.078201
+node:1, MacAwsn::SuperFrameHandler:116, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1628.080800
+node:2, MacAwsn::SuperFrameHandler:116, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1628.080800
+node:0, MacAwsn::SuperFrameHandler:117, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1628.080800
+node:1, RILApp::sendMsg: data arrival msg->seq:80, @1629.702606
+node:2, RILApp::sendMsg: data arrival msg->seq:90, @1630.157059
+node:1, RILApp::sendMsg: data arrival msg->seq:81, @1632.641575
+node:2, RILApp::sendMsg: data arrival msg->seq:91, @1633.452636
+node:1, RILApp::sendMsg: data arrival msg->seq:82, @1635.757962
+node:2, RILApp::sendMsg: data arrival msg->seq:92, @1636.429835
+node:1, RILApp::sendMsg: data arrival msg->seq:83, @1638.511448
+node:2, RILApp::sendMsg: data arrival msg->seq:93, @1639.392543
+node:1, RILApp::sendMsg: data arrival msg->seq:84, @1641.332903
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:72 delay:66.439819, averageDelay:77.564411, totalReceivedpkt:85.000000 @1642.199801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:73 delay:63.143177, averageDelay:77.396722, totalReceivedpkt:86.000000 @1642.202201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:74 delay:60.076980, averageDelay:77.197645, totalReceivedpkt:87.000000 @1642.204601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:61 delay:69.448318, averageDelay:77.109584, totalReceivedpkt:88.000000 @1642.207001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:62 delay:66.350111, averageDelay:76.988691, totalReceivedpkt:89.000000 @1642.209401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:63 delay:63.251873, averageDelay:76.836060, totalReceivedpkt:90.000000 @1642.211801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:64 delay:60.383941, averageDelay:76.655268, totalReceivedpkt:91.000000 @1642.214201
+node:2, RILApp::sendMsg: data arrival msg->seq:94, @1642.215847
+node:1, MacAwsn::SuperFrameHandler:117, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1642.216800
+node:2, MacAwsn::SuperFrameHandler:117, myRole:C, MacQueueSize:17, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1642.216800
+node:0, MacAwsn::SuperFrameHandler:118, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1642.216800
+node:1, RILApp::sendMsg: data arrival msg->seq:85, @1644.330940
+node:2, RILApp::sendMsg: data arrival msg->seq:95, @1645.397062
+node:1, RILApp::sendMsg: data arrival msg->seq:86, @1647.622555
+node:2, RILApp::sendMsg: data arrival msg->seq:96, @1648.174977
+node:1, RILApp::sendMsg: data arrival msg->seq:87, @1650.842639
+node:2, RILApp::sendMsg: data arrival msg->seq:97, @1651.332339
+node:1, RILApp::sendMsg: data arrival msg->seq:88, @1653.905515
+node:2, RILApp::sendMsg: data arrival msg->seq:98, @1654.259687
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:77 delay:65.085423, averageDelay:76.529508, totalReceivedpkt:92.000000 @1656.335801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:78 delay:61.839014, averageDelay:76.371546, totalReceivedpkt:93.000000 @1656.338201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:79 delay:58.713570, averageDelay:76.183695, totalReceivedpkt:94.000000 @1656.340601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:66 delay:68.111505, averageDelay:76.098725, totalReceivedpkt:95.000000 @1656.343001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:67 delay:64.851509, averageDelay:75.981566, totalReceivedpkt:96.000000 @1656.345401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:68 delay:61.594835, averageDelay:75.833249, totalReceivedpkt:97.000000 @1656.347801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:69 delay:58.476258, averageDelay:75.656137, totalReceivedpkt:98.000000 @1656.350201
+node:1, MacAwsn::SuperFrameHandler:118, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1656.352800
+node:2, MacAwsn::SuperFrameHandler:118, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1656.352800
+node:0, MacAwsn::SuperFrameHandler:119, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1656.352800
+node:1, RILApp::sendMsg: data arrival msg->seq:89, @1657.056241
+node:2, RILApp::sendMsg: data arrival msg->seq:99, @1657.383547
+node:1, RILApp::sendMsg: data arrival msg->seq:90, @1660.124920
+node:2, RILApp::sendMsg: data arrival msg->seq:100, @1660.607153
+node:1, RILApp::sendMsg: data arrival msg->seq:91, @1663.064842
+node:2, RILApp::sendMsg: data arrival msg->seq:101, @1663.684568
+node:1, RILApp::sendMsg: data arrival msg->seq:92, @1666.295724
+node:2, RILApp::sendMsg: data arrival msg->seq:102, @1666.920093
+node:1, RILApp::sendMsg: data arrival msg->seq:93, @1669.475904
+node:2, RILApp::sendMsg: data arrival msg->seq:103, @1669.762920
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:81 delay:66.789375, averageDelay:75.566574, totalReceivedpkt:99.000000 @1670.471801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:82 delay:63.986210, averageDelay:75.450770, totalReceivedpkt:100.000000 @1670.474201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:83 delay:61.261357, averageDelay:75.310281, totalReceivedpkt:101.000000 @1670.476601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:70 delay:69.695020, averageDelay:75.255230, totalReceivedpkt:102.000000 @1670.479001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:71 delay:66.820400, averageDelay:75.173338, totalReceivedpkt:103.000000 @1670.481401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:72 delay:64.069574, averageDelay:75.066571, totalReceivedpkt:104.000000 @1670.483801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:73 delay:61.366861, averageDelay:74.936098, totalReceivedpkt:105.000000 @1670.486201
+node:1, MacAwsn::SuperFrameHandler:119, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1670.488800
+node:2, MacAwsn::SuperFrameHandler:119, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1670.488800
+node:0, MacAwsn::SuperFrameHandler:120, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1670.488800
+node:1, RILApp::sendMsg: data arrival msg->seq:94, @1672.473920
+node:2, RILApp::sendMsg: data arrival msg->seq:104, @1672.991614
+node:1, RILApp::sendMsg: data arrival msg->seq:95, @1675.321868
+node:2, RILApp::sendMsg: data arrival msg->seq:105, @1676.263936
+node:1, RILApp::sendMsg: data arrival msg->seq:96, @1678.418617
+node:2, RILApp::sendMsg: data arrival msg->seq:106, @1679.291296
+node:1, RILApp::sendMsg: data arrival msg->seq:97, @1681.642189
+node:2, RILApp::sendMsg: data arrival msg->seq:107, @1682.253524
+node:1, RILApp::sendMsg: data arrival msg->seq:98, @1684.376790
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:86 delay:66.598512, averageDelay:74.857441, totalReceivedpkt:106.000000 @1684.607801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:87 delay:63.330139, averageDelay:74.749709, totalReceivedpkt:107.000000 @1684.610201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:88 delay:60.336118, averageDelay:74.616250, totalReceivedpkt:108.000000 @1684.612601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:75 delay:69.553069, averageDelay:74.569799, totalReceivedpkt:109.000000 @1684.615001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:76 delay:66.689170, averageDelay:74.498157, totalReceivedpkt:110.000000 @1684.617401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:77 delay:63.840593, averageDelay:74.402143, totalReceivedpkt:111.000000 @1684.619801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:78 delay:61.002523, averageDelay:74.282503, totalReceivedpkt:112.000000 @1684.622201
+node:1, MacAwsn::SuperFrameHandler:120, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1684.624800
+node:2, MacAwsn::SuperFrameHandler:120, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1684.624800
+node:0, MacAwsn::SuperFrameHandler:121, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1684.624800
+node:2, RILApp::sendMsg: data arrival msg->seq:108, @1685.298830
+node:1, RILApp::sendMsg: data arrival msg->seq:99, @1687.134183
+node:2, RILApp::sendMsg: data arrival msg->seq:109, @1688.250217
+node:1, RILApp::sendMsg: data arrival msg->seq:100, @1690.313848
+node:2, RILApp::sendMsg: data arrival msg->seq:110, @1691.200633
+node:1, RILApp::sendMsg: data arrival msg->seq:101, @1693.389856
+node:2, RILApp::sendMsg: data arrival msg->seq:111, @1694.326071
+node:1, RILApp::sendMsg: data arrival msg->seq:102, @1696.324355
+node:2, RILApp::sendMsg: data arrival msg->seq:112, @1697.088657
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:91 delay:65.291165, averageDelay:74.202934, totalReceivedpkt:113.000000 @1698.743801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:92 delay:62.316367, averageDelay:74.098666, totalReceivedpkt:114.000000 @1698.746201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:93 delay:59.356058, averageDelay:73.970469, totalReceivedpkt:115.000000 @1698.748601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:80 delay:69.048395, averageDelay:73.928038, totalReceivedpkt:116.000000 @1698.751001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:81 delay:66.111826, averageDelay:73.861232, totalReceivedpkt:117.000000 @1698.753401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:82 delay:62.997839, averageDelay:73.769170, totalReceivedpkt:118.000000 @1698.755801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:83 delay:60.246753, averageDelay:73.655536, totalReceivedpkt:119.000000 @1698.758201
+node:1, MacAwsn::SuperFrameHandler:121, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1698.760800
+node:2, MacAwsn::SuperFrameHandler:121, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1698.760800
+node:0, MacAwsn::SuperFrameHandler:122, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1698.760800
+node:1, RILApp::sendMsg: data arrival msg->seq:103, @1699.075696
+node:2, RILApp::sendMsg: data arrival msg->seq:113, @1700.349479
+node:1, RILApp::sendMsg: data arrival msg->seq:104, @1701.832204
+node:2, RILApp::sendMsg: data arrival msg->seq:114, @1703.569425
+node:1, RILApp::sendMsg: data arrival msg->seq:105, @1704.891802
+node:2, RILApp::sendMsg: data arrival msg->seq:115, @1706.292516
+node:1, RILApp::sendMsg: data arrival msg->seq:106, @1707.843145
+node:2, RILApp::sendMsg: data arrival msg->seq:116, @1709.544830
+node:1, RILApp::sendMsg: data arrival msg->seq:107, @1711.108255
+node:2, RILApp::sendMsg: data arrival msg->seq:117, @1712.554335
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:95 delay:67.482740, averageDelay:73.604096, totalReceivedpkt:120.000000 @1712.879801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:96 delay:64.707224, averageDelay:73.530568, totalReceivedpkt:121.000000 @1712.882201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:97 delay:61.552262, averageDelay:73.432385, totalReceivedpkt:122.000000 @1712.884601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:85 delay:68.556061, averageDelay:73.392740, totalReceivedpkt:123.000000 @1712.887001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:86 delay:65.266846, averageDelay:73.327209, totalReceivedpkt:124.000000 @1712.889401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:87 delay:62.049162, averageDelay:73.236985, totalReceivedpkt:125.000000 @1712.891801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:88 delay:58.988686, averageDelay:73.123903, totalReceivedpkt:126.000000 @1712.894201
+node:1, MacAwsn::SuperFrameHandler:122, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1712.896800
+node:2, MacAwsn::SuperFrameHandler:122, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1712.896800
+node:0, MacAwsn::SuperFrameHandler:123, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1712.896800
+node:1, RILApp::sendMsg: data arrival msg->seq:108, @1714.361611
+node:2, RILApp::sendMsg: data arrival msg->seq:118, @1715.428836
+node:1, RILApp::sendMsg: data arrival msg->seq:109, @1717.423763
+node:2, RILApp::sendMsg: data arrival msg->seq:119, @1718.518028
+node:1, RILApp::sendMsg: data arrival msg->seq:110, @1720.291198
+node:2, RILApp::sendMsg: data arrival msg->seq:120, @1721.802390
+node:1, RILApp::sendMsg: data arrival msg->seq:111, @1723.069234
+node:2, RILApp::sendMsg: data arrival msg->seq:121, @1724.831327
+node:1, RILApp::sendMsg: data arrival msg->seq:112, @1725.770282
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:100 delay:66.408648, averageDelay:73.071027, totalReceivedpkt:127.000000 @1727.015801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:101 delay:63.333633, averageDelay:72.994953, totalReceivedpkt:128.000000 @1727.018201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:102 delay:60.100508, averageDelay:72.894997, totalReceivedpkt:129.000000 @1727.020601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:89 delay:69.966760, averageDelay:72.872472, totalReceivedpkt:130.000000 @1727.023001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:90 delay:66.900481, averageDelay:72.826884, totalReceivedpkt:131.000000 @1727.025401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:91 delay:63.962959, averageDelay:72.759733, totalReceivedpkt:132.000000 @1727.027801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:92 delay:60.734477, averageDelay:72.669318, totalReceivedpkt:133.000000 @1727.030201
+node:1, MacAwsn::SuperFrameHandler:123, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1727.032800
+node:2, MacAwsn::SuperFrameHandler:123, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1727.032800
+node:0, MacAwsn::SuperFrameHandler:124, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1727.032800
+node:2, RILApp::sendMsg: data arrival msg->seq:122, @1727.577688
+node:1, RILApp::sendMsg: data arrival msg->seq:113, @1728.735720
+node:2, RILApp::sendMsg: data arrival msg->seq:123, @1730.468892
+node:1, RILApp::sendMsg: data arrival msg->seq:114, @1731.616024
+node:2, RILApp::sendMsg: data arrival msg->seq:124, @1733.178629
+node:1, RILApp::sendMsg: data arrival msg->seq:115, @1734.425966
+node:2, RILApp::sendMsg: data arrival msg->seq:125, @1736.133567
+node:1, RILApp::sendMsg: data arrival msg->seq:116, @1737.409895
+node:2, RILApp::sendMsg: data arrival msg->seq:126, @1738.997242
+node:1, RILApp::sendMsg: data arrival msg->seq:117, @1740.656989
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:105 delay:64.887866, averageDelay:72.611247, totalReceivedpkt:134.000000 @1741.151801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:106 delay:61.862905, averageDelay:72.531630, totalReceivedpkt:135.000000 @1741.154201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:107 delay:58.903077, averageDelay:72.431420, totalReceivedpkt:136.000000 @1741.156601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:94 delay:68.685081, averageDelay:72.404074, totalReceivedpkt:137.000000 @1741.159001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:95 delay:65.839534, averageDelay:72.356505, totalReceivedpkt:138.000000 @1741.161401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:96 delay:62.745184, averageDelay:72.287359, totalReceivedpkt:139.000000 @1741.163801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:97 delay:59.524012, averageDelay:72.196192, totalReceivedpkt:140.000000 @1741.166201
+node:1, MacAwsn::SuperFrameHandler:124, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1741.168800
+node:2, MacAwsn::SuperFrameHandler:124, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1741.168800
+node:0, MacAwsn::SuperFrameHandler:125, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1741.168800
+node:2, RILApp::sendMsg: data arrival msg->seq:127, @1741.973747
+node:1, RILApp::sendMsg: data arrival msg->seq:118, @1743.441558
+node:2, RILApp::sendMsg: data arrival msg->seq:128, @1744.823212
+node:1, RILApp::sendMsg: data arrival msg->seq:119, @1746.290825
+node:2, RILApp::sendMsg: data arrival msg->seq:129, @1747.532524
+node:1, RILApp::sendMsg: data arrival msg->seq:120, @1749.459880
+node:2, RILApp::sendMsg: data arrival msg->seq:130, @1750.573455
+node:1, RILApp::sendMsg: data arrival msg->seq:121, @1752.241810
+node:2, RILApp::sendMsg: data arrival msg->seq:131, @1753.685663
+node:1, RILApp::sendMsg: data arrival msg->seq:122, @1755.132117
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:109 delay:67.037584, averageDelay:72.159606, totalReceivedpkt:141.000000 @1755.287801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:110 delay:64.089568, averageDelay:72.102775, totalReceivedpkt:142.000000 @1755.290201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:111 delay:60.966530, averageDelay:72.024899, totalReceivedpkt:143.000000 @1755.292601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:99 delay:68.160818, averageDelay:71.998065, totalReceivedpkt:144.000000 @1755.295001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:100 delay:64.983553, averageDelay:71.949689, totalReceivedpkt:145.000000 @1755.297401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:101 delay:61.909945, averageDelay:71.880924, totalReceivedpkt:146.000000 @1755.299801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:102 delay:58.977846, averageDelay:71.793148, totalReceivedpkt:147.000000 @1755.302201
+node:1, MacAwsn::SuperFrameHandler:125, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1755.304800
+node:2, MacAwsn::SuperFrameHandler:125, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1755.304800
+node:0, MacAwsn::SuperFrameHandler:126, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1755.304800
+node:2, RILApp::sendMsg: data arrival msg->seq:132, @1756.611538
+node:1, RILApp::sendMsg: data arrival msg->seq:123, @1758.367529
+node:2, RILApp::sendMsg: data arrival msg->seq:133, @1759.682212
+node:1, RILApp::sendMsg: data arrival msg->seq:124, @1761.463579
+node:2, RILApp::sendMsg: data arrival msg->seq:134, @1762.519072
+node:1, RILApp::sendMsg: data arrival msg->seq:125, @1764.165424
+node:2, RILApp::sendMsg: data arrival msg->seq:135, @1765.482979
+node:1, RILApp::sendMsg: data arrival msg->seq:126, @1767.319661
+node:2, RILApp::sendMsg: data arrival msg->seq:136, @1768.635821
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:114 delay:65.854376, averageDelay:71.753021, totalReceivedpkt:148.000000 @1769.423801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:115 delay:63.133685, averageDelay:71.695173, totalReceivedpkt:149.000000 @1769.426201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:116 delay:59.883772, averageDelay:71.616430, totalReceivedpkt:150.000000 @1769.428601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:103 delay:70.355305, averageDelay:71.608079, totalReceivedpkt:151.000000 @1769.431001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:104 delay:67.601197, averageDelay:71.581718, totalReceivedpkt:152.000000 @1769.433401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:105 delay:64.543999, averageDelay:71.535719, totalReceivedpkt:153.000000 @1769.435801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:106 delay:61.595056, averageDelay:71.471170, totalReceivedpkt:154.000000 @1769.438201
+node:1, MacAwsn::SuperFrameHandler:126, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1769.440800
+node:2, MacAwsn::SuperFrameHandler:126, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1769.440800
+node:0, MacAwsn::SuperFrameHandler:127, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1769.440800
+node:1, RILApp::sendMsg: data arrival msg->seq:127, @1770.521897
+node:2, RILApp::sendMsg: data arrival msg->seq:137, @1771.354734
+node:1, RILApp::sendMsg: data arrival msg->seq:128, @1773.344941
+node:2, RILApp::sendMsg: data arrival msg->seq:138, @1774.483241
+node:1, RILApp::sendMsg: data arrival msg->seq:129, @1776.239314
+node:2, RILApp::sendMsg: data arrival msg->seq:139, @1777.424677
+node:1, RILApp::sendMsg: data arrival msg->seq:130, @1779.077078
+node:2, RILApp::sendMsg: data arrival msg->seq:140, @1780.193277
+node:1, RILApp::sendMsg: data arrival msg->seq:131, @1781.995745
+node:2, RILApp::sendMsg: data arrival msg->seq:141, @1783.325548
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:119 delay:65.041774, averageDelay:71.429690, totalReceivedpkt:155.000000 @1783.559801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:120 delay:61.759811, averageDelay:71.367703, totalReceivedpkt:156.000000 @1783.562201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:121 delay:58.733275, averageDelay:71.287229, totalReceivedpkt:157.000000 @1783.564601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:108 delay:69.205390, averageDelay:71.274053, totalReceivedpkt:158.000000 @1783.567001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:109 delay:66.145638, averageDelay:71.241799, totalReceivedpkt:159.000000 @1783.569401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:110 delay:63.280603, averageDelay:71.192041, totalReceivedpkt:160.000000 @1783.571801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:111 delay:60.504968, averageDelay:71.125662, totalReceivedpkt:161.000000 @1783.574201
+node:1, MacAwsn::SuperFrameHandler:127, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1783.576800
+node:2, MacAwsn::SuperFrameHandler:127, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1783.576800
+node:0, MacAwsn::SuperFrameHandler:128, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1783.576800
+node:1, RILApp::sendMsg: data arrival msg->seq:132, @1784.951402
+node:2, RILApp::sendMsg: data arrival msg->seq:142, @1786.457831
+node:1, RILApp::sendMsg: data arrival msg->seq:133, @1788.207485
+node:2, RILApp::sendMsg: data arrival msg->seq:143, @1789.634578
+node:1, RILApp::sendMsg: data arrival msg->seq:134, @1791.339277
+node:2, RILApp::sendMsg: data arrival msg->seq:144, @1792.606592
+node:1, RILApp::sendMsg: data arrival msg->seq:135, @1794.099205
+node:2, RILApp::sendMsg: data arrival msg->seq:145, @1795.781164
+node:1, RILApp::sendMsg: data arrival msg->seq:136, @1797.065453
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:123 delay:67.226910, averageDelay:71.101596, totalReceivedpkt:162.000000 @1797.695801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:124 delay:64.519572, averageDelay:71.061215, totalReceivedpkt:163.000000 @1797.698201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:125 delay:61.567034, averageDelay:71.003324, totalReceivedpkt:164.000000 @1797.700601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:113 delay:68.967281, averageDelay:70.990984, totalReceivedpkt:165.000000 @1797.703001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:114 delay:66.089378, averageDelay:70.961456, totalReceivedpkt:166.000000 @1797.705401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:115 delay:63.281835, averageDelay:70.915471, totalReceivedpkt:167.000000 @1797.707801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:116 delay:60.300306, averageDelay:70.852285, totalReceivedpkt:168.000000 @1797.710201
+node:1, MacAwsn::SuperFrameHandler:128, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1797.712800
+node:2, MacAwsn::SuperFrameHandler:128, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1797.712800
+node:0, MacAwsn::SuperFrameHandler:129, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1797.712800
+node:2, RILApp::sendMsg: data arrival msg->seq:146, @1798.635012
+node:1, RILApp::sendMsg: data arrival msg->seq:137, @1800.356240
+node:2, RILApp::sendMsg: data arrival msg->seq:147, @1801.698406
+node:1, RILApp::sendMsg: data arrival msg->seq:138, @1803.655184
+node:2, RILApp::sendMsg: data arrival msg->seq:148, @1804.550741
+node:1, RILApp::sendMsg: data arrival msg->seq:139, @1806.849621
+node:2, RILApp::sendMsg: data arrival msg->seq:149, @1807.597336
+node:1, RILApp::sendMsg: data arrival msg->seq:140, @1810.080779
+node:2, RILApp::sendMsg: data arrival msg->seq:150, @1810.840707
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:128 delay:67.008589, averageDelay:70.829541, totalReceivedpkt:169.000000 @1811.831801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:129 delay:64.301677, averageDelay:70.791142, totalReceivedpkt:170.000000 @1811.834201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:130 delay:61.263146, averageDelay:70.735423, totalReceivedpkt:171.000000 @1811.836601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:118 delay:68.397444, averageDelay:70.721830, totalReceivedpkt:172.000000 @1811.839001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:119 delay:65.550576, averageDelay:70.691938, totalReceivedpkt:173.000000 @1811.841401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:120 delay:62.383921, averageDelay:70.644191, totalReceivedpkt:174.000000 @1811.843801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:121 delay:59.604391, averageDelay:70.581107, totalReceivedpkt:175.000000 @1811.846201
+node:1, MacAwsn::SuperFrameHandler:129, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1811.848800
+node:2, MacAwsn::SuperFrameHandler:129, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1811.848800
+node:0, MacAwsn::SuperFrameHandler:130, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1811.848800
+node:1, RILApp::sendMsg: data arrival msg->seq:141, @1812.893497
+node:2, RILApp::sendMsg: data arrival msg->seq:151, @1813.574095
+node:1, RILApp::sendMsg: data arrival msg->seq:142, @1816.025695
+node:2, RILApp::sendMsg: data arrival msg->seq:152, @1816.553356
+node:1, RILApp::sendMsg: data arrival msg->seq:143, @1818.890459
+node:2, RILApp::sendMsg: data arrival msg->seq:153, @1819.606530
+node:1, RILApp::sendMsg: data arrival msg->seq:144, @1821.911846
+node:2, RILApp::sendMsg: data arrival msg->seq:154, @1822.382752
+node:1, RILApp::sendMsg: data arrival msg->seq:145, @1824.986848
+node:2, RILApp::sendMsg: data arrival msg->seq:155, @1825.321965
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:133 delay:66.285589, averageDelay:70.556700, totalReceivedpkt:176.000000 @1825.967801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:134 delay:63.451130, averageDelay:70.516556, totalReceivedpkt:177.000000 @1825.970201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:135 delay:60.489623, averageDelay:70.460225, totalReceivedpkt:178.000000 @1825.972601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:123 delay:67.607473, averageDelay:70.444287, totalReceivedpkt:179.000000 @1825.975001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:124 delay:64.513822, averageDelay:70.411340, totalReceivedpkt:180.000000 @1825.977401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:125 delay:61.814378, averageDelay:70.363843, totalReceivedpkt:181.000000 @1825.979801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:126 delay:58.662541, averageDelay:70.299551, totalReceivedpkt:182.000000 @1825.982201
+node:1, MacAwsn::SuperFrameHandler:130, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1825.984800
+node:2, MacAwsn::SuperFrameHandler:130, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1825.984800
+node:0, MacAwsn::SuperFrameHandler:131, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1825.984800
+node:1, RILApp::sendMsg: data arrival msg->seq:146, @1827.698395
+node:2, RILApp::sendMsg: data arrival msg->seq:156, @1828.076506
+node:2, RILApp::sendMsg: data arrival msg->seq:157, @1830.918381
+node:1, RILApp::sendMsg: data arrival msg->seq:147, @1830.937286
+node:1, RILApp::sendMsg: data arrival msg->seq:148, @1834.081768
+node:2, RILApp::sendMsg: data arrival msg->seq:158, @1834.208681
+node:1, RILApp::sendMsg: data arrival msg->seq:149, @1837.152830
+node:2, RILApp::sendMsg: data arrival msg->seq:159, @1837.503924
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:138 delay:65.620560, averageDelay:70.273982, totalReceivedpkt:183.000000 @1840.103801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:139 delay:62.681524, averageDelay:70.232719, totalReceivedpkt:184.000000 @1840.106201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:140 delay:59.915324, averageDelay:70.176949, totalReceivedpkt:185.000000 @1840.108601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:127 delay:69.589105, averageDelay:70.173789, totalReceivedpkt:186.000000 @1840.111001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:128 delay:66.768460, averageDelay:70.155578, totalReceivedpkt:187.000000 @1840.113401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:129 delay:63.876487, averageDelay:70.122179, totalReceivedpkt:188.000000 @1840.115801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:130 delay:61.041123, averageDelay:70.074131, totalReceivedpkt:189.000000 @1840.118201
+node:1, MacAwsn::SuperFrameHandler:131, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1840.120800
+node:2, MacAwsn::SuperFrameHandler:131, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1840.120800
+node:0, MacAwsn::SuperFrameHandler:132, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1840.120800
+node:1, RILApp::sendMsg: data arrival msg->seq:150, @1840.180942
+node:2, RILApp::sendMsg: data arrival msg->seq:160, @1840.779944
+node:1, RILApp::sendMsg: data arrival msg->seq:151, @1843.200538
+node:2, RILApp::sendMsg: data arrival msg->seq:161, @1843.662964
+node:1, RILApp::sendMsg: data arrival msg->seq:152, @1846.141820
+node:2, RILApp::sendMsg: data arrival msg->seq:162, @1846.506389
+node:1, RILApp::sendMsg: data arrival msg->seq:153, @1849.297719
+node:2, RILApp::sendMsg: data arrival msg->seq:163, @1849.717136
+node:1, RILApp::sendMsg: data arrival msg->seq:154, @1852.093785
+node:2, RILApp::sendMsg: data arrival msg->seq:164, @1852.448200
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:143 delay:64.605224, averageDelay:70.045347, totalReceivedpkt:190.000000 @1854.239801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:144 delay:61.635609, averageDelay:70.001317, totalReceivedpkt:191.000000 @1854.242201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:145 delay:58.463437, averageDelay:69.941224, totalReceivedpkt:192.000000 @1854.244601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:132 delay:69.295599, averageDelay:69.937879, totalReceivedpkt:193.000000 @1854.247001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:133 delay:66.041916, averageDelay:69.917797, totalReceivedpkt:194.000000 @1854.249401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:134 delay:62.912525, averageDelay:69.881872, totalReceivedpkt:195.000000 @1854.251801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:135 delay:60.154996, averageDelay:69.832245, totalReceivedpkt:196.000000 @1854.254201
+node:1, MacAwsn::SuperFrameHandler:132, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1854.256800
+node:2, MacAwsn::SuperFrameHandler:132, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1854.256800
+node:0, MacAwsn::SuperFrameHandler:133, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1854.256800
+node:1, RILApp::sendMsg: data arrival msg->seq:155, @1855.134062
+node:2, RILApp::sendMsg: data arrival msg->seq:165, @1855.199405
+node:1, RILApp::sendMsg: data arrival msg->seq:156, @1858.392431
+node:2, RILApp::sendMsg: data arrival msg->seq:166, @1858.427062
+node:2, RILApp::sendMsg: data arrival msg->seq:167, @1861.466316
+node:1, RILApp::sendMsg: data arrival msg->seq:157, @1861.518483
+node:1, RILApp::sendMsg: data arrival msg->seq:158, @1864.341976
+node:2, RILApp::sendMsg: data arrival msg->seq:168, @1864.616471
+node:1, RILApp::sendMsg: data arrival msg->seq:159, @1867.211238
+node:2, RILApp::sendMsg: data arrival msg->seq:169, @1867.754794
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:147 delay:66.677395, averageDelay:69.816231, totalReceivedpkt:197.000000 @1868.375801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:148 delay:63.827460, averageDelay:69.785985, totalReceivedpkt:198.000000 @1868.378201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:149 delay:60.783265, averageDelay:69.740745, totalReceivedpkt:199.000000 @1868.380601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:137 delay:68.026762, averageDelay:69.732175, totalReceivedpkt:200.000000 @1868.383001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:138 delay:64.730217, averageDelay:69.707289, totalReceivedpkt:201.000000 @1868.385401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:139 delay:61.538180, averageDelay:69.666848, totalReceivedpkt:202.000000 @1868.387801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:140 delay:58.309422, averageDelay:69.610900, totalReceivedpkt:203.000000 @1868.390201
+node:1, MacAwsn::SuperFrameHandler:133, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1868.392800
+node:2, MacAwsn::SuperFrameHandler:133, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1868.392800
+node:0, MacAwsn::SuperFrameHandler:134, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1868.392800
+node:1, RILApp::sendMsg: data arrival msg->seq:160, @1870.111641
+node:2, RILApp::sendMsg: data arrival msg->seq:170, @1870.916046
+node:1, RILApp::sendMsg: data arrival msg->seq:161, @1872.921215
+node:2, RILApp::sendMsg: data arrival msg->seq:171, @1874.023529
+node:1, RILApp::sendMsg: data arrival msg->seq:162, @1875.794324
+node:2, RILApp::sendMsg: data arrival msg->seq:172, @1877.301778
+node:1, RILApp::sendMsg: data arrival msg->seq:163, @1878.535250
+node:2, RILApp::sendMsg: data arrival msg->seq:173, @1880.261048
+node:1, RILApp::sendMsg: data arrival msg->seq:164, @1881.644439
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:152 delay:65.958446, averageDelay:69.592996, totalReceivedpkt:204.000000 @1882.511801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:153 delay:62.907671, averageDelay:69.560385, totalReceivedpkt:205.000000 @1882.514201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:154 delay:60.133849, averageDelay:69.514625, totalReceivedpkt:206.000000 @1882.516601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:141 delay:69.625504, averageDelay:69.515161, totalReceivedpkt:207.000000 @1882.519001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:142 delay:66.495707, averageDelay:69.500644, totalReceivedpkt:208.000000 @1882.521401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:143 delay:63.633342, averageDelay:69.472571, totalReceivedpkt:209.000000 @1882.523801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:144 delay:60.614355, averageDelay:69.430389, totalReceivedpkt:210.000000 @1882.526201
+node:1, MacAwsn::SuperFrameHandler:134, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1882.528800
+node:2, MacAwsn::SuperFrameHandler:134, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1882.528800
+node:0, MacAwsn::SuperFrameHandler:135, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1882.528800
+node:2, RILApp::sendMsg: data arrival msg->seq:174, @1883.158356
+node:1, RILApp::sendMsg: data arrival msg->seq:165, @1884.929283
+node:2, RILApp::sendMsg: data arrival msg->seq:175, @1886.242618
+node:1, RILApp::sendMsg: data arrival msg->seq:166, @1887.872657
+node:2, RILApp::sendMsg: data arrival msg->seq:176, @1889.111235
+node:1, RILApp::sendMsg: data arrival msg->seq:167, @1891.104118
+node:2, RILApp::sendMsg: data arrival msg->seq:177, @1891.899426
+node:1, RILApp::sendMsg: data arrival msg->seq:168, @1893.956353
+node:2, RILApp::sendMsg: data arrival msg->seq:178, @1894.801287
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:157 delay:65.729420, averageDelay:69.412849, totalReceivedpkt:211.000000 @1896.647801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:158 delay:62.441520, averageDelay:69.379965, totalReceivedpkt:212.000000 @1896.650201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:159 delay:59.148677, averageDelay:69.331931, totalReceivedpkt:213.000000 @1896.652601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:146 delay:68.956607, averageDelay:69.330177, totalReceivedpkt:214.000000 @1896.655001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:147 delay:65.720116, averageDelay:69.313386, totalReceivedpkt:215.000000 @1896.657401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:148 delay:62.578033, averageDelay:69.282204, totalReceivedpkt:216.000000 @1896.659801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:149 delay:59.509371, averageDelay:69.237168, totalReceivedpkt:217.000000 @1896.662201
+node:1, MacAwsn::SuperFrameHandler:135, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1896.664800
+node:2, MacAwsn::SuperFrameHandler:135, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1896.664800
+node:0, MacAwsn::SuperFrameHandler:136, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1896.664800
+node:1, RILApp::sendMsg: data arrival msg->seq:169, @1896.919327
+node:2, RILApp::sendMsg: data arrival msg->seq:179, @1898.073693
+node:1, RILApp::sendMsg: data arrival msg->seq:170, @1899.728091
+node:2, RILApp::sendMsg: data arrival msg->seq:180, @1901.370408
+node:1, RILApp::sendMsg: data arrival msg->seq:171, @1902.754880
+node:2, RILApp::sendMsg: data arrival msg->seq:181, @1904.253474
+node:1, RILApp::sendMsg: data arrival msg->seq:172, @1905.733444
+node:2, RILApp::sendMsg: data arrival msg->seq:182, @1907.291417
+node:1, RILApp::sendMsg: data arrival msg->seq:173, @1908.574089
+node:2, RILApp::sendMsg: data arrival msg->seq:183, @1910.024760
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:161 delay:67.120837, averageDelay:69.227460, totalReceivedpkt:218.000000 @1910.783801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:162 delay:64.279813, averageDelay:69.204868, totalReceivedpkt:219.000000 @1910.786201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:163 delay:61.071465, averageDelay:69.167898, totalReceivedpkt:220.000000 @1910.788601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:150 delay:70.610059, averageDelay:69.174423, totalReceivedpkt:221.000000 @1910.791001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:151 delay:67.592863, averageDelay:69.167299, totalReceivedpkt:222.000000 @1910.793401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:152 delay:64.653982, averageDelay:69.147060, totalReceivedpkt:223.000000 @1910.795801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:153 delay:61.500482, averageDelay:69.112924, totalReceivedpkt:224.000000 @1910.798201
+node:1, MacAwsn::SuperFrameHandler:136, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1910.800800
+node:2, MacAwsn::SuperFrameHandler:136, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1910.800800
+node:0, MacAwsn::SuperFrameHandler:137, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1910.800800
+node:1, RILApp::sendMsg: data arrival msg->seq:174, @1911.359898
+node:2, RILApp::sendMsg: data arrival msg->seq:184, @1912.941588
+node:1, RILApp::sendMsg: data arrival msg->seq:175, @1914.172497
+node:2, RILApp::sendMsg: data arrival msg->seq:185, @1916.184637
+node:1, RILApp::sendMsg: data arrival msg->seq:176, @1917.022940
+node:2, RILApp::sendMsg: data arrival msg->seq:186, @1919.084687
+node:1, RILApp::sendMsg: data arrival msg->seq:177, @1919.777994
+node:2, RILApp::sendMsg: data arrival msg->seq:187, @1921.925178
+node:1, RILApp::sendMsg: data arrival msg->seq:178, @1922.957022
+node:2, RILApp::sendMsg: data arrival msg->seq:188, @1924.905770
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:166 delay:66.492739, averageDelay:69.101278, totalReceivedpkt:225.000000 @1924.919801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:167 delay:63.455885, averageDelay:69.076299, totalReceivedpkt:226.000000 @1924.922201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:168 delay:60.308130, averageDelay:69.037672, totalReceivedpkt:227.000000 @1924.924601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:155 delay:69.792939, averageDelay:69.040985, totalReceivedpkt:228.000000 @1924.927001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:156 delay:66.536970, averageDelay:69.030051, totalReceivedpkt:229.000000 @1924.929401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:157 delay:63.413319, averageDelay:69.005630, totalReceivedpkt:230.000000 @1924.931801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:158 delay:60.592226, averageDelay:68.969208, totalReceivedpkt:231.000000 @1924.934201
+node:1, MacAwsn::SuperFrameHandler:137, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1924.936800
+node:2, MacAwsn::SuperFrameHandler:137, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1924.936800
+node:0, MacAwsn::SuperFrameHandler:138, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1924.936800
+node:1, RILApp::sendMsg: data arrival msg->seq:179, @1926.158462
+node:2, RILApp::sendMsg: data arrival msg->seq:189, @1927.929939
+node:1, RILApp::sendMsg: data arrival msg->seq:180, @1929.143350
+node:2, RILApp::sendMsg: data arrival msg->seq:190, @1931.016003
+node:1, RILApp::sendMsg: data arrival msg->seq:181, @1932.110849
+node:2, RILApp::sendMsg: data arrival msg->seq:191, @1934.280832
+node:1, RILApp::sendMsg: data arrival msg->seq:182, @1934.812248
+node:2, RILApp::sendMsg: data arrival msg->seq:192, @1937.416420
+node:1, RILApp::sendMsg: data arrival msg->seq:183, @1937.857951
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:171 delay:65.032272, averageDelay:68.952239, totalReceivedpkt:232.000000 @1939.055801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:172 delay:61.756424, averageDelay:68.921355, totalReceivedpkt:233.000000 @1939.058201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:173 delay:58.799553, averageDelay:68.878100, totalReceivedpkt:234.000000 @1939.060601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:160 delay:68.951360, averageDelay:68.878412, totalReceivedpkt:235.000000 @1939.063001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:161 delay:66.144187, averageDelay:68.866826, totalReceivedpkt:236.000000 @1939.065401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:162 delay:63.273477, averageDelay:68.843225, totalReceivedpkt:237.000000 @1939.067801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:163 delay:60.534951, averageDelay:68.808317, totalReceivedpkt:238.000000 @1939.070201
+node:1, MacAwsn::SuperFrameHandler:138, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1939.072800
+node:2, MacAwsn::SuperFrameHandler:138, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1939.072800
+node:0, MacAwsn::SuperFrameHandler:139, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1939.072800
+node:2, RILApp::sendMsg: data arrival msg->seq:193, @1940.146753
+node:1, RILApp::sendMsg: data arrival msg->seq:184, @1941.090304
+node:2, RILApp::sendMsg: data arrival msg->seq:194, @1943.272793
+node:1, RILApp::sendMsg: data arrival msg->seq:185, @1944.366971
+node:2, RILApp::sendMsg: data arrival msg->seq:195, @1946.020220
+node:1, RILApp::sendMsg: data arrival msg->seq:186, @1947.655575
+node:2, RILApp::sendMsg: data arrival msg->seq:196, @1949.171175
+node:1, RILApp::sendMsg: data arrival msg->seq:187, @1950.730239
+node:2, RILApp::sendMsg: data arrival msg->seq:197, @1952.025474
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:175 delay:66.949183, averageDelay:68.800538, totalReceivedpkt:239.000000 @1953.191801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:176 delay:64.082967, averageDelay:68.780881, totalReceivedpkt:240.000000 @1953.194201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:177 delay:61.297175, averageDelay:68.749828, totalReceivedpkt:241.000000 @1953.196601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:165 delay:68.269719, averageDelay:68.747845, totalReceivedpkt:242.000000 @1953.199001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:166 delay:65.328745, averageDelay:68.733774, totalReceivedpkt:243.000000 @1953.201401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:167 delay:62.099683, averageDelay:68.706585, totalReceivedpkt:244.000000 @1953.203801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:168 delay:59.249848, averageDelay:68.667986, totalReceivedpkt:245.000000 @1953.206201
+node:1, MacAwsn::SuperFrameHandler:139, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1953.208800
+node:2, MacAwsn::SuperFrameHandler:139, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1953.208800
+node:0, MacAwsn::SuperFrameHandler:140, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1953.208800
+node:1, RILApp::sendMsg: data arrival msg->seq:188, @1953.756228
+node:2, RILApp::sendMsg: data arrival msg->seq:198, @1955.109770
+node:1, RILApp::sendMsg: data arrival msg->seq:189, @1956.774957
+node:2, RILApp::sendMsg: data arrival msg->seq:199, @1958.365882
+node:1, RILApp::sendMsg: data arrival msg->seq:190, @1959.774960
+node:2, RILApp::sendMsg: data arrival msg->seq:200, @1961.388955
+node:1, RILApp::sendMsg: data arrival msg->seq:191, @1962.997837
+node:2, RILApp::sendMsg: data arrival msg->seq:201, @1964.381470
+node:1, RILApp::sendMsg: data arrival msg->seq:192, @1966.265577
+node:2, RILApp::sendMsg: data arrival msg->seq:202, @1967.101414
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:180 delay:65.957393, averageDelay:68.656968, totalReceivedpkt:246.000000 @1967.327801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:181 delay:63.076727, averageDelay:68.634376, totalReceivedpkt:247.000000 @1967.330201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:182 delay:60.041185, averageDelay:68.599726, totalReceivedpkt:248.000000 @1967.332601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:169 delay:70.415674, averageDelay:68.607019, totalReceivedpkt:249.000000 @1967.335001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:170 delay:67.609310, averageDelay:68.603028, totalReceivedpkt:250.000000 @1967.337401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:171 delay:64.584922, averageDelay:68.587019, totalReceivedpkt:251.000000 @1967.339801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:172 delay:61.608757, averageDelay:68.559328, totalReceivedpkt:252.000000 @1967.342201
+node:1, MacAwsn::SuperFrameHandler:140, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1967.344800
+node:2, MacAwsn::SuperFrameHandler:140, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1967.344800
+node:0, MacAwsn::SuperFrameHandler:141, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1967.344800
+node:1, RILApp::sendMsg: data arrival msg->seq:193, @1969.115580
+node:2, RILApp::sendMsg: data arrival msg->seq:203, @1970.394185
+node:1, RILApp::sendMsg: data arrival msg->seq:194, @1972.279673
+node:2, RILApp::sendMsg: data arrival msg->seq:204, @1973.496720
+node:1, RILApp::sendMsg: data arrival msg->seq:195, @1975.271874
+node:2, RILApp::sendMsg: data arrival msg->seq:205, @1976.203931
+node:1, RILApp::sendMsg: data arrival msg->seq:196, @1978.448799
+node:2, RILApp::sendMsg: data arrival msg->seq:206, @1979.481344
+node:1, RILApp::sendMsg: data arrival msg->seq:197, @1981.225598
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:185 delay:65.279164, averageDelay:68.546363, totalReceivedpkt:253.000000 @1981.463801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:186 delay:62.381514, averageDelay:68.522092, totalReceivedpkt:254.000000 @1981.466201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:187 delay:59.543423, averageDelay:68.486881, totalReceivedpkt:255.000000 @1981.468601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:174 delay:70.111104, averageDelay:68.493226, totalReceivedpkt:256.000000 @1981.471001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:175 delay:67.300905, averageDelay:68.488586, totalReceivedpkt:257.000000 @1981.473401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:176 delay:64.452861, averageDelay:68.472944, totalReceivedpkt:258.000000 @1981.475801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:177 delay:61.700207, averageDelay:68.446795, totalReceivedpkt:259.000000 @1981.478201
+node:1, MacAwsn::SuperFrameHandler:141, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1981.480800
+node:2, MacAwsn::SuperFrameHandler:141, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1981.480800
+node:0, MacAwsn::SuperFrameHandler:142, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1981.480800
+node:2, RILApp::sendMsg: data arrival msg->seq:207, @1982.505999
+node:1, RILApp::sendMsg: data arrival msg->seq:198, @1984.275404
+node:2, RILApp::sendMsg: data arrival msg->seq:208, @1985.605593
+node:1, RILApp::sendMsg: data arrival msg->seq:199, @1987.344935
+node:2, RILApp::sendMsg: data arrival msg->seq:209, @1988.801984
+node:1, RILApp::sendMsg: data arrival msg->seq:200, @1990.282996
+node:2, RILApp::sendMsg: data arrival msg->seq:210, @1991.613581
+node:1, RILApp::sendMsg: data arrival msg->seq:201, @1993.017924
+node:2, RILApp::sendMsg: data arrival msg->seq:211, @1994.529419
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:190 delay:64.583798, averageDelay:68.431937, totalReceivedpkt:260.000000 @1995.599801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:191 delay:61.321369, averageDelay:68.404693, totalReceivedpkt:261.000000 @1995.602201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:192 delay:58.188181, averageDelay:68.365699, totalReceivedpkt:262.000000 @1995.604601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:179 delay:69.448539, averageDelay:68.369816, totalReceivedpkt:263.000000 @1995.607001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:180 delay:66.466051, averageDelay:68.362605, totalReceivedpkt:264.000000 @1995.609401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:181 delay:63.500953, averageDelay:68.344259, totalReceivedpkt:265.000000 @1995.611801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:182 delay:60.801953, averageDelay:68.315905, totalReceivedpkt:266.000000 @1995.614201
+node:1, MacAwsn::SuperFrameHandler:142, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@1995.616800
+node:2, MacAwsn::SuperFrameHandler:142, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@1995.616800
+node:0, MacAwsn::SuperFrameHandler:143, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@1995.616800
+node:1, RILApp::sendMsg: data arrival msg->seq:202, @1995.821404
+node:2, RILApp::sendMsg: data arrival msg->seq:212, @1997.384975
+node:1, RILApp::sendMsg: data arrival msg->seq:203, @1998.717626
+node:2, RILApp::sendMsg: data arrival msg->seq:213, @2000.239387
+node:1, RILApp::sendMsg: data arrival msg->seq:204, @2001.957156
+node:2, RILApp::sendMsg: data arrival msg->seq:214, @2003.269038
+node:1, RILApp::sendMsg: data arrival msg->seq:205, @2004.849773
+node:2, RILApp::sendMsg: data arrival msg->seq:215, @2006.418707
+node:1, RILApp::sendMsg: data arrival msg->seq:206, @2008.038205
+node:2, RILApp::sendMsg: data arrival msg->seq:216, @2009.215969
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:194 delay:66.463009, averageDelay:68.308965, totalReceivedpkt:267.000000 @2009.735801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:195 delay:63.717981, averageDelay:68.291834, totalReceivedpkt:268.000000 @2009.738201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:196 delay:60.569426, averageDelay:68.263127, totalReceivedpkt:269.000000 @2009.740601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:184 delay:68.652697, averageDelay:68.264569, totalReceivedpkt:270.000000 @2009.743001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:185 delay:65.378430, averageDelay:68.253920, totalReceivedpkt:271.000000 @2009.745401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:186 delay:62.092226, averageDelay:68.231266, totalReceivedpkt:272.000000 @2009.747801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:187 delay:59.019962, averageDelay:68.197525, totalReceivedpkt:273.000000 @2009.750201
+node:1, MacAwsn::SuperFrameHandler:143, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2009.752800
+node:2, MacAwsn::SuperFrameHandler:143, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2009.752800
+node:0, MacAwsn::SuperFrameHandler:144, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2009.752800
+node:1, RILApp::sendMsg: data arrival msg->seq:207, @2010.766244
+node:2, RILApp::sendMsg: data arrival msg->seq:217, @2012.202561
+node:1, RILApp::sendMsg: data arrival msg->seq:208, @2013.613310
+node:2, RILApp::sendMsg: data arrival msg->seq:218, @2014.928530
+node:1, RILApp::sendMsg: data arrival msg->seq:209, @2016.630290
+node:2, RILApp::sendMsg: data arrival msg->seq:219, @2017.770127
+node:1, RILApp::sendMsg: data arrival msg->seq:210, @2019.844927
+node:2, RILApp::sendMsg: data arrival msg->seq:220, @2020.545336
+node:1, RILApp::sendMsg: data arrival msg->seq:211, @2022.894497
+node:2, RILApp::sendMsg: data arrival msg->seq:221, @2023.414932
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:199 delay:65.505919, averageDelay:68.187702, totalReceivedpkt:274.000000 @2023.871801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:200 delay:62.485246, averageDelay:68.166966, totalReceivedpkt:275.000000 @2023.874201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:201 delay:59.495131, averageDelay:68.135546, totalReceivedpkt:276.000000 @2023.876601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:188 delay:70.122773, averageDelay:68.142720, totalReceivedpkt:277.000000 @2023.879001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:189 delay:67.106444, averageDelay:68.138992, totalReceivedpkt:278.000000 @2023.881401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:190 delay:64.108841, averageDelay:68.124547, totalReceivedpkt:279.000000 @2023.883801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:191 delay:60.888364, averageDelay:68.098704, totalReceivedpkt:280.000000 @2023.886201
+node:1, MacAwsn::SuperFrameHandler:144, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2023.888800
+node:2, MacAwsn::SuperFrameHandler:144, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2023.888800
+node:0, MacAwsn::SuperFrameHandler:145, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2023.888800
+node:1, RILApp::sendMsg: data arrival msg->seq:212, @2025.690770
+node:2, RILApp::sendMsg: data arrival msg->seq:222, @2026.334894
+node:1, RILApp::sendMsg: data arrival msg->seq:213, @2028.878578
+node:2, RILApp::sendMsg: data arrival msg->seq:223, @2029.048952
+node:1, RILApp::sendMsg: data arrival msg->seq:214, @2031.712028
+node:2, RILApp::sendMsg: data arrival msg->seq:224, @2032.338616
+node:1, RILApp::sendMsg: data arrival msg->seq:215, @2034.990577
+node:2, RILApp::sendMsg: data arrival msg->seq:225, @2035.068581
+node:2, RILApp::sendMsg: data arrival msg->seq:226, @2037.786364
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:204 delay:64.511082, averageDelay:68.085937, totalReceivedpkt:281.000000 @2038.007801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:205 delay:61.806270, averageDelay:68.063668, totalReceivedpkt:282.000000 @2038.010201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:206 delay:58.531258, averageDelay:68.029985, totalReceivedpkt:283.000000 @2038.012601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:193 delay:68.899421, averageDelay:68.033046, totalReceivedpkt:284.000000 @2038.015001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:194 delay:65.737728, averageDelay:68.024992, totalReceivedpkt:285.000000 @2038.017401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:195 delay:62.747927, averageDelay:68.006541, totalReceivedpkt:286.000000 @2038.019801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:196 delay:59.573402, averageDelay:67.977157, totalReceivedpkt:287.000000 @2038.022201
+node:1, MacAwsn::SuperFrameHandler:145, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2038.024800
+node:2, MacAwsn::SuperFrameHandler:145, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2038.024800
+node:0, MacAwsn::SuperFrameHandler:146, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2038.024800
+node:1, RILApp::sendMsg: data arrival msg->seq:216, @2038.041603
+node:1, RILApp::sendMsg: data arrival msg->seq:217, @2040.769272
+node:2, RILApp::sendMsg: data arrival msg->seq:227, @2040.851984
+node:2, RILApp::sendMsg: data arrival msg->seq:228, @2043.781115
+node:1, RILApp::sendMsg: data arrival msg->seq:218, @2043.824512
+node:2, RILApp::sendMsg: data arrival msg->seq:229, @2046.731504
+node:1, RILApp::sendMsg: data arrival msg->seq:219, @2046.741792
+node:1, RILApp::sendMsg: data arrival msg->seq:220, @2049.641515
+node:2, RILApp::sendMsg: data arrival msg->seq:230, @2049.891721
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:208 delay:66.538208, averageDelay:67.972161, totalReceivedpkt:288.000000 @2052.143801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:209 delay:63.344217, averageDelay:67.956147, totalReceivedpkt:289.000000 @2052.146201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:210 delay:60.535020, averageDelay:67.930557, totalReceivedpkt:290.000000 @2052.148601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:198 delay:67.875597, averageDelay:67.930368, totalReceivedpkt:291.000000 @2052.151001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:199 delay:64.808466, averageDelay:67.919677, totalReceivedpkt:292.000000 @2052.153401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:200 delay:61.872805, averageDelay:67.899039, totalReceivedpkt:293.000000 @2052.155801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:201 delay:59.140278, averageDelay:67.869248, totalReceivedpkt:294.000000 @2052.158201
+node:1, MacAwsn::SuperFrameHandler:146, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2052.160800
+node:2, MacAwsn::SuperFrameHandler:146, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2052.160800
+node:0, MacAwsn::SuperFrameHandler:147, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2052.160800
+node:1, RILApp::sendMsg: data arrival msg->seq:221, @2052.463137
+node:2, RILApp::sendMsg: data arrival msg->seq:231, @2053.090842
+node:1, RILApp::sendMsg: data arrival msg->seq:222, @2055.297839
+node:2, RILApp::sendMsg: data arrival msg->seq:232, @2055.919857
+node:1, RILApp::sendMsg: data arrival msg->seq:223, @2058.230397
+node:2, RILApp::sendMsg: data arrival msg->seq:233, @2058.827549
+node:1, RILApp::sendMsg: data arrival msg->seq:224, @2061.308148
+node:2, RILApp::sendMsg: data arrival msg->seq:234, @2061.928111
+node:1, RILApp::sendMsg: data arrival msg->seq:225, @2064.362209
+node:2, RILApp::sendMsg: data arrival msg->seq:235, @2065.111858
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:213 delay:66.040414, averageDelay:67.863048, totalReceivedpkt:295.000000 @2066.279801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:214 delay:63.013163, averageDelay:67.846663, totalReceivedpkt:296.000000 @2066.282201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:215 delay:59.865894, averageDelay:67.819792, totalReceivedpkt:297.000000 @2066.284601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:202 delay:70.465597, averageDelay:67.828671, totalReceivedpkt:298.000000 @2066.287001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:203 delay:67.571775, averageDelay:67.827811, totalReceivedpkt:299.000000 @2066.289401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:204 delay:64.334645, averageDelay:67.816168, totalReceivedpkt:300.000000 @2066.291801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:205 delay:61.444428, averageDelay:67.794999, totalReceivedpkt:301.000000 @2066.294201
+node:1, MacAwsn::SuperFrameHandler:147, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2066.296800
+node:2, MacAwsn::SuperFrameHandler:147, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2066.296800
+node:0, MacAwsn::SuperFrameHandler:148, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2066.296800
+node:1, RILApp::sendMsg: data arrival msg->seq:226, @2067.094265
+node:2, RILApp::sendMsg: data arrival msg->seq:236, @2068.228717
+node:1, RILApp::sendMsg: data arrival msg->seq:227, @2070.202719
+node:2, RILApp::sendMsg: data arrival msg->seq:237, @2071.089064
+node:1, RILApp::sendMsg: data arrival msg->seq:228, @2072.994956
+node:2, RILApp::sendMsg: data arrival msg->seq:238, @2074.195692
+node:1, RILApp::sendMsg: data arrival msg->seq:229, @2075.817428
+node:2, RILApp::sendMsg: data arrival msg->seq:239, @2077.445744
+node:1, RILApp::sendMsg: data arrival msg->seq:230, @2079.063563
+node:2, RILApp::sendMsg: data arrival msg->seq:240, @2080.181548
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:218 delay:65.487271, averageDelay:67.787357, totalReceivedpkt:302.000000 @2080.415801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:219 delay:62.648074, averageDelay:67.770396, totalReceivedpkt:303.000000 @2080.418201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:220 delay:59.875265, averageDelay:67.744425, totalReceivedpkt:304.000000 @2080.420601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:207 delay:69.656757, averageDelay:67.750695, totalReceivedpkt:305.000000 @2080.423001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:208 delay:66.812091, averageDelay:67.747628, totalReceivedpkt:306.000000 @2080.425401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:209 delay:63.797511, averageDelay:67.734761, totalReceivedpkt:307.000000 @2080.427801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:210 delay:60.585274, averageDelay:67.711548, totalReceivedpkt:308.000000 @2080.430201
+node:1, MacAwsn::SuperFrameHandler:148, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2080.432800
+node:2, MacAwsn::SuperFrameHandler:148, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2080.432800
+node:0, MacAwsn::SuperFrameHandler:149, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2080.432800
+node:1, RILApp::sendMsg: data arrival msg->seq:231, @2082.318482
+node:2, RILApp::sendMsg: data arrival msg->seq:241, @2083.107974
+node:1, RILApp::sendMsg: data arrival msg->seq:232, @2085.246352
+node:2, RILApp::sendMsg: data arrival msg->seq:242, @2086.134537
+node:1, RILApp::sendMsg: data arrival msg->seq:233, @2088.467368
+node:2, RILApp::sendMsg: data arrival msg->seq:243, @2089.392305
+node:1, RILApp::sendMsg: data arrival msg->seq:234, @2091.636086
+node:2, RILApp::sendMsg: data arrival msg->seq:244, @2092.275523
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:223 delay:65.502849, averageDelay:67.704401, totalReceivedpkt:309.000000 @2094.551801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:224 delay:62.215585, averageDelay:67.686695, totalReceivedpkt:310.000000 @2094.554201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:225 delay:59.488020, averageDelay:67.660332, totalReceivedpkt:311.000000 @2094.556601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:212 delay:68.868231, averageDelay:67.664204, totalReceivedpkt:312.000000 @2094.559001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:213 delay:65.682824, averageDelay:67.657874, totalReceivedpkt:313.000000 @2094.561401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:214 delay:62.851773, averageDelay:67.642568, totalReceivedpkt:314.000000 @2094.563801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:215 delay:59.575624, averageDelay:67.616958, totalReceivedpkt:315.000000 @2094.566201
+node:1, MacAwsn::SuperFrameHandler:149, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2094.568800
+node:2, MacAwsn::SuperFrameHandler:149, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2094.568800
+node:0, MacAwsn::SuperFrameHandler:150, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2094.568800
+node:1, RILApp::sendMsg: data arrival msg->seq:235, @2094.735138
+node:2, RILApp::sendMsg: data arrival msg->seq:245, @2095.147303
+node:1, RILApp::sendMsg: data arrival msg->seq:236, @2097.800793
+node:2, RILApp::sendMsg: data arrival msg->seq:246, @2098.102453
+node:2, RILApp::sendMsg: data arrival msg->seq:247, @2100.938099
+node:1, RILApp::sendMsg: data arrival msg->seq:237, @2101.019898
+node:1, RILApp::sendMsg: data arrival msg->seq:238, @2103.786995
+node:2, RILApp::sendMsg: data arrival msg->seq:248, @2103.871025
+node:1, RILApp::sendMsg: data arrival msg->seq:239, @2106.934508
+node:2, RILApp::sendMsg: data arrival msg->seq:249, @2107.006081
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:228 delay:64.906686, averageDelay:67.608381, totalReceivedpkt:316.000000 @2108.687801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:229 delay:61.958697, averageDelay:67.590559, totalReceivedpkt:317.000000 @2108.690201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:230 delay:58.800880, averageDelay:67.562919, totalReceivedpkt:318.000000 @2108.692601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:216 delay:70.653398, averageDelay:67.572607, totalReceivedpkt:319.000000 @2108.695001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:217 delay:67.928129, averageDelay:67.573718, totalReceivedpkt:320.000000 @2108.697401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:218 delay:64.875290, averageDelay:67.565311, totalReceivedpkt:321.000000 @2108.699801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:219 delay:61.960409, averageDelay:67.547905, totalReceivedpkt:322.000000 @2108.702201
+node:1, MacAwsn::SuperFrameHandler:150, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2108.704800
+node:2, MacAwsn::SuperFrameHandler:150, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2108.704800
+node:0, MacAwsn::SuperFrameHandler:151, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2108.704800
+node:1, RILApp::sendMsg: data arrival msg->seq:240, @2110.220447
+node:2, RILApp::sendMsg: data arrival msg->seq:250, @2110.246034
+node:2, RILApp::sendMsg: data arrival msg->seq:251, @2113.013512
+node:1, RILApp::sendMsg: data arrival msg->seq:241, @2113.180626
+node:1, RILApp::sendMsg: data arrival msg->seq:242, @2116.072873
+node:2, RILApp::sendMsg: data arrival msg->seq:252, @2116.093969
+node:2, RILApp::sendMsg: data arrival msg->seq:253, @2119.307861
+node:1, RILApp::sendMsg: data arrival msg->seq:243, @2119.360770
+node:2, RILApp::sendMsg: data arrival msg->seq:254, @2122.064127
+node:1, RILApp::sendMsg: data arrival msg->seq:244, @2122.441497
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:232 delay:66.903944, averageDelay:67.545911, totalReceivedpkt:323.000000 @2122.823801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:233 delay:63.998652, averageDelay:67.534963, totalReceivedpkt:324.000000 @2122.826201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:234 delay:60.900490, averageDelay:67.514549, totalReceivedpkt:325.000000 @2122.828601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:221 delay:70.367864, averageDelay:67.523301, totalReceivedpkt:326.000000 @2122.831001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:222 delay:67.535562, averageDelay:67.523339, totalReceivedpkt:327.000000 @2122.833401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:223 delay:64.605405, averageDelay:67.514443, totalReceivedpkt:328.000000 @2122.835801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:224 delay:61.530053, averageDelay:67.496253, totalReceivedpkt:329.000000 @2122.838201
+node:1, MacAwsn::SuperFrameHandler:151, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2122.840800
+node:2, MacAwsn::SuperFrameHandler:151, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2122.840800
+node:0, MacAwsn::SuperFrameHandler:152, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2122.840800
+node:1, RILApp::sendMsg: data arrival msg->seq:245, @2125.289044
+node:2, RILApp::sendMsg: data arrival msg->seq:255, @2125.337671
+node:1, RILApp::sendMsg: data arrival msg->seq:246, @2128.095051
+node:2, RILApp::sendMsg: data arrival msg->seq:256, @2128.502645
+node:1, RILApp::sendMsg: data arrival msg->seq:247, @2131.229332
+node:2, RILApp::sendMsg: data arrival msg->seq:257, @2131.425329
+node:1, RILApp::sendMsg: data arrival msg->seq:248, @2134.299021
+node:2, RILApp::sendMsg: data arrival msg->seq:258, @2134.387880
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:237 delay:65.870737, averageDelay:67.491327, totalReceivedpkt:330.000000 @2136.959801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:238 delay:62.766509, averageDelay:67.477053, totalReceivedpkt:331.000000 @2136.962201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:239 delay:59.518857, averageDelay:67.453083, totalReceivedpkt:332.000000 @2136.964601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:226 delay:69.872737, averageDelay:67.460349, totalReceivedpkt:333.000000 @2136.967001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:227 delay:66.766682, averageDelay:67.458272, totalReceivedpkt:334.000000 @2136.969401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:228 delay:63.976845, averageDelay:67.447880, totalReceivedpkt:335.000000 @2136.971801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:229 delay:61.156773, averageDelay:67.429156, totalReceivedpkt:336.000000 @2136.974201
+node:1, MacAwsn::SuperFrameHandler:152, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2136.976800
+node:2, MacAwsn::SuperFrameHandler:152, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2136.976800
+node:0, MacAwsn::SuperFrameHandler:153, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2136.976800
+node:1, RILApp::sendMsg: data arrival msg->seq:249, @2137.011587
+node:2, RILApp::sendMsg: data arrival msg->seq:259, @2137.664888
+node:1, RILApp::sendMsg: data arrival msg->seq:250, @2140.063070
+node:2, RILApp::sendMsg: data arrival msg->seq:260, @2140.789861
+node:1, RILApp::sendMsg: data arrival msg->seq:251, @2143.202534
+node:2, RILApp::sendMsg: data arrival msg->seq:261, @2143.701016
+node:1, RILApp::sendMsg: data arrival msg->seq:252, @2146.262958
+node:2, RILApp::sendMsg: data arrival msg->seq:262, @2146.864153
+node:1, RILApp::sendMsg: data arrival msg->seq:253, @2149.075861
+node:2, RILApp::sendMsg: data arrival msg->seq:263, @2150.110085
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:242 delay:64.961264, averageDelay:67.421833, totalReceivedpkt:337.000000 @2151.095801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:243 delay:61.705896, averageDelay:67.404922, totalReceivedpkt:338.000000 @2151.098201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:244 delay:58.825078, averageDelay:67.379613, totalReceivedpkt:339.000000 @2151.100601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:231 delay:68.784519, averageDelay:67.383745, totalReceivedpkt:340.000000 @2151.103001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:232 delay:65.859049, averageDelay:67.379273, totalReceivedpkt:341.000000 @2151.105401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:233 delay:62.640434, averageDelay:67.365417, totalReceivedpkt:342.000000 @2151.107801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:234 delay:59.474115, averageDelay:67.342410, totalReceivedpkt:343.000000 @2151.110201
+node:1, MacAwsn::SuperFrameHandler:153, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2151.112800
+node:2, MacAwsn::SuperFrameHandler:153, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2151.112800
+node:0, MacAwsn::SuperFrameHandler:154, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2151.112800
+node:1, RILApp::sendMsg: data arrival msg->seq:254, @2152.346131
+node:2, RILApp::sendMsg: data arrival msg->seq:264, @2153.247919
+node:1, RILApp::sendMsg: data arrival msg->seq:255, @2155.515305
+node:2, RILApp::sendMsg: data arrival msg->seq:265, @2156.345254
+node:1, RILApp::sendMsg: data arrival msg->seq:256, @2158.617112
+node:2, RILApp::sendMsg: data arrival msg->seq:266, @2159.286881
+node:1, RILApp::sendMsg: data arrival msg->seq:257, @2161.742070
+node:2, RILApp::sendMsg: data arrival msg->seq:267, @2162.317523
+node:1, RILApp::sendMsg: data arrival msg->seq:258, @2164.526960
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:246 delay:67.129349, averageDelay:67.341791, totalReceivedpkt:344.000000 @2165.231801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:247 delay:64.296102, averageDelay:67.332963, totalReceivedpkt:345.000000 @2165.234201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:248 delay:61.365576, averageDelay:67.315716, totalReceivedpkt:346.000000 @2165.236601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:235 delay:70.503864, averageDelay:67.324904, totalReceivedpkt:347.000000 @2165.239001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:236 delay:67.440608, averageDelay:67.325236, totalReceivedpkt:348.000000 @2165.241401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:237 delay:64.223904, averageDelay:67.316350, totalReceivedpkt:349.000000 @2165.243801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:238 delay:61.459206, averageDelay:67.299615, totalReceivedpkt:350.000000 @2165.246201
+node:1, MacAwsn::SuperFrameHandler:154, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2165.248800
+node:2, MacAwsn::SuperFrameHandler:154, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2165.248800
+node:0, MacAwsn::SuperFrameHandler:155, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2165.248800
+node:2, RILApp::sendMsg: data arrival msg->seq:268, @2165.421598
+node:1, RILApp::sendMsg: data arrival msg->seq:259, @2167.296499
+node:2, RILApp::sendMsg: data arrival msg->seq:269, @2168.140834
+node:1, RILApp::sendMsg: data arrival msg->seq:260, @2170.155098
+node:2, RILApp::sendMsg: data arrival msg->seq:270, @2170.985531
+node:1, RILApp::sendMsg: data arrival msg->seq:261, @2173.434519
+node:2, RILApp::sendMsg: data arrival msg->seq:271, @2174.212231
+node:1, RILApp::sendMsg: data arrival msg->seq:262, @2176.461813
+node:2, RILApp::sendMsg: data arrival msg->seq:272, @2177.439363
+node:1, RILApp::sendMsg: data arrival msg->seq:263, @2179.254866
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:251 delay:66.354289, averageDelay:67.296922, totalReceivedpkt:351.000000 @2179.367801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:252 delay:63.276232, averageDelay:67.285500, totalReceivedpkt:352.000000 @2179.370201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:253 delay:60.064741, averageDelay:67.265044, totalReceivedpkt:353.000000 @2179.372601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:240 delay:69.154555, averageDelay:67.270382, totalReceivedpkt:354.000000 @2179.375001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:241 delay:66.196775, averageDelay:67.267358, totalReceivedpkt:355.000000 @2179.377401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:242 delay:63.306929, averageDelay:67.256233, totalReceivedpkt:356.000000 @2179.379801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:243 delay:60.021431, averageDelay:67.235967, totalReceivedpkt:357.000000 @2179.382201
+node:1, MacAwsn::SuperFrameHandler:155, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2179.384800
+node:2, MacAwsn::SuperFrameHandler:155, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2179.384800
+node:0, MacAwsn::SuperFrameHandler:156, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2179.384800
+node:2, RILApp::sendMsg: data arrival msg->seq:273, @2180.167799
+node:1, RILApp::sendMsg: data arrival msg->seq:264, @2182.509945
+node:2, RILApp::sendMsg: data arrival msg->seq:274, @2183.096484
+node:1, RILApp::sendMsg: data arrival msg->seq:265, @2185.238642
+node:2, RILApp::sendMsg: data arrival msg->seq:275, @2186.129022
+node:1, RILApp::sendMsg: data arrival msg->seq:266, @2188.135270
+node:2, RILApp::sendMsg: data arrival msg->seq:276, @2189.110603
+node:1, RILApp::sendMsg: data arrival msg->seq:267, @2191.235377
+node:2, RILApp::sendMsg: data arrival msg->seq:277, @2192.406921
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:256 delay:65.001156, averageDelay:67.229725, totalReceivedpkt:358.000000 @2193.503801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:257 delay:62.080872, averageDelay:67.215383, totalReceivedpkt:359.000000 @2193.506201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:258 delay:59.120721, averageDelay:67.192898, totalReceivedpkt:360.000000 @2193.508601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:245 delay:68.221958, averageDelay:67.195748, totalReceivedpkt:361.000000 @2193.511001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:246 delay:65.418350, averageDelay:67.190838, totalReceivedpkt:362.000000 @2193.513401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:247 delay:62.286469, averageDelay:67.177327, totalReceivedpkt:363.000000 @2193.515801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:248 delay:59.219180, averageDelay:67.155464, totalReceivedpkt:364.000000 @2193.518201
+node:1, MacAwsn::SuperFrameHandler:156, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2193.520800
+node:2, MacAwsn::SuperFrameHandler:156, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2193.520800
+node:0, MacAwsn::SuperFrameHandler:157, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2193.520800
+node:1, RILApp::sendMsg: data arrival msg->seq:268, @2193.996923
+node:2, RILApp::sendMsg: data arrival msg->seq:278, @2195.419352
+node:1, RILApp::sendMsg: data arrival msg->seq:269, @2196.813206
+node:2, RILApp::sendMsg: data arrival msg->seq:279, @2198.272471
+node:1, RILApp::sendMsg: data arrival msg->seq:270, @2199.831027
+node:2, RILApp::sendMsg: data arrival msg->seq:280, @2201.425944
+node:1, RILApp::sendMsg: data arrival msg->seq:271, @2202.646844
+node:2, RILApp::sendMsg: data arrival msg->seq:281, @2204.583445
+node:1, RILApp::sendMsg: data arrival msg->seq:272, @2205.542635
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:260 delay:66.849940, averageDelay:67.154627, totalReceivedpkt:365.000000 @2207.639801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:261 delay:63.941186, averageDelay:67.145848, totalReceivedpkt:366.000000 @2207.642201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:262 delay:60.780449, averageDelay:67.128503, totalReceivedpkt:367.000000 @2207.644601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:249 delay:70.635414, averageDelay:67.138033, totalReceivedpkt:368.000000 @2207.647001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:250 delay:67.586331, averageDelay:67.139248, totalReceivedpkt:369.000000 @2207.649401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:251 delay:64.449267, averageDelay:67.131977, totalReceivedpkt:370.000000 @2207.651801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:252 delay:61.391243, averageDelay:67.116504, totalReceivedpkt:371.000000 @2207.654201
+node:1, MacAwsn::SuperFrameHandler:157, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2207.656800
+node:2, MacAwsn::SuperFrameHandler:157, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2207.656800
+node:0, MacAwsn::SuperFrameHandler:158, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2207.656800
+node:2, RILApp::sendMsg: data arrival msg->seq:282, @2207.677657
+node:1, RILApp::sendMsg: data arrival msg->seq:273, @2208.675834
+node:2, RILApp::sendMsg: data arrival msg->seq:283, @2210.841951
+node:1, RILApp::sendMsg: data arrival msg->seq:274, @2211.599265
+node:2, RILApp::sendMsg: data arrival msg->seq:284, @2213.970327
+node:1, RILApp::sendMsg: data arrival msg->seq:275, @2214.539998
+node:2, RILApp::sendMsg: data arrival msg->seq:285, @2216.897593
+node:1, RILApp::sendMsg: data arrival msg->seq:276, @2217.347415
+node:2, RILApp::sendMsg: data arrival msg->seq:286, @2220.074516
+node:1, RILApp::sendMsg: data arrival msg->seq:277, @2220.614057
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:265 delay:65.430547, averageDelay:67.111972, totalReceivedpkt:372.000000 @2221.775801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:266 delay:62.491320, averageDelay:67.099584, totalReceivedpkt:373.000000 @2221.778201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:267 delay:59.463078, averageDelay:67.079165, totalReceivedpkt:374.000000 @2221.780601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:254 delay:69.436870, averageDelay:67.085453, totalReceivedpkt:375.000000 @2221.783001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:255 delay:66.270096, averageDelay:67.083284, totalReceivedpkt:376.000000 @2221.785401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:256 delay:63.170689, averageDelay:67.072906, totalReceivedpkt:377.000000 @2221.787801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:257 delay:60.048132, averageDelay:67.054322, totalReceivedpkt:378.000000 @2221.790201
+node:1, MacAwsn::SuperFrameHandler:158, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2221.792800
+node:2, MacAwsn::SuperFrameHandler:158, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2221.792800
+node:0, MacAwsn::SuperFrameHandler:159, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2221.792800
+node:2, RILApp::sendMsg: data arrival msg->seq:287, @2223.078046
+node:1, RILApp::sendMsg: data arrival msg->seq:278, @2223.468651
+node:2, RILApp::sendMsg: data arrival msg->seq:288, @2225.989277
+node:1, RILApp::sendMsg: data arrival msg->seq:279, @2226.307546
+node:2, RILApp::sendMsg: data arrival msg->seq:289, @2228.696001
+node:1, RILApp::sendMsg: data arrival msg->seq:280, @2229.218119
+node:2, RILApp::sendMsg: data arrival msg->seq:290, @2231.702671
+node:1, RILApp::sendMsg: data arrival msg->seq:281, @2231.957442
+node:2, RILApp::sendMsg: data arrival msg->seq:291, @2234.428154
+node:1, RILApp::sendMsg: data arrival msg->seq:282, @2234.788351
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:269 delay:67.770967, averageDelay:67.056213, totalReceivedpkt:379.000000 @2235.911801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:270 delay:64.928670, averageDelay:67.050614, totalReceivedpkt:380.000000 @2235.914201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:271 delay:61.704370, averageDelay:67.036582, totalReceivedpkt:381.000000 @2235.916601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:259 delay:68.622502, averageDelay:67.040733, totalReceivedpkt:382.000000 @2235.919001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:260 delay:65.766304, averageDelay:67.037406, totalReceivedpkt:383.000000 @2235.921401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:261 delay:62.489282, averageDelay:67.025562, totalReceivedpkt:384.000000 @2235.923801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:262 delay:59.464388, averageDelay:67.005922, totalReceivedpkt:385.000000 @2235.926201
+node:1, MacAwsn::SuperFrameHandler:159, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2235.928800
+node:2, MacAwsn::SuperFrameHandler:159, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2235.928800
+node:0, MacAwsn::SuperFrameHandler:160, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2235.928800
+node:2, RILApp::sendMsg: data arrival msg->seq:292, @2237.424568
+node:1, RILApp::sendMsg: data arrival msg->seq:283, @2237.864597
+node:2, RILApp::sendMsg: data arrival msg->seq:293, @2240.595074
+node:1, RILApp::sendMsg: data arrival msg->seq:284, @2240.747995
+node:2, RILApp::sendMsg: data arrival msg->seq:294, @2243.447768
+node:1, RILApp::sendMsg: data arrival msg->seq:285, @2243.670568
+node:1, RILApp::sendMsg: data arrival msg->seq:286, @2246.495583
+node:2, RILApp::sendMsg: data arrival msg->seq:295, @2246.594779
+node:2, RILApp::sendMsg: data arrival msg->seq:296, @2249.449994
+node:1, RILApp::sendMsg: data arrival msg->seq:287, @2249.470956
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:274 delay:66.951317, averageDelay:67.005781, totalReceivedpkt:386.000000 @2250.047801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:275 delay:63.921179, averageDelay:66.997810, totalReceivedpkt:387.000000 @2250.050201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:276 delay:60.941998, averageDelay:66.982203, totalReceivedpkt:388.000000 @2250.052601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:264 delay:67.545056, averageDelay:66.983649, totalReceivedpkt:389.000000 @2250.055001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:265 delay:64.818759, averageDelay:66.978098, totalReceivedpkt:390.000000 @2250.057401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:266 delay:61.924531, averageDelay:66.965174, totalReceivedpkt:391.000000 @2250.059801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:267 delay:58.826824, averageDelay:66.944413, totalReceivedpkt:392.000000 @2250.062201
+node:1, MacAwsn::SuperFrameHandler:160, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2250.064800
+node:2, MacAwsn::SuperFrameHandler:160, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2250.064800
+node:0, MacAwsn::SuperFrameHandler:161, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2250.064800
+node:1, RILApp::sendMsg: data arrival msg->seq:288, @2252.664974
+node:2, RILApp::sendMsg: data arrival msg->seq:297, @2252.694766
+node:2, RILApp::sendMsg: data arrival msg->seq:298, @2255.397918
+node:1, RILApp::sendMsg: data arrival msg->seq:289, @2255.839744
+node:2, RILApp::sendMsg: data arrival msg->seq:299, @2258.496477
+node:1, RILApp::sendMsg: data arrival msg->seq:290, @2258.767621
+node:2, RILApp::sendMsg: data arrival msg->seq:300, @2261.640572
+node:1, RILApp::sendMsg: data arrival msg->seq:291, @2262.000690
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:279 delay:65.911331, averageDelay:66.941784, totalReceivedpkt:393.000000 @2264.183801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:280 delay:62.760257, averageDelay:66.931171, totalReceivedpkt:394.000000 @2264.186201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:281 delay:59.605156, averageDelay:66.912624, totalReceivedpkt:395.000000 @2264.188601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:268 delay:70.194078, averageDelay:66.920911, totalReceivedpkt:396.000000 @2264.191001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:269 delay:67.380196, averageDelay:66.922067, totalReceivedpkt:397.000000 @2264.193401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:270 delay:64.364774, averageDelay:66.915642, totalReceivedpkt:398.000000 @2264.195801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:271 delay:61.551357, averageDelay:66.902198, totalReceivedpkt:399.000000 @2264.198201
+node:1, MacAwsn::SuperFrameHandler:161, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2264.200800
+node:2, MacAwsn::SuperFrameHandler:161, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2264.200800
+node:0, MacAwsn::SuperFrameHandler:162, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2264.200800
+node:2, RILApp::sendMsg: data arrival msg->seq:301, @2264.627245
+node:1, RILApp::sendMsg: data arrival msg->seq:292, @2264.863577
+node:2, RILApp::sendMsg: data arrival msg->seq:302, @2267.541274
+node:1, RILApp::sendMsg: data arrival msg->seq:293, @2267.767971
+node:2, RILApp::sendMsg: data arrival msg->seq:303, @2270.371238
+node:1, RILApp::sendMsg: data arrival msg->seq:294, @2270.542284
+node:2, RILApp::sendMsg: data arrival msg->seq:304, @2273.255959
+node:1, RILApp::sendMsg: data arrival msg->seq:295, @2273.309214
+node:2, RILApp::sendMsg: data arrival msg->seq:305, @2276.296295
+node:1, RILApp::sendMsg: data arrival msg->seq:296, @2276.466252
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:283 delay:67.477850, averageDelay:66.903637, totalReceivedpkt:400.000000 @2278.319801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:284 delay:64.351874, averageDelay:66.897273, totalReceivedpkt:401.000000 @2278.322201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:285 delay:61.427008, averageDelay:66.883666, totalReceivedpkt:402.000000 @2278.324601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:273 delay:69.651167, averageDelay:66.890533, totalReceivedpkt:403.000000 @2278.327001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:274 delay:66.730136, averageDelay:66.890136, totalReceivedpkt:404.000000 @2278.329401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:275 delay:63.791803, averageDelay:66.882486, totalReceivedpkt:405.000000 @2278.331801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:276 delay:60.986786, averageDelay:66.867964, totalReceivedpkt:406.000000 @2278.334201
+node:1, MacAwsn::SuperFrameHandler:162, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2278.336800
+node:2, MacAwsn::SuperFrameHandler:162, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2278.336800
+node:0, MacAwsn::SuperFrameHandler:163, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2278.336800
+node:1, RILApp::sendMsg: data arrival msg->seq:297, @2279.182270
+node:2, RILApp::sendMsg: data arrival msg->seq:306, @2279.440231
+node:1, RILApp::sendMsg: data arrival msg->seq:298, @2282.261453
+node:2, RILApp::sendMsg: data arrival msg->seq:307, @2282.440058
+node:1, RILApp::sendMsg: data arrival msg->seq:299, @2285.076561
+node:2, RILApp::sendMsg: data arrival msg->seq:308, @2285.566364
+node:1, RILApp::sendMsg: data arrival msg->seq:300, @2288.131060
+node:2, RILApp::sendMsg: data arrival msg->seq:309, @2288.654495
+node:1, RILApp::sendMsg: data arrival msg->seq:301, @2291.422461
+node:2, RILApp::sendMsg: data arrival msg->seq:310, @2291.792243
+node:1 node:2 node:0 
+
+
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:288 delay:66.466524, averageDelay:66.866978, totalReceivedpkt:407.000000 @2292.455801
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:289 delay:63.762201, averageDelay:66.859368, totalReceivedpkt:408.000000 @2292.458201
+node:0, RILApp::recvMsg: receive a data message from node-2 msg->seq:290 delay:60.757930, averageDelay:66.844450, totalReceivedpkt:409.000000 @2292.460601
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:278 delay:68.994350, averageDelay:66.849694, totalReceivedpkt:410.000000 @2292.463001
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:279 delay:66.157855, averageDelay:66.848011, totalReceivedpkt:411.000000 @2292.465401
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:280 delay:63.249683, averageDelay:66.839277, totalReceivedpkt:412.000000 @2292.467801
+node:0, RILApp::recvMsg: receive a data message from node-1 msg->seq:281 delay:60.512759, averageDelay:66.823958, totalReceivedpkt:413.000000 @2292.470201
+node:1, MacAwsn::SuperFrameHandler:163, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-992 time@2292.472800
+node:2, MacAwsn::SuperFrameHandler:163, myRole:C, MacQueueSize:16, parentID:0, shiftFrameSlot:0, totalSlotsShift:-970 time@2292.472800
+node:0, MacAwsn::SuperFrameHandler:164, myRole:P, MacQueueSize:0, parentID:0, shiftFrameSlot:0, totalSlotsShift:0 time@2292.472800
+node:1, RILApp::sendMsg: data arrival msg->seq:302, @2294.268861
+node:2, RILApp::sendMsg: data arrival msg->seq:311, @2294.960850
+node:1, RILApp::sendMsg: data arrival msg->seq:303, @2297.026157
+node:2, RILApp::sendMsg: data arrival msg->seq:312, @2298.046607
+node:1, RILApp::sendMsg: data arrival msg->seq:304, @2299.954545
+node:2, RILApp::sendMsg: data arrival msg->seq:313, @2300.982320
+node:1, RILApp::sendMsg: data arrival msg->seq:305, @2303.138206
+node:2, RILApp::sendMsg: data arrival msg->seq:314, @2303.784282
+node:1, RILApp::sendMsg: data arrival msg->seq:306, @2306.346856
+node:1 node:2 node:0 
+node:2, RILApp::sendMsg: data arrival msg->seq:315, @2306.585201
+
+MacAwsn::recvHandler: error_y!!! node 2, rx_state_:0, wrong state in recvHandle
