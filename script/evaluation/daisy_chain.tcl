@@ -141,7 +141,7 @@ for {set i 0} {$i <  $val(total)} {incr i} {
     }
     
      
-    if {$i == $val(nn)-1} {
+    if {$i >= 1} {
     	$god_ setasEdgeNode $i
     } else {
     	$god_ setasNotEdgeNode $i
