@@ -260,8 +260,8 @@ private:
 	int 				alloc_slot_prev[frameLen];
 	int 				maxFrameSlots;
 	int					slotNum;
-	int					maxParentCycle;
-	int					parentCycleNum;
+//	int					maxParentCycle;
+//	int					parentCycleNum;
 	int					currentFrameSlots;
 	double				runTimeShift;
 	double				mySFTime;

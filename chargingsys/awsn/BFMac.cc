@@ -38,13 +38,12 @@ MacBF::MacBF():Mac(),startTimer(this),SFBFTimer(this), chargeBFTimer(this), FBFT
 	adjustmentTime = 0;
 	adjustSF = adjustF = checkForAck = sendRTSFlag = false;
 	startTimer.start(0);
-	TotalDataSent = ofPackets = parentCycleNum = 0;
+	TotalDataSent = ofPackets = 0;
 	runTimeShiftReq = false;
 	TxRx[0] = 'B'; TxRx[1] = 'T'; TxRx[2] = 'R'; TxRx[3] = 'A'; TxRx[4] = 'I'; TxRx[5] = 'S';
 	Role[0] = 'P'; Role[1] = 'C';
 	dir[0] = 'D'; dir[2] = 'U';
 	runTimeShift = 0; myTotalSFslots = 0; myRole = CHILD;
-	maxParentCycle = 20;
 	MAC_BufferSize = 20;
 }
 
@@ -73,12 +72,11 @@ void MacBF::runAtstartUp() {
 	God::instance()->setTotalSFslots(index_,myTotalSFslots);
 	God::instance()->setTotalSFTime(index_,mySFTime);
 	God::instance()->setRole(index_,myRole);						// Every node starts with empty MacBuffer and act as PARENT
-	maxParentCycle = God::instance()->getMaxparentCycle();
 	MAC_BufferSize = God::instance()->getnodebufferSize();
 	if(debug > 1)
 	printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomTime@%f, dischargeTime:%f,chargeTime:%f, myParent:%d, myTreeParentID:%d, myTotalSFslots:%d, mytotalSFTime:%f\n",
 			index_,ranNum,randomTime, dischargeTime,chargeTime,parentID,God::instance()->getMyParent(index_),myTotalSFslots,mySFTime);
-	printf("Buffer size:%d, maxParentCycle:%d\n",MAC_BufferSize,maxParentCycle);
+	printf("Buffer size:%d\n",MAC_BufferSize);
 	SFBFTimer.start(randomTime);
 	newnetif()->printvalues();
 }
@@ -255,29 +253,15 @@ void MacBF::postFrameHandler() {
 			if(debug > 4)
 				printf("node:%d, MacBF::postFrameHandler PARENT ROLE latency:%f @time:%f\n",index_,latency,NOW);
 		}
-		parentCycleNum++;
-		if (parentCycleNum > maxParentCycle) {
-			myRole = CHILD;
-			if(ParentTable.size()>0) {
-				neighborNode myParentNode = getParentInfo();
-				totalSlotsShift = shiftFrameSlot = myParentNode.distSlots;
-				God::instance()->setMyParent(index_,myParentNode.id);
-			}
-			if(debug > 4)
-				printf("node:%d, MacBF::postFrameHandler new Role as CHILD due to parentCycleMaxout, parentCycleNum:%d, macQueue.size:%d @time:%f\n",
-						index_,parentCycleNum,macQueue.size(),NOW);
-			parentCycleNum = 0;
-		} else
-			if(macQueue.size() >= MAC_BufferSize * 0.8) {
-			myRole = CHILD;
-			if(ParentTable.size()>0) {
-				neighborNode myParentNode = getParentInfo();
-				totalSlotsShift = shiftFrameSlot = myParentNode.distSlots;
-				God::instance()->setMyParent(index_,myParentNode.id);
-			}
-			if(debug > 4)
-				printf("node:%d, MacBF::postFrameHandler new Role as CHILD due to QueueSizeMaxout, parentCycleNum:%d, macQueue.size:%d @time:%f\n",
-						index_,parentCycleNum,macQueue.size(),NOW);
+		if(macQueue.size() >= MAC_BufferSize * 0.8) {
+		myRole = CHILD;
+		if(ParentTable.size()>0) {
+			neighborNode myParentNode = getParentInfo();
+			totalSlotsShift = shiftFrameSlot = myParentNode.distSlots;
+			God::instance()->setMyParent(index_,myParentNode.id);
+		}
+		if(debug > 4)
+			printf("node:%d, MacBF::postFrameHandler new Role as CHILD, macQueue.size:%d @time:%f\n",index_,macQueue.size(),NOW);
 		}
 	} else if(myRole == CHILD ) {
 		if(parentID == UNKNOWN) {

@@ -10,7 +10,7 @@
 #include "random.h"
 #include "math.h"
 
-#define debug 1
+#define debug 2
 
 static class MacAWSNClass : public TclClass {
 public:
@@ -39,8 +39,6 @@ MacAwsn::MacAwsn():Mac(),startTimer(this),SFAwsnTimer(this), chargeAwsnTimer(thi
 	adjustSF = adjustF = checkForAck = false;
 	startTimer.start(0);
 	TotalDataSent = ofPackets = 0;
-	maxParentCycle = 5;
-	parentCycleNum = 0;
 	runTimeShiftReq = false; runTimeShift = 0; myTotalSFslots = 0;
 	TxRx[0] = 'B'; TxRx[1] = 'T'; TxRx[2] = 'R'; TxRx[3] = 'A'; TxRx[4] = 'I';
 	Role[0] = 'P'; Role[1] = 'C';
@@ -73,7 +71,7 @@ void MacAwsn::runAtstartUp() {
 	God::instance()->setTotalSFTime(index_,mySFTime);
 	God::instance()->setRole(index_,myRole);						// Every node starts with empty MacBuffer and act as PARENT
 	if(debug > 1)
-	printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomTime@%f, dischargeTime:%f,chargeTime:%f, myParent:%d, myTreeParentID:%d, myTotalSFslots:%d, mytotalSFTime:%f\n",
+		printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomTime@%f, dischargeTime:%f,chargeTime:%f, myParent:%d, myTreeParentID:%d, myTotalSFslots:%d, mytotalSFTime:%f\n",
 			index_,ranNum,randomTime, dischargeTime,chargeTime,parentID,God::instance()->getMyParent(index_),myTotalSFslots,mySFTime);
 	SFAwsnTimer.start(randomTime);
 	newnetif()->printvalues();
@@ -84,8 +82,8 @@ void MacAwsn::SuperFrameHandler() {
 	superFrameCount++;
 	chargeTime = newnetif()->timeToFullCharge();
 	chargeAwsnTimer.restart(chargeTime);
-	if(debug > 1)
-	printf("node:%d, MacAwsn::SuperFrameHandler:%d, myRole:%c, MacQueueSize:%d, parentID:%d, shiftFrameSlot:%d, totalSlotsShift:%d time@%f\n",
+	if(debug > 2)
+		printf("node:%d, MacAwsn::SuperFrameHandler:%d, myRole:%c, MacQueueSize:%d, parentID:%d, shiftFrameSlot:%d, totalSlotsShift:%d time@%f\n",
 			index_,superFrameCount,Role[myRole],macQueue.size(),parentID,shiftFrameSlot,totalSlotsShift,NOW);
 }
 
@@ -123,7 +121,8 @@ void MacAwsn::scheduleChildren() {
 	for (unsigned int i =0;i<newSchedule.size();i++)
 		if(debug > 4)
 			printf("%d:%d, ",i,newSchedule[i]);
-	printf("\n");
+	if(debug > 4)
+		printf("\n");
 	for (int i=0;i<frameLen;i++)
 		God::instance()->setSchedule(index_,i,newSchedule[i]);
 	return;
@@ -254,19 +253,6 @@ void MacAwsn::postFrameHandler() {
 			if(debug > 4)
 				printf("node:%d, MacAwsn::postFrameHandler PARENT ROLE latency:%f @time:%f\n",index_,latency,NOW);
 		}
-		parentCycleNum++;
-		if (parentCycleNum > maxParentCycle) {
-			myRole = CHILD;
-			if(ParentTable.size()>0) {
-				neighborNode myParentNode = getParentInfo();
-				totalSlotsShift = shiftFrameSlot = myParentNode.distSlots;
-				God::instance()->setMyParent(index_,myParentNode.id);
-			}
-			if(debug > 4)
-				printf("node:%d, MacBF::postFrameHandler new Role as CHILD due to parentCycleMaxout, parentCycleNum:%d, macQueue.size:%d @time:%f\n",
-						index_,parentCycleNum,macQueue.size(),NOW);
-			parentCycleNum = 0;
-		} else
 		if(macQueue.size() >= MAC_BufferSize * 0.8) {
 			myRole = CHILD;
 			if(ParentTable.size()>0) {
@@ -766,7 +752,8 @@ void MacAwsn::recvBeacon(Packet *p) {
 					if(debug > 4)
 						printf("%d:%c, ",i,TxRx[alloc_slot[i]]);
 				}
-				printf("\n");
+				if(debug > 4)
+					printf("\n");
 				if(myTxSlotsNum < 1) {
 					sendRTS(src);
 					if(debug > 4)

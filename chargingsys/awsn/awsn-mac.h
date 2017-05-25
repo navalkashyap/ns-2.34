@@ -248,8 +248,6 @@ private:
 	double last_alive_;             // last time a data message is received
 
 
-	int					parentCycleNum;
-	int					maxParentCycle;
 	int 				TotalDataSent;
 	int					ofPackets;
 	int 				alloc_slot[frameLen];

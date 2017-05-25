@@ -119,7 +119,7 @@ WirelessChargingPhy::turnOffRadio(){
 }
 
 void WirelessChargingPhy::chargeNode(double chargeTime) {
-	printf("node:%d ",index_);
+//	printf("node:%d ",index_);
 	em()->IncrChargeEnergy(chargeTime,P_charge);
 	return;
 }
