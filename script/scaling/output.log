@@ -1,0 +1,637 @@
+79
+6
+1
+Starting Simulation...
+num_nodes is set 79
+node 0 x 0.000000 y 0.000000
+node 16 x 0.000000 y 0.000000
+node 32 x 0.000000 y 0.000000
+node 48 x 50383939040830313467244301165220154822268243648279699512014599469445960963435957008966044645664784591633786201571774538904827883605065013763454523333475383446534093116894291984145381460686989442118619385168830080609576550400.000000 y 0.000000
+node 64 x 72671300134567829258746634553685797809945150188718472995161907203828625508523813661312129195019645852038385264243902838679560500620340643014490726141339160591127872920294526656529990999876456260042752.000000 y 50383939040830313467244301165220154822268243648279699512014599469445960963435957008966044645664784591633786201571774538904827883605065013763454523333475383446534093116894291984145381460686989442118619385168830080609576550400.000000
+ChargingRT::command: node:0 x 0.000000 y 0.000000 
+node:0, isEdgeNode:0
+node:0, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.416800, dischargeTime:0.024000,chargeTime:0.000000, myParent:0, myTreeParentID:0, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:0, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:1 x 61.000000 y 0.000000 
+node:1, isEdgeNode:1
+node:1, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.050400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:0, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:1, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:2 x 122.000000 y 0.000000 
+node:2, isEdgeNode:1
+node:2, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.100800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:1, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:2, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:3 x 123.000000 y 0.000000 
+node:3, isEdgeNode:1
+node:3, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.151200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:1, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:3, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:4 x 180.000000 y 0.000000 
+node:4, isEdgeNode:1
+node:4, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.201600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:2, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:4, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:5 x 181.000000 y 0.000000 
+node:5, isEdgeNode:1
+node:5, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.252000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:2, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:5, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:6 x 182.000000 y 0.000000 
+node:6, isEdgeNode:1
+node:6, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.302400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:3, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:6, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:7 x 183.000000 y 0.000000 
+node:7, isEdgeNode:1
+node:7, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.352800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:3, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:7, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:8 x 240.000000 y 0.000000 
+node:8, isEdgeNode:1
+node:8, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.403200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:4, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:8, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:9 x 241.000000 y 0.000000 
+node:9, isEdgeNode:1
+node:9, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.453600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:4, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:9, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:10 x 242.000000 y 0.000000 
+node:10, isEdgeNode:1
+node:10, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.504000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:5, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:10, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:11 x 243.000000 y 0.000000 
+node:11, isEdgeNode:1
+node:11, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.554400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:5, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:11, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:12 x 244.000000 y 0.000000 
+node:12, isEdgeNode:1
+node:12, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.604800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:6, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:12, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:13 x 245.000000 y 0.000000 
+node:13, isEdgeNode:1
+node:13, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.655200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:6, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:13, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:14 x 246.000000 y 0.000000 
+node:14, isEdgeNode:1
+node:14, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.705600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:7, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:14, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:15 x 247.000000 y 0.000000 
+node:15, isEdgeNode:1
+node:15, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.756000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:7, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:15, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:16 x 0.000000 y 200.000000 
+node:16, isEdgeNode:1
+node:16, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.416800, dischargeTime:0.024000,chargeTime:0.000000, myParent:16, myTreeParentID:16, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:16, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:17 x 61.000000 y 200.000000 
+node:17, isEdgeNode:1
+node:17, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.856800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:16, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:17, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:18 x 122.000000 y 200.000000 
+node:18, isEdgeNode:1
+node:18, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.907200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:17, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:18, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:19 x 123.000000 y 200.000000 
+node:19, isEdgeNode:1
+node:19, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@0.957600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:17, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:19, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:20 x 180.000000 y 200.000000 
+node:20, isEdgeNode:1
+node:20, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.008000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:18, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:20, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:21 x 181.000000 y 200.000000 
+node:21, isEdgeNode:1
+node:21, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.058400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:18, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:21, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:22 x 182.000000 y 200.000000 
+node:22, isEdgeNode:1
+node:22, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.108800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:19, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:22, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:23 x 183.000000 y 200.000000 
+node:23, isEdgeNode:1
+node:23, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.159200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:19, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:23, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:24 x 240.000000 y 200.000000 
+node:24, isEdgeNode:1
+node:24, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.209600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:20, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:24, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:25 x 241.000000 y 200.000000 
+node:25, isEdgeNode:1
+node:25, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.260000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:20, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:25, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:26 x 242.000000 y 200.000000 
+node:26, isEdgeNode:1
+node:26, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.310400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:21, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:26, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:27 x 243.000000 y 200.000000 
+node:27, isEdgeNode:1
+node:27, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.360800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:21, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:27, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:28 x 244.000000 y 200.000000 
+node:28, isEdgeNode:1
+node:28, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.411200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:22, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:28, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:29 x 245.000000 y 200.000000 
+node:29, isEdgeNode:1
+node:29, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.461600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:22, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:29, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:30 x 246.000000 y 200.000000 
+node:30, isEdgeNode:1
+node:30, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.512000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:23, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:30, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:31 x 247.000000 y 200.000000 
+node:31, isEdgeNode:1
+node:31, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.562400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:23, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:31, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:32 x 0.000000 y 400.000000 
+node:32, isEdgeNode:1
+node:32, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.416800, dischargeTime:0.024000,chargeTime:0.000000, myParent:32, myTreeParentID:32, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:32, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:33 x 61.000000 y 400.000000 
+node:33, isEdgeNode:1
+node:33, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.663200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:32, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:33, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:34 x 122.000000 y 400.000000 
+node:34, isEdgeNode:1
+node:34, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.713600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:33, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:34, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:35 x 123.000000 y 400.000000 
+node:35, isEdgeNode:1
+node:35, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.764000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:33, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:35, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:36 x 180.000000 y 400.000000 
+node:36, isEdgeNode:1
+node:36, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.814400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:34, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:36, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:37 x 181.000000 y 400.000000 
+node:37, isEdgeNode:1
+node:37, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.864800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:34, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:37, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:38 x 182.000000 y 400.000000 
+node:38, isEdgeNode:1
+node:38, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.915200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:35, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:38, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:39 x 183.000000 y 400.000000 
+node:39, isEdgeNode:1
+node:39, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@1.965600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:35, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:39, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:40 x 240.000000 y 400.000000 
+node:40, isEdgeNode:1
+node:40, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.016000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:36, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:40, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:41 x 241.000000 y 400.000000 
+node:41, isEdgeNode:1
+node:41, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.066400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:36, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:41, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:42 x 242.000000 y 400.000000 
+node:42, isEdgeNode:1
+node:42, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.116800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:37, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:42, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:43 x 243.000000 y 400.000000 
+node:43, isEdgeNode:1
+node:43, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.167200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:37, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:43, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:44 x 244.000000 y 400.000000 
+node:44, isEdgeNode:1
+node:44, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.217600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:38, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:44, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:45 x 245.000000 y 400.000000 
+node:45, isEdgeNode:1
+node:45, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.268000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:38, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:45, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:46 x 246.000000 y 400.000000 
+node:46, isEdgeNode:1
+node:46, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.318400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:39, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:46, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:47 x 247.000000 y 400.000000 
+node:47, isEdgeNode:1
+node:47, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.368800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:39, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:47, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:48 x 0.000000 y 600.000000 
+node:48, isEdgeNode:1
+node:48, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.416800, dischargeTime:0.024000,chargeTime:0.000000, myParent:48, myTreeParentID:48, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:48, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:49 x 61.000000 y 600.000000 
+node:49, isEdgeNode:1
+node:49, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.469600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:48, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:49, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:50 x 122.000000 y 600.000000 
+node:50, isEdgeNode:1
+node:50, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.520000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:49, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:50, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:51 x 123.000000 y 600.000000 
+node:51, isEdgeNode:1
+node:51, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.570400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:49, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:51, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:52 x 180.000000 y 600.000000 
+node:52, isEdgeNode:1
+node:52, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.620800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:50, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:52, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:53 x 181.000000 y 600.000000 
+node:53, isEdgeNode:1
+node:53, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.671200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:50, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:53, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:54 x 182.000000 y 600.000000 
+node:54, isEdgeNode:1
+node:54, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.721600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:51, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:54, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:55 x 183.000000 y 600.000000 
+node:55, isEdgeNode:1
+node:55, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.772000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:51, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:55, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:56 x 240.000000 y 600.000000 
+node:56, isEdgeNode:1
+node:56, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.822400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:52, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:56, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:57 x 241.000000 y 600.000000 
+node:57, isEdgeNode:1
+node:57, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.872800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:52, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:57, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:58 x 242.000000 y 600.000000 
+node:58, isEdgeNode:1
+node:58, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.923200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:53, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:58, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:59 x 243.000000 y 600.000000 
+node:59, isEdgeNode:1
+node:59, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.973600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:53, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:59, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:60 x 244.000000 y 600.000000 
+node:60, isEdgeNode:1
+node:60, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.024000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:54, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:60, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:61 x 245.000000 y 600.000000 
+node:61, isEdgeNode:1
+node:61, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.074400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:54, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:61, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:62 x 246.000000 y 600.000000 
+node:62, isEdgeNode:1
+node:62, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.124800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:55, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:62, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:63 x 247.000000 y 600.000000 
+node:63, isEdgeNode:1
+node:63, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.175200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:55, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:63, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:64 x 0.000000 y 800.000000 
+node:64, isEdgeNode:1
+node:64, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@2.416800, dischargeTime:0.024000,chargeTime:0.000000, myParent:64, myTreeParentID:64, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:64, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:65 x 61.000000 y 800.000000 
+node:65, isEdgeNode:1
+node:65, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.276000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:64, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:65, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:66 x 122.000000 y 800.000000 
+node:66, isEdgeNode:1
+node:66, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.326400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:65, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:66, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:67 x 123.000000 y 800.000000 
+node:67, isEdgeNode:1
+node:67, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.376800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:65, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:67, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:68 x 180.000000 y 800.000000 
+node:68, isEdgeNode:1
+node:68, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.427200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:66, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:68, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:69 x 181.000000 y 800.000000 
+node:69, isEdgeNode:1
+node:69, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.477600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:66, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:69, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:70 x 182.000000 y 800.000000 
+node:70, isEdgeNode:1
+node:70, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.528000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:67, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:70, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:71 x 183.000000 y 800.000000 
+node:71, isEdgeNode:1
+node:71, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.578400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:67, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:71, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:72 x 240.000000 y 800.000000 
+node:72, isEdgeNode:1
+node:72, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.628800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:68, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:72, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:73 x 241.000000 y 800.000000 
+node:73, isEdgeNode:1
+node:73, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.679200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:68, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:73, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:74 x 242.000000 y 800.000000 
+node:74, isEdgeNode:1
+node:74, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.729600, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:69, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:74, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:75 x 243.000000 y 800.000000 
+node:75, isEdgeNode:1
+node:75, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.780000, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:69, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:75, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:76 x 244.000000 y 800.000000 
+node:76, isEdgeNode:1
+node:76, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.830400, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:70, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:76, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:77 x 245.000000 y 800.000000 
+node:77, isEdgeNode:1
+node:77, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.880800, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:70, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:77, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+ChargingRT::command: node:78 x 246.000000 y 800.000000 
+node:78, isEdgeNode:1
+node:78, AWSNMac::AWSNMac: MAC_BufferSize:10, randomTime@3.931200, dischargeTime:0.024000,chargeTime:0.000000, myParent:-2, myTreeParentID:71, myTotalSFslots:5889, mytotalSFTime:14.136000
+node:78, WirelessChargingPhy::WirelessChargingPhy: P_charge:0.000100, Pt_consume_:0.058800
+channel.cc:sendUp - Calc highestAntennaZ_ and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 150.0
+node:0, RILApp::start: Does not started, isEdgeNode:0
+node:1, RILApp::start: isEdgeNode:1
+node:2, RILApp::start: isEdgeNode:1
+node:3, RILApp::start: isEdgeNode:1
+node:4, RILApp::start: isEdgeNode:1
+node:5, RILApp::start: isEdgeNode:1
+node:6, RILApp::start: isEdgeNode:1
+node:7, RILApp::start: isEdgeNode:1
+node:8, RILApp::start: isEdgeNode:1
+node:9, RILApp::start: isEdgeNode:1
+node:10, RILApp::start: isEdgeNode:1
+node:11, RILApp::start: isEdgeNode:1
+node:12, RILApp::start: isEdgeNode:1
+node:13, RILApp::start: isEdgeNode:1
+node:14, RILApp::start: isEdgeNode:1
+node:15, RILApp::start: isEdgeNode:1
+node:16, RILApp::start: Does not started, isEdgeNode:1
+node:17, RILApp::start: isEdgeNode:1
+node:18, RILApp::start: isEdgeNode:1
+node:19, RILApp::start: isEdgeNode:1
+node:20, RILApp::start: isEdgeNode:1
+node:21, RILApp::start: isEdgeNode:1
+node:22, RILApp::start: isEdgeNode:1
+node:23, RILApp::start: isEdgeNode:1
+node:24, RILApp::start: isEdgeNode:1
+node:25, RILApp::start: isEdgeNode:1
+node:26, RILApp::start: isEdgeNode:1
+node:27, RILApp::start: isEdgeNode:1
+node:28, RILApp::start: isEdgeNode:1
+node:29, RILApp::start: isEdgeNode:1
+node:30, RILApp::start: isEdgeNode:1
+node:31, RILApp::start: isEdgeNode:1
+node:32, RILApp::start: Does not started, isEdgeNode:1
+node:33, RILApp::start: isEdgeNode:1
+node:34, RILApp::start: isEdgeNode:1
+node:35, RILApp::start: isEdgeNode:1
+node:36, RILApp::start: isEdgeNode:1
+node:37, RILApp::start: isEdgeNode:1
+node:38, RILApp::start: isEdgeNode:1
+node:39, RILApp::start: isEdgeNode:1
+node:40, RILApp::start: isEdgeNode:1
+node:41, RILApp::start: isEdgeNode:1
+node:42, RILApp::start: isEdgeNode:1
+node:43, RILApp::start: isEdgeNode:1
+node:44, RILApp::start: isEdgeNode:1
+node:45, RILApp::start: isEdgeNode:1
+node:46, RILApp::start: isEdgeNode:1
+node:47, RILApp::start: isEdgeNode:1
+node:48, RILApp::start: Does not started, isEdgeNode:1
+node:49, RILApp::start: isEdgeNode:1
+node:50, RILApp::start: isEdgeNode:1
+node:51, RILApp::start: isEdgeNode:1
+node:52, RILApp::start: isEdgeNode:1
+node:53, RILApp::start: isEdgeNode:1
+node:54, RILApp::start: isEdgeNode:1
+node:55, RILApp::start: isEdgeNode:1
+node:56, RILApp::start: isEdgeNode:1
+node:57, RILApp::start: isEdgeNode:1
+node:58, RILApp::start: isEdgeNode:1
+node:59, RILApp::start: isEdgeNode:1
+node:60, RILApp::start: isEdgeNode:1
+node:61, RILApp::start: isEdgeNode:1
+node:62, RILApp::start: isEdgeNode:1
+node:63, RILApp::start: isEdgeNode:1
+node:64, RILApp::start: Does not started, isEdgeNode:1
+node:65, RILApp::start: isEdgeNode:1
+node:66, RILApp::start: isEdgeNode:1
+node:67, RILApp::start: isEdgeNode:1
+node:68, RILApp::start: isEdgeNode:1
+node:69, RILApp::start: isEdgeNode:1
+node:70, RILApp::start: isEdgeNode:1
+node:71, RILApp::start: isEdgeNode:1
+node:72, RILApp::start: isEdgeNode:1
+node:73, RILApp::start: isEdgeNode:1
+node:74, RILApp::start: isEdgeNode:1
+node:75, RILApp::start: isEdgeNode:1
+node:76, RILApp::start: isEdgeNode:1
+node:77, RILApp::start: isEdgeNode:1
+node:78, RILApp::start: isEdgeNode:1
+node:35, MacAwsn::recvHandler: src:32,ch->error(), time@384.089322
+node:34, MacAwsn::recvHandler: src:32,ch->error(), time@412.361322
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:0, @441.734973
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:1, @448.267373
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:2, @454.529141
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:3, @460.569033
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:4, @466.858835
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:5, @472.729235
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:6, @478.841125
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:7, @485.221606
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:8, @491.702079
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:9, @497.910836
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:10, @503.819862
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:11, @509.806863
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:12, @515.408412
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:13, @521.317225
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:14, @527.418790
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:15, @533.511885
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:1 delay:91.324428, averageDelay:91.324428, totalReceivedpkt:1.000000 @539.591801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:2 delay:85.065060, averageDelay:88.194744, totalReceivedpkt:2.000000 @539.594201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:3 delay:79.027568, averageDelay:85.139019, totalReceivedpkt:3.000000 @539.596601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:4 delay:72.740166, averageDelay:82.039306, totalReceivedpkt:4.000000 @539.599001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:5 delay:66.872166, averageDelay:79.005878, totalReceivedpkt:5.000000 @539.601401
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:6 delay:60.762677, averageDelay:75.965344, totalReceivedpkt:6.000000 @539.603801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:7 delay:54.384595, averageDelay:72.882380, totalReceivedpkt:7.000000 @539.606201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:16, @539.953780
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:17, @546.437953
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:18, @551.847269
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:8 delay:62.025722, averageDelay:71.525298, totalReceivedpkt:8.000000 @553.727801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:9 delay:55.819366, averageDelay:69.780194, totalReceivedpkt:9.000000 @553.730201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:16 delay:13.778822, averageDelay:64.180057, totalReceivedpkt:10.000000 @553.732601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:17 delay:7.297048, averageDelay:59.008874, totalReceivedpkt:11.000000 @553.735001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:18 delay:1.890132, averageDelay:54.248979, totalReceivedpkt:12.000000 @553.737401
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:19, @557.809444
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:20, @564.175837
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:21, @570.739049
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:22, @576.470613
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:23, @582.663325
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:24, @588.400924
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:25, @594.234252
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:26, @600.302836
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:27, @606.224143
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:28, @611.933545
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:29, @617.770620
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:30, @623.626684
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:20 delay:60.231964, averageDelay:54.709209, totalReceivedpkt:13.000000 @624.407801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:21 delay:53.671153, averageDelay:54.635062, totalReceivedpkt:14.000000 @624.410201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:22 delay:47.941989, averageDelay:54.188857, totalReceivedpkt:15.000000 @624.412601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:23 delay:41.751676, averageDelay:53.411533, totalReceivedpkt:16.000000 @624.415001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:24 delay:36.016477, averageDelay:52.388295, totalReceivedpkt:17.000000 @624.417401
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:25 delay:30.185549, averageDelay:51.154809, totalReceivedpkt:18.000000 @624.419801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:26 delay:24.119365, averageDelay:49.731891, totalReceivedpkt:19.000000 @624.422201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:31, @629.052530
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:32, @634.765800
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:27 delay:32.319658, averageDelay:48.861279, totalReceivedpkt:20.000000 @638.543801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:28 delay:26.612656, averageDelay:47.801821, totalReceivedpkt:21.000000 @638.546201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:31 delay:9.496072, averageDelay:46.060650, totalReceivedpkt:22.000000 @638.548601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:32 delay:3.785201, averageDelay:44.222587, totalReceivedpkt:23.000000 @638.551001
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:33, @640.449587
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:34, @645.927030
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:35, @652.039547
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:36, @658.103504
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:37, @664.492367
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:38, @670.615891
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:39, @677.204962
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:40, @683.624150
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:41, @690.063740
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:42, @696.162486
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:43, @702.620629
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:44, @709.141723
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:34 delay:63.296771, averageDelay:45.017345, totalReceivedpkt:24.000000 @709.223801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:35 delay:57.186655, averageDelay:45.504117, totalReceivedpkt:25.000000 @709.226201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:36 delay:51.125097, averageDelay:45.720309, totalReceivedpkt:26.000000 @709.228601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:37 delay:44.738635, averageDelay:45.683951, totalReceivedpkt:27.000000 @709.231001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:38 delay:38.617510, averageDelay:45.431578, totalReceivedpkt:28.000000 @709.233401
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:39 delay:32.030839, averageDelay:44.969483, totalReceivedpkt:29.000000 @709.235801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:40 delay:25.614051, averageDelay:44.324302, totalReceivedpkt:30.000000 @709.238201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:45, @714.571294
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:46, @720.333075
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:41 delay:33.296062, averageDelay:43.968553, totalReceivedpkt:31.000000 @723.359801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:42 delay:27.199715, averageDelay:43.444526, totalReceivedpkt:32.000000 @723.362201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:45 delay:8.793307, averageDelay:42.394489, totalReceivedpkt:33.000000 @723.364601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:46 delay:3.033926, averageDelay:41.236826, totalReceivedpkt:34.000000 @723.367001
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:47, @726.848248
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:48, @732.302402
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:49, @738.446655
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:50, @744.033470
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:51, @750.185696
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:52, @756.152169
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:53, @762.162963
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:54, @767.884161
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:55, @773.388837
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:56, @779.201787
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:57, @785.192910
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:58, @791.035151
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:48 delay:61.737399, averageDelay:41.822556, totalReceivedpkt:35.000000 @794.039801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:49 delay:55.595547, averageDelay:42.205140, totalReceivedpkt:36.000000 @794.042201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:50 delay:50.011132, averageDelay:42.416112, totalReceivedpkt:37.000000 @794.044601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:51 delay:43.861305, averageDelay:42.454144, totalReceivedpkt:38.000000 @794.047001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:52 delay:37.897232, averageDelay:42.337300, totalReceivedpkt:39.000000 @794.049401
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:53 delay:31.888838, averageDelay:42.076088, totalReceivedpkt:40.000000 @794.051801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:54 delay:26.170041, averageDelay:41.688136, totalReceivedpkt:41.000000 @794.054201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:59, @797.575863
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:60, @803.595089
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:55 delay:34.786964, averageDelay:41.523822, totalReceivedpkt:42.000000 @808.175801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:56 delay:28.976414, averageDelay:41.232022, totalReceivedpkt:43.000000 @808.178201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:59 delay:10.604738, averageDelay:40.535947, totalReceivedpkt:44.000000 @808.180601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:60 delay:4.587912, averageDelay:39.737102, totalReceivedpkt:45.000000 @808.183001
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:61, @809.091750
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:62, @814.574850
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:63, @820.158582
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:64, @826.753691
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:65, @832.625841
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:66, @838.983054
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:67, @845.096713
+node:19, MacAwsn::recvHandler: src:16,ch->error(), time@850.577322
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:68, @851.591015
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:69, @857.556151
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:70, @862.990323
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:71, @869.477583
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:72, @876.025880
+node:18, MacAwsn::recvHandler: src:16,ch->error(), time@878.849322
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:62 delay:64.280951, averageDelay:40.270664, totalReceivedpkt:46.000000 @878.855801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:63 delay:58.699620, averageDelay:40.662770, totalReceivedpkt:47.000000 @878.858201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:64 delay:52.106911, averageDelay:40.901189, totalReceivedpkt:48.000000 @878.860601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:65 delay:46.237160, averageDelay:41.010087, totalReceivedpkt:49.000000 @878.863001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:66 delay:39.882347, averageDelay:40.987532, totalReceivedpkt:50.000000 @878.865401
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:67 delay:33.771088, averageDelay:40.846033, totalReceivedpkt:51.000000 @878.867801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:68 delay:27.279186, averageDelay:40.585132, totalReceivedpkt:52.000000 @878.870201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:73, @882.292243
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:74, @887.816469
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:69 delay:35.435650, averageDelay:40.487972, totalReceivedpkt:53.000000 @892.991801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:70 delay:30.003878, averageDelay:40.293822, totalReceivedpkt:54.000000 @892.994201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:73 delay:10.704359, averageDelay:39.755832, totalReceivedpkt:55.000000 @892.996601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:74 delay:5.182533, averageDelay:39.138451, totalReceivedpkt:56.000000 @892.999001
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:75, @893.508713
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:76, @899.303131
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:77, @904.850629
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:78, @910.540655
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:79, @917.121204
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:80, @923.053516
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:0, @925.973449
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:81, @929.568664
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:1, @931.650299
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:82, @935.366920
+node:17, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:2, @937.656027
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:83, @940.773671
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:3, @943.064193
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:84, @947.347447
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:4, @949.418277
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:85, @953.054158
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:5, @955.690572
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:86, @958.939130
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:6, @961.950199
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:76 delay:64.368670, averageDelay:39.581087, totalReceivedpkt:57.000000 @963.671801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:77 delay:58.823572, averageDelay:39.912854, totalReceivedpkt:58.000000 @963.674201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:78 delay:53.135946, averageDelay:40.136974, totalReceivedpkt:59.000000 @963.676601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:79 delay:46.557797, averageDelay:40.243988, totalReceivedpkt:60.000000 @963.679001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:80 delay:40.627886, averageDelay:40.250281, totalReceivedpkt:61.000000 @963.681401
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:81 delay:34.115138, averageDelay:40.151327, totalReceivedpkt:62.000000 @963.683801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:82 delay:28.319281, averageDelay:39.963517, totalReceivedpkt:63.000000 @963.686201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:87, @964.895523
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:7, @967.539333
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:88, @971.170904
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:8, @974.079967
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:89, @976.747832
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:83 delay:37.034131, averageDelay:39.917745, totalReceivedpkt:64.000000 @977.807801
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:84 delay:30.462755, averageDelay:39.772284, totalReceivedpkt:65.000000 @977.810201
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:87 delay:12.917078, averageDelay:39.365387, totalReceivedpkt:66.000000 @977.812601
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:88 delay:6.644097, averageDelay:38.877009, totalReceivedpkt:67.000000 @977.815001
+node:32, RILApp::recvMsg: receive a data message from node-33 msg->seq:89 delay:1.069569, averageDelay:38.321018, totalReceivedpkt:68.000000 @977.817401
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:33, MacAwsn::sendData: no data to send when temp to send
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:9, @980.516684
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:90, @983.092540
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:10, @986.381453
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:91, @989.354067
+node:33, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:11, @992.948410
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:92, @995.720952
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:12, @998.467793
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:93, @1001.719638
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:13, @1004.164949
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:1 delay:74.429503, averageDelay:74.429503, totalReceivedpkt:1.000000 @1006.079801
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:2 delay:68.426174, averageDelay:71.427839, totalReceivedpkt:2.000000 @1006.082201
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:3 delay:63.020408, averageDelay:68.625362, totalReceivedpkt:3.000000 @1006.084601
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:4 delay:56.668724, averageDelay:65.636202, totalReceivedpkt:4.000000 @1006.087001
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:5 delay:50.398829, averageDelay:62.588728, totalReceivedpkt:5.000000 @1006.089401
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:6 delay:44.141602, averageDelay:59.514207, totalReceivedpkt:6.000000 @1006.091801
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:7 delay:38.554869, averageDelay:56.520016, totalReceivedpkt:7.000000 @1006.094201
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:94, @1008.118113
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:14, @1009.848799
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:95, @1014.466025
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:15, @1016.268432
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:8 delay:46.135834, averageDelay:55.221993, totalReceivedpkt:8.000000 @1020.215801
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:9 delay:39.701517, averageDelay:53.497496, totalReceivedpkt:9.000000 @1020.218201
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:14 delay:10.371802, averageDelay:49.184926, totalReceivedpkt:10.000000 @1020.220601
+node:16, RILApp::recvMsg: receive a data message from node-17 msg->seq:15 delay:3.954569, averageDelay:45.073076, totalReceivedpkt:11.000000 @1020.223001
+node:17, MacAwsn::sendData: no data to send when temp to send
+node:17, MacAwsn::sendData: no data to send when temp to send
+node:17, MacAwsn::sendData: no data to send when temp to send
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:96, @1020.285502
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:16, @1021.770140
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:97, @1026.197040
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:17, @1027.880203
+node:33, RILApp::sendMsg: data arrival, msg->dst:32, msg->seq:98, @1031.890540
+node:17, RILApp::sendMsg: data arrival, msg->dst:16, msg->seq:18, @1033.409259
+node:17, MacAwsn::recv, tx_active_:1, hdr->error:0
+node:33, RILApp::sendMsg: data arrival, msg->dst:32,

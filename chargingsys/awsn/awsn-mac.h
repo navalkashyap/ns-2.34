@@ -8,7 +8,7 @@
 #ifndef CHARGINGSYS_MAC_AWSN_MAC_H_
 #define CHARGINGSYS_MAC_AWSN_MAC_H_
 
-#define MAC_BufferSize				20
+//#define MAC_BufferSize				20
 #define pktSendLatency				10
 #define pktDropLatency				30
 #define frameLen 					10
@@ -248,6 +248,7 @@ private:
 	double last_alive_;             // last time a data message is received
 
 
+	int 				MAC_BufferSize;
 	int 				TotalDataSent;
 	int					ofPackets;
 	int 				alloc_slot[frameLen];

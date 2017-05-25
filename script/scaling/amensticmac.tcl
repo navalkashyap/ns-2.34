@@ -17,7 +17,6 @@ set val(nn)             [lindex $argv 0]
 set val(datainterval)   [lindex $argv 1]
 set val(firstLeafNode)  [lindex $argv 2]
 set val(buffersize)		[lindex $argv 3]
-set val(maxParentCycle)	[lindex $argv 4]
 
 #set val(nn)             7
 #set val(datainterval)  25
@@ -46,8 +45,6 @@ set topo        [new Topography]
 $topo           load_flatgrid 1500 1500
 
 source ns2parameters.tcl
-Mac/BF				set MaxParentCycle 	$val(maxParentCycle)
-Mac/BF				set Buffersize  	$val(buffersize)
 
 Agent/ChargingRT    set RTYPE $val(rtype)
 Agent/ChargingRT    set routinginterval $val(routeinterval)
@@ -85,6 +82,7 @@ set god_ [create-god $val(total)]
 $god_ add-logfile $val(mylog)
 
 #source treeStructure.tcl
+$god_ setbufferSize $val(buffersize)
 
 for {set i 0} {$i <  $val(total)} {incr i} {
     $god_ setnodechargeID $i

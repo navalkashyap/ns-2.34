@@ -24,6 +24,7 @@ MacAwsn::MacAwsn():Mac(),startTimer(this),SFAwsnTimer(this), chargeAwsnTimer(thi
 		recvTimer(this),sendTimer(this),RadioOFFTimer(this),BeaconTxTimer(this),BeaconRxTimer(this),sendBeaconTimer(this),
 		postFrameTimer(this),superFrameCount(0)
 {
+	MAC_BufferSize = 20;
 	tx_state_ = rx_state_ = MAC_IDLE;
 	tx_active_ = 0;
 	sender_cw_ = cw_ = config_.cw_min;
@@ -67,12 +68,13 @@ void MacAwsn::runAtstartUp() {
 	newnetif()->setP_charge(God::instance()->getP_charge(index_));
 	mySFTime = newnetif()->getSuperFrameTime(maxFrameSlots * config_.slotTime);
 	myTotalSFslots = mySFTime / config_.slotTime;
+	MAC_BufferSize = God::instance()->getnodebufferSize();
 	God::instance()->setTotalSFslots(index_,myTotalSFslots);
 	God::instance()->setTotalSFTime(index_,mySFTime);
 	God::instance()->setRole(index_,myRole);						// Every node starts with empty MacBuffer and act as PARENT
 	if(debug >= 1)
-		printf("node:%d, AWSNMac::AWSNMac: ranNum:%d, randomTime@%f, dischargeTime:%f,chargeTime:%f, myParent:%d, myTreeParentID:%d, myTotalSFslots:%d, mytotalSFTime:%f\n",
-			index_,ranNum,randomTime, dischargeTime,chargeTime,parentID,God::instance()->getMyParent(index_),myTotalSFslots,mySFTime);
+		printf("node:%d, AWSNMac::AWSNMac: MAC_BufferSize:%d, randomTime@%f, dischargeTime:%f,chargeTime:%f, myParent:%d, myTreeParentID:%d, myTotalSFslots:%d, mytotalSFTime:%f\n",
+			index_,MAC_BufferSize,randomTime, dischargeTime,chargeTime,parentID,God::instance()->getMyParent(index_),myTotalSFslots,mySFTime);
 	SFAwsnTimer.start(randomTime);
 	newnetif()->printvalues();
 }
@@ -351,7 +353,7 @@ void MacAwsn::sendBeacon(int dst) {
 	}
 	BeaconTxTimer.restart(ch->txtime());
 	calcNextSFslots();
-
+	Packet::free(p);
 }
 
 void MacAwsn::BeaconSent() {
@@ -417,13 +419,14 @@ void MacAwsn::sendAck() {
 	if (tx_state_ == MAC_IDLE && rx_state_ == MAC_IDLE && tx_active_ == 0) {
 		if(debug > 4)
 			printf("node:%d, MacAwsn::sendAck: ch->txtime@%f, time@%f\n",index_, ch->txtime(), NOW);
-				downtarget_->recv(p->copy(), this);
+		downtarget_->recv(p->copy(), this);
 	} else {
 		if(debug > 4)
 			printf("node:%d, MacAwsn::sendAck: Radio Busy:tx_state_:%d,rx_state_:%d, tx_active_:%d, time@%f\n",
 				index_,tx_state_, rx_state_,tx_active_, NOW);
 	}
 	calcNextSFslots();
+	Packet::free(p);
 }
 
 void MacAwsn::calcNextSFslots() {
@@ -524,6 +527,7 @@ void MacAwsn::recv(Packet *p, Handler *h) {
 			h->handle((Event*) 0);
 			rx_state_ = MAC_IDLE;
 		}
+//	Packet::free(p);
 	return;
 }
 
@@ -815,6 +819,7 @@ void MacAwsn::sendRTS(int src) {
 		if(debug > 4)
 			printf("node:%d, MacAwsn::sendRTS: Radio Busy:tx_state_:%d,rx_state_:%d, time@%f\n",index_,tx_state_, rx_state_, NOW);
 	}
+	Packet::free(p);
 }
 
 void MacAwsn::recvRTS(Packet *p) {
