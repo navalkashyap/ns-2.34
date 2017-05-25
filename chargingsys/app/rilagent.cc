@@ -65,6 +65,7 @@ void RILAgent::sendmsg(int nbytes, AppData* data, const char* flags) {
 	    }
 	    p->setdata(data);
 		target_->recv(p);
+//		printf("RILAgent::sendmsg: node:%d, daddr:%d, dst:%d, send app\n", here_.addr_,iph->daddr(),iph->dst());
 	}
 	idle();
 }

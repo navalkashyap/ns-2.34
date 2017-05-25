@@ -56,10 +56,11 @@ double RILApp::next_interval() {
 void RILApp::timeout(int type) {
     if (type == DTIMER) {
 	    RILAppMessageT_ msg;
-		if (myID != 0 && God::instance()->getparentDiscovered(myID)) {
+	    msg.dest = (myID - myID%16);
+		if ((myID != myID - myID%16) && God::instance()->getparentDiscovered(myID)) {
 	        produceMsg(&msg, DATA_SENSING);
             sendMsg(&msg);
-//            printf("RILApp::timeout: node:%d send app, msg seq:%d, msg size:%d @ %f\n", myID, msg.seq,msg.len, NOW);
+//            printf("RILApp::timeout: node:%d send app, msg seq:%d, msg dst:%d @ %f\n", myID, msg.seq, msg.dest, NOW);
         }
         dataT_->resched(next_interval());
     }
@@ -76,7 +77,7 @@ void RILApp::process_data(int size, AppData* data) {
 
 void RILApp::start() {
 	//God::instance()->ctrace()->log("node %d start charging app @ %f\n", myID, NOW);
-	if (myID != 0 && God::instance()->isEdgeNode(myID)) {
+	if ((myID != myID - myID%16) && God::instance()->isEdgeNode(myID)) {
 	    dataT_ = new RILAppTimer(this, DTIMER);
 	    averageDelay = 0.0;
 	    totalDelay = 0;
@@ -101,16 +102,17 @@ void RILApp::produceMsg(RILAppMessageT_* msg, int msgtype) {
 	msg->msgType = msgtype;
 	msg->timestamp = NOW;
 	msg->seq = packetseq++;
+	msg->dest = myID - myID%16;
 	return;
 }
 
 // send msg based on destination
 void RILApp::sendMsg(RILAppMessageT_* msg) {
-	msg->dest = 0;//God::instance()->sink_num();
+	msg->dest = myID - myID%16;//God::instance()->sink_num();
     msg->netType = UCAST;
 	PacketData* data = new PacketData(sizeof(RILAppMessageT_));
 	memcpy(data->data(), msg, sizeof(RILAppMessageT_));
-    printf("node:%d, RILApp::sendMsg: data arrival msg->seq:%d, @%f\n", myID, msg->seq,NOW);
+    printf("node:%d, RILApp::sendMsg: data arrival, msg->dst:%d, msg->seq:%d, @%f\n", myID, msg->dest, msg->seq,NOW);
 	agent_->sendmsg(sizeof(RILAppMessageT_), data);
 }
 

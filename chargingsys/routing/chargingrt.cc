@@ -311,6 +311,8 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
 	if ((ih->daddr() == here_.addr_|| ih->daddr() == (nsaddr_t)IP_BROADCAST) &&
 			(ch->ptype() != PT_CHARGINGRT) && ch->direction() == hdr_cmn::UP) {
 		dmux_->recv(p,0);
+//		printf("ChargingRT:: node:%d, recv a packet to me, either dest to me, or broadcasts, daddr:%d, direction:%d\n",
+//				here_.addr_,ih->daddr(),ch->direction());
 		return;
 	}
 #if 0
@@ -322,7 +324,8 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
 	}
 #endif
 	if (rt) {
-        int sinkid = God::instance()->sink_num();
+//        int sinkid = God::instance()->sink_num();
+        int sinkid = ih->saddr() - ih->saddr()%16;
 		int nexthop = getNextHop(ih->daddr(), &sinkid, p);
 		if (nexthop < 0) nexthop = 0;
 		if (nexthop < 0) {
@@ -336,7 +339,7 @@ void ChargingRT::forward(int rt, Packet *p, double delay) {
             }
             parentID_ = nexthop;
         }
-        ih->daddr() = sinkid;
+        ih->daddr() = ih->saddr() - ih->saddr()%16;
 		ch->next_hop_ = nexthop;
 		ch->addr_type() = NS_AF_INET;
 	}
